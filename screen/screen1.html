@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배드민턴 매칭 - 홈</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 홈 화면 (S004) -->
+    <div class="container">
+        <!-- 내 동네 뱃지 표시 -->
+        <div class="my-neighborhoods">
+            <span class="neighborhood-badge active">강남구</span>
+            <span class="neighborhood-badge">송파구</span>
+            <button class="my-neighborhoods-btn">내 동네 설정</button>
+        </div>
+        <!-- 상단 필터 & 검색 -->
+        <div class="filter-section">
+            <div class="filter-container">
+                <!-- 기존 필터들 -->
+                <select class="filter-select">
+                    <option>급수</option>
+                    <option>초심</option>
+                    <option>D조</option>
+                    <option>C조</option>
+                    <option>B조</option>
+                    <option>A조</option>
+                </select>
+                <select class="filter-select">
+                    <option>반경</option>
+                    <option>1km 이내</option>
+                    <option>3km 이내</option>
+                    <option>5km 이내</option>
+                    <option>10km 이내</option>
+                </select>
+                <!-- 검색창 -->
+                <input type="text" placeholder="장소, 제목 검색" class="search-input" />
+            </div>
+        </div>
+
+        <!-- 매칭 리스트 -->
+        <div class="matching-list">
+            <!-- 기존 카드 1 -->
+            <div class="matching-card">
+                <div class="card-content">
+                    <div class="card-info">
+                        <div class="card-header">
+                            <span class="card-title">[초보환영] 강남구 배드민턴 매칭</span>
+                            <span class="level-badge beginner">초심</span>
+                        </div>
+                        <div class="card-description">
+                            초보자도 환영합니다! 친근한 분위기에서 배드민턴을 즐겨보세요. 체력에 맞춰 쉬어가면서 진행하겠습니다.
+                        </div>
+                    </div>
+                    <div class="card-image">
+                        <img src="https://www.nowonsc.kr/design/homepage/nowon/img/sub/badminton_img0301.jpg" alt="매칭 이미지" class="matching-img">
+                    </div>
+                </div>
+                <div class="card-details">
+                    <span class="detail-item">📍 강남구민체육관</span>
+                    <span class="detail-item">🕒 24-06-10</span>
+                    <span class="detail-item">👥 8/12명</span>
+                    <span class="detail-item">🏸 급수: 초심</span>
+                </div>
+                <div class="card-bookmark">
+                  <span class="view-count">조회 133</span>
+                  <span class="bookmark-group"><span class="heart">&#9829;</span><span class="bookmark-count">12</span></span>
+                </div>
+            </div>
+            <!-- 기존 카드 2 -->
+            <div class="matching-card">
+                <div class="card-content">
+                    <div class="card-info">
+                        <div class="card-header">
+                            <span class="card-title">[중급] 송파구 저녁 매칭</span>
+                            <span class="level-badge intermediate">D조</span>
+                        </div>
+                        <div class="card-description">
+                            중급자들을 위한 매칭입니다. 실력 향상을 위한 연습과 함께 즐거운 경기를 해보세요.
+                        </div>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <span class="detail-item">📍 송파구체육관</span>
+                    <span class="detail-item">🕒 24-06-11</span>
+                    <span class="detail-item">👥 10/16명</span>
+                    <span class="detail-item">🏸 급수: D조</span>
+                </div>
+                <div class="card-bookmark">
+                  <span class="view-count">조회 50</span>
+                  <span class="bookmark-group"><span class="heart">&#9829;</span><span class="bookmark-count">8</span></span>
+                </div>
+            </div>
+            <!-- 추가 카드 3~12 -->
+            <div class="matching-card">
+                <div class="card-content">
+                    <div class="card-info">
+                        <div class="card-header"><span class="card-title">[상급] 마포구 아침 매칭</span><span class="level-badge advanced">C조</span></div>
+                        <div class="card-description">상급자 위주로 진행합니다. 아침에 상쾌하게 운동해요!</div>
+                    </div>
+                    <div class="card-image"><img src="https://cdn.pixabay.com/photo/2016/11/29/09/32/badminton-1867005_1280.jpg" alt="매칭 이미지" class="matching-img"></div>
+                </div>
+                <div class="card-details">
+                    <span class="detail-item">📍 마포구체육관</span>
+                    <span class="detail-item">🕒 24-06-12</span>
+                    <span class="detail-item">👥 6/10명</span>
+                    <span class="detail-item">🏸 급수: C조</span>
+                </div>
+                <div class="card-bookmark">
+                  <span class="view-count">조회 200</span>
+                  <span class="bookmark-group"><span class="heart">&#9829;</span><span class="bookmark-count">5</span></span>
+                </div>
+            </div>
+            <div class="matching-card">
+                <div class="card-content">
+                    <div class="card-info">
+                        <div class="card-header"><span class="card-title">[A조] 강동구 저녁 매칭</span><span class="level-badge pro">A조</span></div>
+                        <div class="card-description">최상급자 매칭입니다. 실전 감각을 키우고 싶은 분 환영!</div>
+                    </div>
+                    <!-- <div class="card-image"><img src="https://cdn.pixabay.com/photo/2017/01/20/00/30/badminton-1994377_1280.jpg" alt="매칭 이미지" class="matching-img"></div> -->
+                </div>
+                <div class="card-details">
+                    <span class="detail-item">📍 강동구체육관</span>
+                    <span class="detail-item">🕒 24-06-13</span>
+                    <span class="detail-item">👥 4/8명</span>
+                    <span class="detail-item">🏸 급수: A조</span>
+                </div>
+                <div class="card-bookmark">
+                  <span class="view-count">조회 100</span>
+                  <span class="bookmark-group"><span class="heart">&#9829;</span><span class="bookmark-count">3</span></span>
+                </div>
+            </div>
+            <div class="matching-card">
+                <div class="card-content">
+                    <div class="card-info">
+                        <div class="card-header"><span class="card-title">[초심] 노원구 점심 매칭</span><span class="level-badge beginner">초심</span></div>
+                        <div class="card-description">점심시간에 가볍게 즐기는 배드민턴 매칭입니다.</div>
+                    </div>
+                    <div class="card-image"><img src="https://cdn.pixabay.com/photo/2016/11/29/09/32/badminton-1867005_1280.jpg" alt="매칭 이미지" class="matching-img"></div>
+                </div>
+                <div class="card-details">
+                    <span class="detail-item">📍 노원구체육관</span>
+                    <span class="detail-item">🕒 24-06-14</span>
+                    <span class="detail-item">👥 12/16명</span>
+                    <span class="detail-item">🏸 급수: 초심</span>
+                </div>
+                <div class="card-bookmark">
+                  <span class="view-count">조회 70</span>
+                  <span class="bookmark-group"><span class="heart">&#9829;</span><span class="bookmark-count">7</span></span>
+                </div>
+            </div>
+            <div class="matching-card">
+                <div class="card-content">
+                    <div class="card-info">
+                        <div class="card-header"><span class="card-title">[B조] 구로구 저녁 매칭</span><span class="level-badge pro">B조</span></div>
+                        <div class="card-description">B조 회원들과 함께하는 저녁 매칭입니다.</div>
+                    </div>
+                    <div class="card-image"><img src="https://cdn.pixabay.com/photo/2017/01/20/00/30/badminton-1994377_1280.jpg" alt="매칭 이미지" class="matching-img"></div>
+                </div>
+                <div class="card-details">
+                    <span class="detail-item">📍 구로구체육관</span>
+                    <span class="detail-item">🕒 24-06-15</span>
+                    <span class="detail-item">👥 9/12명</span>
+                    <span class="detail-item">🏸 급수: B조</span>
+                </div>
+                <div class="card-bookmark">
+                  <span class="view-count">조회 150</span>
+                  <span class="bookmark-group"><span class="heart">&#9829;</span><span class="bookmark-count">10</span></span>
+                </div>
+            </div>
+            <div class="matching-card">
+                <div class="card-content">
+                    <div class="card-info">
+                        <div class="card-header"><span class="card-title">[D조] 서초구 아침 매칭</span><span class="level-badge intermediate">D조</span></div>
+                        <div class="card-description">아침에 모여서 가볍게 운동하는 매칭입니다.</div>
+                    </div>
+                    <div class="card-image"><img src="https://cdn.pixabay.com/photo/2016/11/29/09/32/badminton-1867005_1280.jpg" alt="매칭 이미지" class="matching-img"></div>
+                </div>
+                <div class="card-details">
+                    <span class="detail-item">📍 서초구체육관</span>
+                    <span class="detail-item">🕒 24-06-16</span>
+                    <span class="detail-item">👥 7/10명</span>
+                    <span class="detail-item">🏸 급수: D조</span>
+                </div>
+                <div class="card-bookmark">
+                  <span class="view-count">조회 90</span>
+                  <span class="bookmark-group"><span class="heart">&#9829;</span><span class="bookmark-count">6</span></span>
+                </div>
+            </div>
+            <div class="matching-card">
+                <div class="card-content">
+                    <div class="card-info">
+                        <div class="card-header"><span class="card-title">[C조] 용산구 점심 매칭</span><span class="level-badge advanced">C조</span></div>
+                        <div class="card-description">점심시간에 실력자들과 함께하는 매칭입니다.</div>
+                    </div>
+                    <div class="card-image"><img src="https://cdn.pixabay.com/photo/2017/01/20/00/30/badminton-1994377_1280.jpg" alt="매칭 이미지" class="matching-img"></div>
+                </div>
+                <div class="card-details">
+                    <span class="detail-item">📍 용산구체육관</span>
+                    <span class="detail-item">🕒 24-06-17</span>
+                    <span class="detail-item">👥 11/14명</span>
+                    <span class="detail-item">🏸 급수: C조</span>
+                </div>
+                <div class="card-bookmark">
+                  <span class="view-count">조회 220</span>
+                  <span class="bookmark-group"><span class="heart">&#9829;</span><span class="bookmark-count">9</span></span>
+                </div>
+            </div>
+            <div class="matching-card">
+                <div class="card-content">
+                    <div class="card-info">
+                        <div class="card-header"><span class="card-title">[B조] 동작구 저녁 매칭</span><span class="level-badge pro">B조</span></div>
+                        <div class="card-description">B조 회원들과 함께하는 저녁 매칭입니다.</div>
+                    </div>
+                    <div class="card-image"><img src="https://cdn.pixabay.com/photo/2016/11/29/09/32/badminton-1867005_1280.jpg" alt="매칭 이미지" class="matching-img"></div>
+                </div>
+                <div class="card-details">
+                    <span class="detail-item">📍 동작구체육관</span>
+                    <span class="detail-item">🕒 24-06-18</span>
+                    <span class="detail-item">👥 5/8명</span>
+                    <span class="detail-item">🏸 급수: B조</span>
+                </div>
+                <div class="card-bookmark">
+                  <span class="view-count">조회 80</span>
+                  <span class="bookmark-group"><span class="heart">&#9829;</span><span class="bookmark-count">4</span></span>
+                </div>
+            </div>
+            <div class="matching-card">
+                <div class="card-content">
+                    <div class="card-info">
+                        <div class="card-header"><span class="card-title">[초심] 강서구 아침 매칭</span><span class="level-badge beginner">초심</span></div>
+                        <div class="card-description">아침에 모여서 가볍게 운동하는 매칭입니다.</div>
+                    </div>
+                    <div class="card-image"><img src="https://cdn.pixabay.com/photo/2017/01/20/00/30/badminton-1994377_1280.jpg" alt="매칭 이미지" class="matching-img"></div>
+                </div>
+                <div class="card-details">
+                    <span class="detail-item">📍 강서구체육관</span>
+                    <span class="detail-item">🕒 24-06-19</span>
+                    <span class="detail-item">👥 13/16명</span>
+                    <span class="detail-item">🏸 급수: 초심</span>
+                </div>
+                <div class="card-bookmark">
+                  <span class="view-count">조회 110</span>
+                  <span class="bookmark-group"><span class="heart">&#9829;</span><span class="bookmark-count">11</span></span>
+                </div>
+            </div>
+            <div class="matching-card">
+                <div class="card-content">
+                    <div class="card-info">
+                        <div class="card-header"><span class="card-title">[A조] 은평구 저녁 매칭</span><span class="level-badge pro">A조</span></div>
+                        <div class="card-description">최상급자 매칭입니다. 실전 감각을 키우고 싶은 분 환영!</div>
+                    </div>
+                    <div class="card-image"><img src="https://cdn.pixabay.com/photo/2016/11/29/09/32/badminton-1867005_1280.jpg" alt="매칭 이미지" class="matching-img"></div>
+                </div>
+                <div class="card-details">
+                    <span class="detail-item">📍 은평구체육관</span>
+                    <span class="detail-item">🕒 24-06-20</span>
+                    <span class="detail-item">👥 3/8명</span>
+                    <span class="detail-item">🏸 급수: A조</span>
+                </div>
+                <div class="card-bookmark">
+                  <span class="view-count">조회 30</span>
+                  <span class="bookmark-group"><span class="heart">&#9829;</span><span class="bookmark-count">2</span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
