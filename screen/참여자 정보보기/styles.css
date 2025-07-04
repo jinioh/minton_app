@@ -1,0 +1,156 @@
+body {
+  background: #111;
+  color: #f3f4f6;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.participant-detail-container {
+  max-width: 420px;
+  margin: 32px auto;
+  background: #18181b;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  padding: 0 0 32px 0;
+  border: 1px solid #111;
+}
+
+.participant-profile-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 28px 24px 12px 24px;
+}
+.participant-profile-img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #222;
+}
+.participant-profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+}
+.participant-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #f8fafc;
+}
+.participant-joined {
+  font-size: 14px;
+  color: #94a3b8;
+}
+.participant-level-badge {
+  background: #6366f1;
+  color: #fff;
+  font-size: 13px;
+  border-radius: 8px;
+  padding: 4px 12px;
+  font-weight: 500;
+  margin-left: 8px;
+}
+
+.participant-stats-row {
+  display: flex;
+  gap: 18px;
+  padding: 8px 24px 0 24px;
+  justify-content: center;
+}
+.stat-box {
+  background: #222;
+  border-radius: 10px;
+  padding: 12px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 90px;
+}
+.stat-label {
+  font-size: 13px;
+  color: #a1a1aa;
+  margin-bottom: 4px;
+}
+.stat-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fbbf24;
+}
+
+.participant-history-section {
+  padding: 24px 24px 0 24px;
+}
+.history-title {
+  font-size: 15px;
+  color: #f3f4f6;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.history-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.history-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #232323;
+}
+.history-date {
+  font-size: 13px;
+  color: #a1a1aa;
+  min-width: 80px;
+}
+.history-title-text {
+  font-size: 15px;
+  color: #f3f4f6;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.history-role-badge {
+  font-size: 12px;
+  border-radius: 8px;
+  padding: 2px 8px;
+  font-weight: 500;
+  margin-left: 4px;
+}
+.history-role-badge.host {
+  background: #60a5fa;
+  color: #18181b;
+}
+.history-role-badge.join {
+  background: #34d399;
+  color: #18181b;
+}
+.history-role-badge.wait {
+  background: #facc15;
+  color: #18181b;
+}
+
+@media (max-width: 600px) {
+  .participant-detail-container {
+    max-width: 100vw;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .participant-profile-row, .participant-stats-row, .participant-history-section {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .stat-box {
+    min-width: 0;
+    flex: 1;
+    padding: 10px 0;
+  }
+  .history-date {
+    min-width: 60px;
+  }
+}
