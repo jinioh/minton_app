@@ -42,18 +42,16 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2px;
+  flex: 1;
 }
 .profile-id {
+  font-size: 16px;
   font-weight: 600;
-  color: #f3f4f6;
+  color: #f8fafc;
 }
-.profile-town {
+.profile-town-time {
   font-size: 14px;
-  color: #60a5fa;
-}
-.profile-time {
-  font-size: 13px;
-  color: #9ca3af;
+  color: #94a3b8;
 }
 
 .meeting-time, .meeting-place {
@@ -254,6 +252,87 @@ body {
 .join-btn:hover {
   background: #3b82f6;
   color: #fff;
+}
+
+.recommend-section {
+  margin-top: 40px;
+}
+.recommend-title {
+  color: #f8fafc;
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 14px;
+  margin-left: 8px;
+}
+.recommend-carousel {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: #334155 #18181b;
+}
+.recommend-carousel::-webkit-scrollbar {
+  height: 7px;
+}
+.recommend-carousel::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 8px;
+}
+.recommend-card {
+  background: #23272f;
+  border-radius: 14px;
+  min-width: 140px;
+  max-width: 140px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 10px 10px 10px;
+  flex-shrink: 0;
+}
+.recommend-img {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+.recommend-info {
+  width: 100%;
+  text-align: left;
+}
+.recommend-title-text {
+  color: #f1f5f9;
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.recommend-town {
+  color: #94a3b8;
+  font-size: 13px;
+}
+.recommend-more-btn {
+  min-width: 70px;
+  height: 100px;
+  align-self: center;
+  background: #18181b;
+  color: #60a5fa;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 500;
+  margin-left: 8px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+}
+.recommend-more-btn:hover, .recommend-more-btn:focus {
+  background: #334155;
+  color: #f1f5f9;
+  border: 1px solid #60a5fa;
 }
 
 @media (max-width: 600px) {
