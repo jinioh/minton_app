@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>매칭 생성</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="match-create-container">
+    <h2 class="section-title">매칭 생성</h2>
+    <form class="match-form">
+      <div class="form-row">
+        <label for="title">제목</label>
+        <input type="text" id="title" class="input-text" placeholder="제목을 입력하세요">
+      </div>
+      <div class="form-row">
+        <label for="description">상세 모임정보</label>
+        <textarea id="description" class="input-textarea" rows="4" placeholder="모임에 대한 상세 정보를 입력하세요"></textarea>
+      </div>
+      <div class="form-row">
+        <label for="capacity">참여 정원</label>
+        <select id="capacity" class="input-select">
+          <option value="4">4명</option>
+          <option value="6">6명</option>
+          <option value="8">8명</option>
+          <option value="10">10명</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="date">날짜</label>
+        <input type="date" id="date" class="input-date">
+      </div>
+      <div class="form-row">
+        <label for="place">장소</label>
+        <div class="place-select-group">
+          <input type="text" id="place" class="input-text" placeholder="장소를 선택하세요" readonly>
+          <button type="button" class="map-select-btn">지도에서 선택</button>
+        </div>
+        <!-- <div class="place-guide">* 네이버 또는 카카오 맵을 통해 한 군데만 선택할 수 있습니다.</div> -->
+      </div>
+      <div class="form-row">
+        <label for="level">급수</label>
+        <div class="level-select-group">
+          <select id="level" class="input-select">
+            <option value="초심">초심 이상</option>
+            <option value="D조">D조 이상</option>
+            <option value="C조">C조 이상</option>
+            <option value="B조">B조 이상</option>
+            <option value="A조">A조 이상</option>
+          </select>
+          <span class="level-guide">* 선택한 급수 이상만 참여할 수 있습니다.</span>
+        </div>
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="save-btn">저장</button>
+        <button type="button" class="cancel-btn">취소</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html> 
