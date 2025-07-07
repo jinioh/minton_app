@@ -1,0 +1,225 @@
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background: #181818;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+.match-management-container {
+  max-width: 480px;
+  margin: 32px auto;
+  background: #232323;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  padding: 32px 24px;
+}
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 24px;
+  color: #fff;
+}
+.match-details h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #fff;
+}
+.match-meta {
+  display: flex;
+  gap: 16px;
+  font-size: 14px;
+  color: #bbb;
+}
+.applicants-section {
+  margin-top: 32px;
+}
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.section-header h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+.status-summary {
+  display: flex;
+  gap: 12px;
+}
+.status-item {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+.status-item.approved {
+  background: #2e7d32;
+  color: #fff;
+}
+.status-item.pending {
+  background: #f57c00;
+  color: #fff;
+}
+.status-item.rejected {
+  background: #d32f2f;
+  color: #fff;
+}
+.applicants-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.applicant-item {
+  background: #181818;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 4px solid #444;
+}
+.applicant-item.approved {
+  border-left-color: #4caf50;
+}
+.applicant-item.pending {
+  border-left-color: #ff9800;
+}
+.applicant-item.rejected {
+  border-left-color: #f44336;
+}
+.applicant-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.profile-image {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.applicant-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.applicant-name {
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+}
+.applicant-level {
+  font-size: 14px;
+  color: #bbb;
+}
+.applicant-rating {
+  font-size: 13px;
+  color: #bbb;
+}
+.applicant-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-end;
+}
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.checkbox-container input[type="checkbox"] {
+  display: none;
+}
+.checkmark {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #444;
+  border-radius: 4px;
+  position: relative;
+  display: inline-block;
+}
+.checkmark.approved {
+  background: #4caf50;
+  border-color: #4caf50;
+}
+.checkmark.pending {
+  border-color: #ff9800;
+}
+.checkmark.rejected {
+  background: #f44336;
+  border-color: #f44336;
+}
+.checkmark.approved::after,
+.checkmark.rejected::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+}
+.penalty-btn {
+  background: #d32f2f;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.management-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 32px;
+}
+.save-btn, .cancel-btn {
+  font-size: 15px;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.save-btn {
+  background: #4caf50;
+  color: #fff;
+}
+.cancel-btn {
+  background: #444;
+  color: #fff;
+}
+.approval-buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+}
+.approve-btn.large, .reject-btn.large {
+  font-size: 18px;
+  padding: 14px 32px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  width: 120px;
+}
+.approve-btn.large {
+  background: #4caf50;
+  color: #fff;
+}
+.reject-btn.large {
+  background: #d32f2f;
+  color: #fff;
+}
+@media (max-width: 480px) {
+  .approve-btn.large, .reject-btn.large {
+    width: 100px;
+    font-size: 16px;
+    padding: 12px 0;
+  }
+} 

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>매칭 관리</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="match-management-container">
+    <div class="match-info-section">
+      <h2 class="section-title">매칭 관리</h2>
+      <div class="match-details">
+        <h3>강남구 배드민턴 모임</h3>
+        <div class="match-meta">
+          <span class="date">2024-01-15</span>
+          <span class="location">강남구민체육관</span>
+          <span class="capacity">6명 (3/6 참가)</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="applicants-section">
+      <div class="section-header">
+        <h3>신청자 목록</h3>
+        <div class="status-summary">
+          <span class="status-item approved">승인: 3명</span>
+          <span class="status-item pending">대기: 2명</span>
+          <span class="status-item rejected">거절: 1명</span>
+        </div>
+      </div>
+
+      <div class="auto-approval-info">
+        <span class="info-icon">ℹ️</span>
+        <span>급수 조건에 맞는 참가자는 자동으로 승인됩니다.<br>무단 불참 시 자동으로 패널티가 부여됩니다.<br>매너 문제는 모임 종료 후 참가자 평가를 통해 반영됩니다.</span>
+      </div>
+
+      <!-- 자동 승인된 참가자들 -->
+      <div class="approval-section">
+        <h4 class="section-subtitle">✅ 자동 승인된 참가자</h4>
+        <div class="applicants-list">
+          <div class="applicant-item auto-approved">
+            <div class="applicant-info">
+              <img src="/assets/default-profile.png" alt="프로필" class="profile-image">
+              <div class="applicant-details">
+                <div class="applicant-name">김철수</div>
+                <div class="applicant-level">B조</div>
+                <div class="applicant-rating">평점: 4.5</div>
+                <div class="trust-score">신뢰도: 95점</div>
+              </div>
+            </div>
+            <div class="applicant-actions">
+              <span class="auto-approval-badge">자동승인</span>
+            </div>
+          </div>
+
+          <div class="applicant-item auto-approved">
+            <div class="applicant-info">
+              <img src="/assets/default-profile.png" alt="프로필" class="profile-image">
+              <div class="applicant-details">
+                <div class="applicant-name">이영희</div>
+                <div class="applicant-level">C조</div>
+                <div class="applicant-rating">평점: 4.2</div>
+                <div class="trust-score">신뢰도: 88점</div>
+              </div>
+            </div>
+            <div class="applicant-actions">
+              <span class="auto-approval-badge">자동승인</span>
+            </div>
+          </div>
+
+          <div class="applicant-item auto-approved">
+            <div class="applicant-info">
+              <img src="/assets/default-profile.png" alt="프로필" class="profile-image">
+              <div class="applicant-details">
+                <div class="applicant-name">박민수</div>
+                <div class="applicant-level">A조</div>
+                <div class="applicant-rating">평점: 4.8</div>
+                <div class="trust-score">신뢰도: 92점</div>
+              </div>
+            </div>
+            <div class="applicant-actions">
+              <span class="auto-approval-badge">자동승인</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 승인 대기 중인 참가자들 -->
+      <div class="approval-section">
+        <h4 class="section-subtitle">⏳ 승인 대기 중</h4>
+        <div class="applicants-list">
+          <div class="applicant-item pending">
+            <div class="applicant-info">
+              <img src="/assets/default-profile.png" alt="프로필" class="profile-image">
+              <div class="applicant-details">
+                <div class="applicant-name">정현우</div>
+                <div class="applicant-level">C조</div>
+                <div class="applicant-rating">평점: 4.1</div>
+                <div class="trust-score">신뢰도: 80점</div>
+              </div>
+            </div>
+            <div class="applicant-actions">
+              <div class="approval-buttons">
+                <button class="approve-btn large">승인</button>
+                <button class="reject-btn large">거절</button>
+              </div>
+            </div>
+          </div>
+          <!-- 다른 승인대기 참가자도 동일하게 구성 -->
+        </div>
+      </div>
+
+      <div class="applicants-list">
+        <div class="applicant-item rejected">
+          <div class="applicant-info">
+            <img src="/assets/default-profile.png" alt="프로필" class="profile-image">
+            <div class="applicant-details">
+              <div class="applicant-name">한소희</div>
+              <div class="applicant-level">초심</div>
+              <div class="applicant-rating">평점: 3.5</div>
+              <div class="trust-score">신뢰도: 65점</div>
+              <div class="rejection-reason">급수 조건 미달로 거절</div>
+            </div>
+          </div>
+          <div class="applicant-actions">
+            <span class="rejection-badge">거절됨</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="management-actions">
+      <button class="save-btn">변경사항 저장</button>
+      <button class="cancel-btn">취소</button>
+    </div>
+  </div>
+</body>
+</html> 
