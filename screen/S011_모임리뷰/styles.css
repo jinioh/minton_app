@@ -1,0 +1,126 @@
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background: #181818;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+.gathering-review-container {
+  max-width: 480px;
+  margin: 32px auto;
+  background: #232323;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  padding: 32px 24px;
+}
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 24px;
+  color: #fff;
+}
+.gathering-review-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+label {
+  font-size: 15px;
+  color: #bbb;
+  margin-bottom: 2px;
+}
+.input-textarea {
+  background: #181818;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 15px;
+  resize: vertical;
+}
+.star-rating {
+  display: flex;
+  gap: 4px;
+  font-size: 28px;
+  color: #bbb;
+  cursor: pointer;
+}
+.star-rating .star.selected {
+  color: #ffd600;
+}
+.photo-upload-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.photo-upload-input {
+  display: none;
+}
+.photo-upload-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: #181818;
+  border: 2px dashed #4caf50;
+  border-radius: 12px;
+  color: #4caf50;
+  font-size: 32px;
+  cursor: pointer;
+  margin-bottom: 8px;
+  transition: background 0.2s, border 0.2s;
+}
+.photo-upload-label:active, .photo-upload-label:hover {
+  background: #263a29;
+  border-color: #388e3c;
+}
+.plus-icon {
+  font-size: 36px;
+  line-height: 1;
+}
+.photo-upload-text {
+  font-size: 13px;
+  color: #4caf50;
+  margin-top: 4px;
+}
+.photo-preview-list {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+.photo-preview-list img {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #4caf50;
+}
+.form-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+.save-btn, .cancel-btn {
+  font-size: 15px;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.save-btn {
+  background: #4caf50;
+  color: #fff;
+}
+.cancel-btn {
+  background: #444;
+  color: #fff;
+} 

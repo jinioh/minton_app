@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>모임 리뷰</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="gathering-review-container">
+    <h2 class="section-title">모임 리뷰</h2>
+    <form class="gathering-review-form">
+      <div class="form-row">
+        <label>별점</label>
+        <div class="star-rating">
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+        </div>
+      </div>
+      <div class="form-row">
+        <label>상세 후기</label>
+        <textarea class="input-textarea" rows="4" placeholder="모임에 대한 후기를 작성해 주세요."></textarea>
+      </div>
+      <div class="form-row">
+        <label>사진 등록 (최대 3장)</label>
+        <div class="photo-upload-group">
+          <input type="file" id="photo-upload" class="photo-upload-input" accept="image/*" multiple style="display:none;">
+          <label for="photo-upload" class="photo-upload-label">
+            <span class="plus-icon">＋</span>
+            <span class="photo-upload-text">사진 추가</span>
+          </label>
+          <div class="photo-preview-list">
+            <!-- 업로드된 사진 미리보기 썸네일이 여기에 표시됩니다. -->
+          </div>
+        </div>
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="save-btn">리뷰 저장</button>
+        <button type="button" class="cancel-btn">취소</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html> 
