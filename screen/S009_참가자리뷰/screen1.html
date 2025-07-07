@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>참가자 리뷰</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="review-container">
+    <h2 class="section-title">참가자 리뷰</h2>
+    <div class="participants-section">
+      <h3>참여자 선택</h3>
+      <div class="participants-list">
+        <button class="participant-btn selected">김철수</button>
+        <button class="participant-btn">이영희</button>
+        <button class="participant-btn">박민수</button>
+        <button class="participant-btn">정현우</button>
+      </div>
+    </div>
+    <form class="review-form">
+      <div class="form-row">
+        <label>별점</label>
+        <div class="star-rating">
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+        </div>
+      </div>
+      <div class="form-row">
+        <label>상세 리뷰</label>
+        <textarea class="input-textarea" rows="4" placeholder="상세한 후기를 작성해 주세요."></textarea>
+      </div>
+      <div class="form-row">
+        <label>좋았던 점 (복수 선택)</label>
+        <div class="good-points">
+          <button type="button" class="good-point-btn">친절해요</button>
+          <button type="button" class="good-point-btn">매너가 좋아요</button>
+          <button type="button" class="good-point-btn">열정적이에요</button>
+          <button type="button" class="good-point-btn">피드백이 좋아요</button>
+          <button type="button" class="good-point-btn">시간 약속을 잘 지켜요</button>
+        </div>
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="save-btn">리뷰 저장</button>
+        <button type="button" class="cancel-btn">취소</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html> 
