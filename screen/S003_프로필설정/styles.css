@@ -168,4 +168,19 @@ body {
 .cancel-btn {
   background: #444;
   color: #fff;
+}
+.location-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+.location-count {
+  font-size: 13px;
+  color: #4caf50;
+  font-weight: bold;
+}
+.location-guide {
+  font-size: 13px;
+  color: #bbb;
 } 
