@@ -1,156 +1,81 @@
 body {
-  background: #111;
-  color: #f3f4f6;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
+  background: #181818;
+  color: #fff;
   margin: 0;
   padding: 0;
 }
-
-.participant-detail-container {
-  max-width: 420px;
+.participant-info-container {
+  max-width: 480px;
   margin: 32px auto;
-  background: #18181b;
+  background: #232323;
   border-radius: 16px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
-  padding: 0 0 32px 0;
-  border: 1px solid #111;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  padding: 32px 24px;
 }
-
-.participant-profile-row {
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 24px;
+  color: #4caf50;
+}
+.profile-section {
   display: flex;
   align-items: center;
-  gap: 18px;
-  padding: 28px 24px 12px 24px;
+  gap: 24px;
+  margin-bottom: 24px;
 }
-.participant-profile-img {
-  width: 56px;
-  height: 56px;
+.profile-image {
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid #222;
+  border: 2px solid #4caf50;
 }
-.participant-profile-info {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
+.profile-info {
   flex: 1;
 }
-.participant-name {
-  font-size: 18px;
-  font-weight: 600;
-  color: #f8fafc;
-}
-.participant-joined {
-  font-size: 14px;
-  color: #94a3b8;
-}
-.participant-level-badge {
-  background: #6366f1;
-  color: #fff;
-  font-size: 13px;
-  border-radius: 8px;
-  padding: 4px 12px;
-  font-weight: 500;
-  margin-left: 8px;
-}
-
-.participant-stats-row {
+.profile-row {
   display: flex;
-  gap: 18px;
-  padding: 8px 24px 0 24px;
-  justify-content: center;
-}
-.stat-box {
-  background: #222;
-  border-radius: 10px;
-  padding: 12px 20px;
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  min-width: 90px;
-}
-.stat-label {
-  font-size: 13px;
-  color: #a1a1aa;
-  margin-bottom: 4px;
-}
-.stat-value {
-  font-size: 20px;
-  font-weight: 700;
-  color: #fbbf24;
-}
-
-.participant-history-section {
-  padding: 24px 24px 0 24px;
-}
-.history-title {
-  font-size: 15px;
-  color: #f3f4f6;
   margin-bottom: 10px;
-  font-weight: 600;
+  gap: 8px;
 }
-.history-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.history-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 0;
-  border-bottom: 1px solid #232323;
-}
-.history-date {
-  font-size: 13px;
-  color: #a1a1aa;
+.label {
   min-width: 80px;
-}
-.history-title-text {
+  color: #bbb;
   font-size: 15px;
-  color: #f3f4f6;
-  flex: 1;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
-.history-role-badge {
-  font-size: 12px;
-  border-radius: 8px;
-  padding: 2px 8px;
-  font-weight: 500;
-  margin-left: 4px;
+.value {
+  font-weight: bold;
+  color: #4caf50;
+  font-size: 16px;
 }
-.history-role-badge.host {
-  background: #60a5fa;
-  color: #18181b;
+.review-section {
+  margin-top: 24px;
 }
-.history-role-badge.join {
-  background: #34d399;
-  color: #18181b;
+.review-title {
+  font-size: 17px;
+  font-weight: bold;
+  color: #4caf50;
+  margin-bottom: 10px;
 }
-.history-role-badge.wait {
-  background: #facc15;
-  color: #18181b;
+.review-list {
+  list-style: disc inside;
+  margin: 0 0 8px 0;
+  padding: 0 0 0 16px;
+  color: #fff;
 }
-
-@media (max-width: 600px) {
-  .participant-detail-container {
-    max-width: 100vw;
-    margin: 0;
-    border-radius: 0;
-    box-shadow: none;
-  }
-  .participant-profile-row, .participant-stats-row, .participant-history-section {
-    padding-left: 12px;
-    padding-right: 12px;
-  }
-  .stat-box {
-    min-width: 0;
-    flex: 1;
-    padding: 10px 0;
-  }
-  .history-date {
-    min-width: 60px;
-  }
+.penalty-section {
+  margin-top: 24px;
+}
+.penalty-title {
+  font-size: 17px;
+  font-weight: bold;
+  color: #ffb300;
+  margin-bottom: 10px;
+}
+.penalty-info {
+  font-size: 15px;
+  color: #ffb300;
 }
