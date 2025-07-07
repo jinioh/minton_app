@@ -1,0 +1,171 @@
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background: #181818;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+.profile-container {
+  max-width: 480px;
+  margin: 32px auto;
+  background: #232323;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  padding: 32px 24px;
+}
+.profile-header {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+.profile-image-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.profile-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #444;
+}
+.change-image-btn {
+  font-size: 12px;
+  padding: 4px 10px;
+  border: none;
+  background: #333;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #fff;
+}
+.profile-info-section {
+  flex: 1;
+}
+.profile-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  gap: 8px;
+}
+.label {
+  min-width: 80px;
+  color: #bbb;
+  font-size: 15px;
+}
+.nickname {
+  font-weight: bold;
+  font-size: 17px;
+  color: #fff;
+}
+.edit-nickname-btn {
+  font-size: 12px;
+  padding: 2px 8px;
+  border: none;
+  background: #2d6fa1;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #fff;
+}
+.skill-level {
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background: #181818;
+  color: #fff;
+}
+.locations {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.location-input {
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  width: 120px;
+  background: #181818;
+  color: #fff;
+}
+.add-location-btn {
+  font-size: 12px;
+  padding: 2px 8px;
+  border: none;
+  background: #2e7d32;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #fff;
+}
+.location-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 8px;
+}
+.location-list li {
+  background: #333;
+  border-radius: 8px;
+  padding: 2px 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #fff;
+}
+.remove-location-btn {
+  font-size: 11px;
+  border: none;
+  background: #b71c1c;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #fff;
+}
+.profile-activity {
+  margin-bottom: 32px;
+}
+.activity-row {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  gap: 12px;
+}
+.activity-value {
+  font-weight: bold;
+  color: #fff;
+}
+.review-list {
+  list-style: disc inside;
+  margin: 0 0 8px 0;
+  padding: 0 0 0 16px;
+}
+.more-reviews-btn {
+  font-size: 12px;
+  padding: 2px 8px;
+  border: none;
+  background: #333;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #fff;
+}
+.profile-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+.save-btn, .cancel-btn {
+  font-size: 15px;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.save-btn {
+  background: #4caf50;
+  color: #fff;
+}
+.cancel-btn {
+  background: #444;
+  color: #fff;
+} 

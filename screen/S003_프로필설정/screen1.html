@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>프로필 설정</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="profile-container">
+    <section class="profile-header">
+      <div class="profile-image-section">
+        <img src="/assets/default-profile.png" alt="프로필 이미지" class="profile-image">
+        <button class="change-image-btn">이미지 변경</button>
+      </div>
+      <div class="profile-info-section">
+        <div class="profile-row">
+          <span class="label">닉네임</span>
+          <span class="nickname">홍길동</span>
+          <button class="edit-nickname-btn">수정</button>
+        </div>
+        <div class="profile-row">
+          <span class="label">가입일</span>
+          <span class="join-date">2024-01-01</span>
+        </div>
+        <div class="profile-row">
+          <span class="label">실력 급수</span>
+          <select class="skill-level">
+            <option>Beginner</option>
+            <option>Intermediate</option>
+            <option>Advanced</option>
+            <option>Pro</option>
+          </select>
+        </div>
+        <div class="profile-row">
+          <span class="label">위치</span>
+          <div class="locations">
+            <!-- 위치가 2개 미만일 때만 아래 input과 버튼이 보이도록 JS로 제어 필요 -->
+            <input type="text" class="location-input" placeholder="구 입력">
+            <button class="add-location-btn">추가</button>
+            <ul class="location-list">
+              <li>강남구 <button class="remove-location-btn">삭제</button></li>
+              <li>송파구 <button class="remove-location-btn">삭제</button></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="profile-activity">
+      <div class="activity-row">
+        <span class="label">모임 참여횟수</span>
+        <span class="activity-value">12회</span>
+      </div>
+      <div class="activity-row">
+        <span class="label">모임에서 평가한 나의 점수</span>
+        <span class="activity-value">4.7 / 5.0</span>
+      </div>
+      <div class="activity-row">
+        <span class="label">나에대한 후기</span>
+        <ul class="review-list">
+          <li>친절하고 실력이 좋아요!</li>
+          <li>시간 약속을 잘 지켜요.</li>
+          <li>다시 함께하고 싶어요.</li>
+        </ul>
+        <button class="more-reviews-btn">더보기</button>
+      </div>
+    </section>
+    <section class="profile-actions">
+      <button class="save-btn">저장</button>
+      <button class="cancel-btn">취소</button>
+    </section>
+  </div>
+</body>
+</html> 
