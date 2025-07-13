@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>친구 요청/수락</title>
+    <link rel="stylesheet" href="friend_request_accept.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="notification-container">
+        <!-- 헤더 -->
+        <div class="header">
+            <button class="back-btn">←</button>
+            <h1>알림</h1>
+            <button class="menu-btn">⋯</button>
+        </div>
+
+        <!-- 탭 네비게이션 -->
+        <div class="tab-navigation">
+            <button class="tab-btn active" data-tab="all">전체</button>
+            <button class="tab-btn" data-tab="matching">매칭</button>
+            <button class="tab-btn" data-tab="friends">친구</button>
+            <button class="tab-btn" data-tab="reviews">후기</button>
+        </div>
+
+        <!-- 알림 리스트 -->
+        <div class="notification-list">
+            <!-- 전체 탭 내용 -->
+            <div class="tab-content active" id="all">
+                <!-- 매칭 승인 알림 -->
+                <div class="notification-item unread">
+                    <div class="notification-icon approved">
+                        <span>✓</span>
+                    </div>
+                    <div class="notification-content">
+                        <div class="notification-title">매칭 신청이 승인되었습니다</div>
+                        <div class="notification-message">강남구 배드민턴 모임에 참여가 승인되었습니다.</div>
+                        <div class="notification-time">방금 전</div>
+                    </div>
+                    <div class="notification-arrow">></div>
+                </div>
+
+                <!-- 매칭 시작 임박 알림 -->
+                <div class="notification-item unread urgent">
+                    <div class="notification-icon urgent">
+                        <span>⏰</span>
+                    </div>
+                    <div class="notification-content">
+                        <div class="notification-title">매칭이 곧 시작됩니다!</div>
+                        <div class="notification-message">서초구 테니스 모임이 30분 후에 시작됩니다.</div>
+                        <div class="notification-time">10분 전</div>
+                    </div>
+                    <div class="notification-arrow">></div>
+                </div>
+
+                <!-- 친구 요청 알림 -->
+                <div class="notification-item unread">
+                    <div class="user-avatar">
+                        <img src="https://via.placeholder.com/40x40/4caf50/fff?text=김" alt="사용자 아바타">
+                    </div>
+                    <div class="notification-content">
+                        <div class="notification-title">김철수님이 친구 요청을 보냈습니다</div>
+                        <div class="notification-message">배드민턴 레벨: 중급 | 활동 지역: 강남구</div>
+                        <div class="notification-time">30분 전</div>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="accept-btn">수락</button>
+                        <button class="reject-btn">거절</button>
+                    </div>
+                </div>
+
+                <!-- 후기 요청 알림 -->
+                <div class="notification-item unread">
+                    <div class="notification-icon review">
+                        <span>⭐</span>
+                    </div>
+                    <div class="notification-content">
+                        <div class="notification-title">후기를 남겨주세요</div>
+                        <div class="notification-message">마포구 축구 모임에 대한 후기를 작성해주세요.</div>
+                        <div class="notification-time">1시간 전</div>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="write-review-btn">후기 작성</button>
+                    </div>
+                </div>
+
+                <!-- 매칭 일정 변경 알림 -->
+                <div class="notification-item">
+                    <div class="notification-icon changed">
+                        <span>↻</span>
+                    </div>
+                    <div class="notification-content">
+                        <div class="notification-title">매칭 일정이 변경되었습니다</div>
+                        <div class="notification-message">송파구 농구 모임의 일정이 변경되었습니다.</div>
+                        <div class="notification-time">2시간 전</div>
+                    </div>
+                    <div class="notification-arrow">></div>
+                </div>
+            </div>
+
+            <!-- 매칭 탭 내용 -->
+            <div class="tab-content" id="matching">
+                <!-- 매칭 관련 알림들만 표시 -->
+            </div>
+
+            <!-- 친구 탭 내용 -->
+            <div class="tab-content" id="friends">
+                <!-- 친구 관련 알림들만 표시 -->
+            </div>
+
+            <!-- 후기 탭 내용 -->
+            <div class="tab-content" id="reviews">
+                <!-- 후기 관련 알림들만 표시 -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 탭 전환 기능
+        document.querySelectorAll('.tab-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                // 모든 탭 비활성화
+                document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+                
+                // 클릭된 탭 활성화
+                button.classList.add('active');
+                const tabId = button.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html> 
