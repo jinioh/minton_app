@@ -1,0 +1,186 @@
+# 운동갈래 코드 컨벤션
+
+## 파일명 규칙
+
+### HTML 파일
+- 소문자와 하이픈 사용: `screen1.html`, `matching-list.html`
+- 의미있는 이름 사용: `login-form.html`, `user-profile.html`
+
+### CSS 파일
+- 소문자와 하이픈 사용: `styles.css`, `main-styles.css`
+- 컴포넌트별 분리: `buttons.css`, `cards.css`, `forms.css`
+
+### Dart 파일 (Flutter)
+- 카멜케이스 사용: `matchingList.dart`, `userProfile.dart`
+- 클래스명은 파스칼케이스: `MatchingList`, `UserProfile`
+
+## 변수명 규칙
+
+### CSS 변수
+```css
+:root {
+  --color-primary: #4CAF50;
+  --spacing-md: 16px;
+  --font-size-lg: 18px;
+}
+```
+
+### Dart 변수 (Flutter)
+```dart
+// 카멜케이스 사용
+String userName = "홍길동";
+int matchingCount = 5;
+bool isLoggedIn = true;
+
+// 상수는 스네이크케이스
+const String API_BASE_URL = "https://api.minton.com";
+```
+
+## 함수명 규칙
+
+### Dart 함수 (Flutter)
+```dart
+// 카멜케이스 사용
+void fetchMatchingList() { }
+String getUserName() { return "홍길동"; }
+bool isValidEmail(String email) { return true; }
+
+// 이벤트 핸들러
+void onLoginPressed() { }
+void onCardTapped() { }
+```
+
+## 클래스명 규칙
+
+### CSS 클래스
+```css
+/* 케밥케이스 사용 */
+.matching-card { }
+.user-profile { }
+.login-button { }
+
+/* BEM 방법론 적용 */
+.card__title { }
+.card__description { }
+.card--highlighted { }
+```
+
+### Dart 클래스 (Flutter)
+```dart
+// 파스칼케이스 사용
+class MatchingCard extends StatelessWidget { }
+class UserProfileScreen extends StatefulWidget { }
+class ApiService { }
+```
+
+## 주석 규칙
+
+### HTML 주석
+```html
+<!-- 섹션 시작 -->
+<div class="matching-list">
+  <!-- 매칭 카드 아이템 -->
+  <div class="card card-listing">
+    <!-- 카드 내용 -->
+  </div>
+</div>
+```
+
+### CSS 주석
+```css
+/* ===== 카드 컴포넌트 ===== */
+.card-listing {
+  /* 카드 기본 스타일 */
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+}
+
+/* 카드 호버 효과 */
+.card-listing:hover {
+  border-color: var(--color-primary);
+}
+```
+
+### Dart 주석 (Flutter)
+```dart
+/// 매칭 카드 위젯
+/// 
+/// 매칭 정보를 카드 형태로 표시하는 위젯입니다.
+class MatchingCard extends StatelessWidget {
+  // 매칭 데이터
+  final Matching matching;
+  
+  // 생성자
+  const MatchingCard({
+    Key? key,
+    required this.matching,
+  }) : super(key: key);
+  
+  @override
+  Widget build(BuildContext context) {
+    // 카드 UI 구성
+    return Card(
+      child: Column(
+        children: [
+          // 제목과 레벨 배지
+          _buildHeader(),
+          // 설명 텍스트
+          _buildDescription(),
+        ],
+      ),
+    );
+  }
+}
+```
+
+## 폴더 구조 규칙
+
+### Flutter 프로젝트
+```
+lib/
+  ├── core/           # 핵심 기능
+  │   ├── constants/  # 상수
+  │   ├── theme/      # 테마
+  │   └── utils/      # 유틸리티
+  ├── features/       # 기능별 모듈
+  │   ├── auth/       # 인증
+  │   ├── matching/   # 매칭
+  │   └── profile/    # 프로필
+  └── shared/         # 공통 컴포넌트
+      ├── widgets/    # 공통 위젯
+      └── services/   # 공통 서비스
+```
+
+### 웹 프로젝트
+```
+screen/
+  ├── S001_랜딩/
+  ├── S002_로그인/
+  ├── S003_프로필설정/
+  └── S004_매칭리스트/
+
+docs/
+  └── design-system/
+      ├── design-system.html
+      ├── design-system.css
+      └── README.md
+```
+
+## 코드 포맷팅
+
+### 들여쓰기
+- HTML/CSS: 2칸 공백
+- Dart: 2칸 공백
+
+### 줄 길이
+- 최대 80자 (가능한 경우)
+- 긴 줄은 적절히 분리
+
+### 빈 줄 사용
+- 논리적 섹션 구분
+- 함수/클래스 사이
+- 관련 없는 코드 블록 사이
+description:
+globs:
+alwaysApply: false
+---

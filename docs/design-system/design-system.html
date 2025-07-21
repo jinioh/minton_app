@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>운동갈래 디자인 시스템</title>
+    <link rel="stylesheet" href="design-system.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="design-system">
+        <!-- 헤더 -->
+        <header class="ds-header">
+            <h1>운동갈래 디자인 시스템</h1>
+            <p>소모임 스타일 기반의 밝고 친근한 디자인 시스템</p>
+        </header>
+
+        <!-- 색상 팔레트 -->
+        <section class="ds-section">
+            <h2>🎨 색상 팔레트</h2>
+            <div class="color-grid">
+                <div class="color-item">
+                    <div class="color-swatch primary-bg"></div>
+                    <div class="color-info">
+                        <h4>Primary Green</h4>
+                        <p>#4CAF50</p>
+                        <p>메인 포인트 색상</p>
+                    </div>
+                </div>
+                <div class="color-item">
+                    <div class="color-swatch background-bg"></div>
+                    <div class="color-info">
+                        <h4>Background</h4>
+                        <p>#FFFFFF</p>
+                        <p>메인 배경색</p>
+                    </div>
+                </div>
+                <div class="color-item">
+                    <div class="color-swatch text-primary-bg"></div>
+                    <div class="color-info">
+                        <h4>Text Primary</h4>
+                        <p>#333333</p>
+                        <p>주요 텍스트</p>
+                    </div>
+                </div>
+                <div class="color-item">
+                    <div class="color-swatch text-secondary-bg"></div>
+                    <div class="color-info">
+                        <h4>Text Secondary</h4>
+                        <p>#666666</p>
+                        <p>보조 텍스트</p>
+                    </div>
+                </div>
+                <div class="color-item">
+                    <div class="color-swatch text-tertiary-bg"></div>
+                    <div class="color-info">
+                        <h4>Text Tertiary</h4>
+                        <p>#999999</p>
+                        <p>부가 정보</p>
+                    </div>
+                </div>
+                <div class="color-item">
+                    <div class="color-swatch border-bg"></div>
+                    <div class="color-info">
+                        <h4>Border</h4>
+                        <p>#E5E5E5</p>
+                        <p>테두리 색상</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 타이포그래피 -->
+        <section class="ds-section">
+            <h2>📝 타이포그래피</h2>
+            <div class="typography-examples">
+                <div class="text-example">
+                    <h1 class="text-display">Display Large (32px)</h1>
+                    <p class="text-caption">메인 페이지 제목</p>
+                </div>
+                <div class="text-example">
+                    <h2 class="text-headline">Headline (24px)</h2>
+                    <p class="text-caption">섹션 제목</p>
+                </div>
+                <div class="text-example">
+                    <h3 class="text-title">Title (18px)</h3>
+                    <p class="text-caption">카드 제목</p>
+                </div>
+                <div class="text-example">
+                    <p class="text-body">Body (16px) - 기본 본문 텍스트입니다.</p>
+                    <p class="text-caption">본문 내용</p>
+                </div>
+                <div class="text-example">
+                    <p class="text-caption">Caption (14px) - 부가 정보나 설명</p>
+                    <p class="text-caption">부가 정보</p>
+                </div>
+                <div class="text-example">
+                    <p class="text-small">Small (12px) - 작은 텍스트</p>
+                    <p class="text-caption">메타데이터</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 버튼 시스템 -->
+        <section class="ds-section">
+            <h2>🔘 버튼 시스템</h2>
+            <div class="button-examples">
+                <div class="button-group">
+                    <h4>Primary Buttons</h4>
+                    <button class="btn btn-primary btn-large">Large Button</button>
+                    <button class="btn btn-primary">Default Button</button>
+                    <button class="btn btn-primary btn-small">Small Button</button>
+                </div>
+                <div class="button-group">
+                    <h4>Secondary Buttons</h4>
+                    <button class="btn btn-secondary btn-large">Large Button</button>
+                    <button class="btn btn-secondary">Default Button</button>
+                    <button class="btn btn-secondary btn-small">Small Button</button>
+                </div>
+                <div class="button-group">
+                    <h4>Text Buttons</h4>
+                    <button class="btn btn-text btn-large">Large Button</button>
+                    <button class="btn btn-text">Default Button</button>
+                    <button class="btn btn-text btn-small">Small Button</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 카드 컴포넌트 -->
+        <section class="ds-section">
+            <h2>🃏 카드 컴포넌트</h2>
+            <div class="card-examples">
+                <!-- 리스팅 카드 1 (이미지 있음) -->
+                <div class="card card-listing card-with-image">
+                    <div class="card-content">
+                        <div class="card-info">
+                            <div class="card-header">
+                                <span class="card-title">[초보환영] 강남구 배드민턴 매칭</span>
+                                <span class="level-badge beginner">초심</span>
+                            </div>
+                            <div class="card-description">
+                                초보자도 환영합니다! 친근한 분위기에서 배드민턴을 즐겨보세요. 체력에 맞춰 쉬어가면서 진행하겠습니다.
+                            </div>
+                        </div>
+                        <div class="card-image">
+                            <img src="https://www.nowonsc.kr/design/homepage/nowon/img/sub/badminton_img0301.jpg" alt="매칭 이미지">
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <span class="detail-item">📍 강남구민체육관</span>
+                        <span class="detail-item">🕒 24-06-10</span>
+                        <span class="detail-item">👥 8/12명</span>
+                        <span class="detail-item">🏸 급수: 초심</span>
+                    </div>
+                    <div class="card-bookmark">
+                        <span class="view-count">조회 133</span>
+                        <span class="bookmark-group"><span class="heart">❤️</span><span class="bookmark-count">12</span></span>
+                    </div>
+                </div>
+
+                <!-- 리스팅 카드 2 (이미지 없음) -->
+                <div class="card card-listing">
+                    <div class="card-content">
+                        <div class="card-info">
+                            <div class="card-header">
+                                <span class="card-title">[중급] 송파구 저녁 매칭</span>
+                                <span class="level-badge intermediate">D조</span>
+                            </div>
+                            <div class="card-description">
+                                중급자들을 위한 매칭입니다. 실력 향상을 위한 연습과 함께 즐거운 경기를 해보세요.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <span class="detail-item">📍 송파구체육관</span>
+                        <span class="detail-item">🕒 24-06-11</span>
+                        <span class="detail-item">👥 10/16명</span>
+                        <span class="detail-item">🏸 급수: D조</span>
+                    </div>
+                    <div class="card-bookmark">
+                        <span class="view-count">조회 50</span>
+                        <span class="bookmark-group"><span class="heart">❤️</span><span class="bookmark-count">8</span></span>
+                    </div>
+                </div>
+
+                <!-- 리스팅 카드 3 (이미지 있음) -->
+                <div class="card card-listing card-with-image">
+                    <div class="card-content">
+                        <div class="card-info">
+                            <div class="card-header">
+                                <span class="card-title">[상급] 마포구 아침 매칭</span>
+                                <span class="level-badge advanced">C조</span>
+                            </div>
+                            <div class="card-description">
+                                상급자 위주로 진행합니다. 아침에 상쾌하게 운동해요!
+                            </div>
+                        </div>
+                        <div class="card-image">
+                            <img src="https://www.nowonsc.kr/design/homepage/nowon/img/sub/badminton_img0301.jpg" alt="매칭 이미지">
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <span class="detail-item">📍 마포구체육관</span>
+                        <span class="detail-item">🕒 24-06-12</span>
+                        <span class="detail-item">👥 6/10명</span>
+                        <span class="detail-item">🏸 급수: C조</span>
+                    </div>
+                    <div class="card-bookmark">
+                        <span class="view-count">조회 200</span>
+                        <span class="bookmark-group"><span class="heart">❤️</span><span class="bookmark-count">5</span></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 입력 필드 -->
+        <section class="ds-section">
+            <h2>📝 입력 필드</h2>
+            <div class="input-examples">
+                <div class="input-group">
+                    <label for="input-default">기본 입력</label>
+                    <input type="text" id="input-default" placeholder="텍스트를 입력하세요">
+                </div>
+                <div class="input-group">
+                    <label for="input-search">검색 입력</label>
+                    <div class="search-input-wrapper">
+                        <input type="text" id="input-search" placeholder="장소, 제목 검색">
+                        <button class="search-btn">🔍</button>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="input-select">선택 입력</label>
+                    <select id="input-select">
+                        <option>급수를 선택하세요</option>
+                        <option>초심</option>
+                        <option>D조</option>
+                        <option>C조</option>
+                        <option>B조</option>
+                        <option>A조</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <!-- 배지 & 태그 -->
+        <section class="ds-section">
+            <h2>🏷️ 배지 & 태그</h2>
+            <div class="badge-examples">
+                <div class="badge-group">
+                    <h4>레벨 배지</h4>
+                    <span class="badge badge-beginner">초심</span>
+                    <span class="badge badge-intermediate">D조</span>
+                    <span class="badge badge-advanced">C조</span>
+                    <span class="badge badge-pro">B조</span>
+                    <span class="badge badge-master">A조</span>
+                </div>
+                <div class="badge-group">
+                    <h4>상태 배지</h4>
+                    <span class="badge badge-success">성공</span>
+                    <span class="badge badge-warning">주의</span>
+                    <span class="badge badge-error">오류</span>
+                    <span class="badge badge-info">정보</span>
+                </div>
+                <div class="badge-group">
+                    <h4>태그</h4>
+                    <span class="tag">운동/스포츠</span>
+                    <span class="tag">배드민턴</span>
+                    <span class="tag">초보환영</span>
+                    <span class="tag">강남구</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 네비게이션 -->
+        <section class="ds-section">
+            <h2>🧭 네비게이션</h2>
+            <div class="nav-examples">
+                <nav class="nav-tabs">
+                    <a href="#" class="nav-tab active">전체</a>
+                    <a href="#" class="nav-tab">배드민턴</a>
+                    <a href="#" class="nav-tab">자전거</a>
+                    <a href="#" class="nav-tab">등산</a>
+                    <a href="#" class="nav-tab">러닝</a>
+                </nav>
+                
+                <nav class="nav-breadcrumb">
+                    <a href="#" class="breadcrumb-item">홈</a>
+                    <span class="breadcrumb-separator">/</span>
+                    <a href="#" class="breadcrumb-item">배드민턴</a>
+                    <span class="breadcrumb-separator">/</span>
+                    <span class="breadcrumb-item active">매칭 목록</span>
+                </nav>
+            </div>
+        </section>
+
+        <!-- 그리드 시스템 -->
+        <section class="ds-section">
+            <h2>📐 그리드 시스템</h2>
+            <div class="grid-examples">
+                <div class="grid-row">
+                    <div class="grid-col grid-col-12">
+                        <div class="grid-demo">12/12</div>
+                    </div>
+                </div>
+                <div class="grid-row">
+                    <div class="grid-col grid-col-6">
+                        <div class="grid-demo">6/12</div>
+                    </div>
+                    <div class="grid-col grid-col-6">
+                        <div class="grid-demo">6/12</div>
+                    </div>
+                </div>
+                <div class="grid-row">
+                    <div class="grid-col grid-col-4">
+                        <div class="grid-demo">4/12</div>
+                    </div>
+                    <div class="grid-col grid-col-4">
+                        <div class="grid-demo">4/12</div>
+                    </div>
+                    <div class="grid-col grid-col-4">
+                        <div class="grid-demo">4/12</div>
+                    </div>
+                </div>
+                <div class="grid-row">
+                    <div class="grid-col grid-col-3">
+                        <div class="grid-demo">3/12</div>
+                    </div>
+                    <div class="grid-col grid-col-3">
+                        <div class="grid-demo">3/12</div>
+                    </div>
+                    <div class="grid-col grid-col-3">
+                        <div class="grid-demo">3/12</div>
+                    </div>
+                    <div class="grid-col grid-col-3">
+                        <div class="grid-demo">3/12</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 반응형 예시 -->
+        <section class="ds-section">
+            <h2>📱 반응형 예시</h2>
+            <div class="responsive-example">
+                <div class="responsive-card">
+                    <div class="responsive-image">
+                        <img src="https://www.nowonsc.kr/design/homepage/nowon/img/sub/badminton_img0301.jpg" alt="반응형 이미지">
+                    </div>
+                    <div class="responsive-content">
+                        <h3>반응형 카드</h3>
+                        <p>모바일 우선 디자인으로 제작된 카드입니다. 화면 크기에 따라 레이아웃이 자동으로 조정됩니다.</p>
+                        <div class="card-details">
+                            <span class="detail-item">📍 강남구</span>
+                            <span class="detail-item">🕒 24-06-10</span>
+                            <span class="detail-item">👥 8/12명</span>
+                            <span class="detail-item">🏸 급수: 초심</span>
+                        </div>
+                        <div class="card-bookmark">
+                            <span class="view-count">조회 133</span>
+                            <span class="bookmark-group"><span class="heart">❤️</span><span class="bookmark-count">12</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html> 
