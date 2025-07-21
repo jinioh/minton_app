@@ -22,7 +22,7 @@
                 <div class="color-item">
                     <div class="color-swatch primary-bg"></div>
                     <div class="color-info">
-                        <h4>Primary Green</h4>
+                        <h4>Primary Green <code>--color-primary</code></h4>
                         <p>#4CAF50</p>
                         <p>메인 포인트 색상</p>
                     </div>
@@ -30,7 +30,7 @@
                 <div class="color-item">
                     <div class="color-swatch background-bg"></div>
                     <div class="color-info">
-                        <h4>Background</h4>
+                        <h4>Background <code>--color-background</code></h4>
                         <p>#FFFFFF</p>
                         <p>메인 배경색</p>
                     </div>
@@ -38,7 +38,7 @@
                 <div class="color-item">
                     <div class="color-swatch text-primary-bg"></div>
                     <div class="color-info">
-                        <h4>Text Primary</h4>
+                        <h4>Text Primary <code>--color-text-primary</code></h4>
                         <p>#333333</p>
                         <p>주요 텍스트</p>
                     </div>
@@ -46,7 +46,7 @@
                 <div class="color-item">
                     <div class="color-swatch text-secondary-bg"></div>
                     <div class="color-info">
-                        <h4>Text Secondary</h4>
+                        <h4>Text Secondary <code>--color-text-secondary</code></h4>
                         <p>#666666</p>
                         <p>보조 텍스트</p>
                     </div>
@@ -54,7 +54,7 @@
                 <div class="color-item">
                     <div class="color-swatch text-tertiary-bg"></div>
                     <div class="color-info">
-                        <h4>Text Tertiary</h4>
+                        <h4>Text Tertiary <code>--color-text-tertiary</code></h4>
                         <p>#999999</p>
                         <p>부가 정보</p>
                     </div>
@@ -62,11 +62,62 @@
                 <div class="color-item">
                     <div class="color-swatch border-bg"></div>
                     <div class="color-info">
-                        <h4>Border</h4>
+                        <h4>Border <code>--color-border</code></h4>
                         <p>#E5E5E5</p>
                         <p>테두리 색상</p>
                     </div>
                 </div>
+                <div class="color-item">
+                    <div class="color-swatch" style="background: var(--color-success);"></div>
+                    <div class="color-info">
+                        <h4>Success <code>--color-success</code></h4>
+                        <p>#4CAF50</p>
+                        <p>성공/완료 상태</p>
+                    </div>
+                </div>
+                <div class="color-item">
+                    <div class="color-swatch" style="background: var(--color-error);"></div>
+                    <div class="color-info">
+                        <h4>Error <code>--color-error</code></h4>
+                        <p>#F44336</p>
+                        <p>오류/실패 상태</p>
+                    </div>
+                </div>
+                <div class="color-item">
+                    <div class="color-swatch" style="background: var(--color-warning);"></div>
+                    <div class="color-info">
+                        <h4>Warning <code>--color-warning</code></h4>
+                        <p>#FF9800</p>
+                        <p>경고/주의 상태</p>
+                    </div>
+                </div>
+                <div class="color-item">
+                    <div class="color-swatch" style="background: var(--color-primary-light);"></div>
+                    <div class="color-info">
+                        <h4>Primary Hover <code>--color-primary-light</code></h4>
+                        <p>#66BB6A</p>
+                        <p>Primary Hover/Active</p>
+                    </div>
+                </div>
+                <div class="color-item">
+                    <div class="color-swatch" style="background: var(--color-primary-dark);"></div>
+                    <div class="color-info">
+                        <h4>Primary Dark <code>--color-primary-dark</code></h4>
+                        <p>#388E3C</p>
+                        <p>Primary Active/Pressed</p>
+                    </div>
+                </div>
+                <div class="color-item">
+                    <div class="color-swatch" style="background: var(--color-info);"></div>
+                    <div class="color-info">
+                        <h4>Info <code>--color-info</code></h4>
+                        <p>#2196F3</p>
+                        <p>정보/알림</p>
+                    </div>
+                </div>
+            </div>
+            <div class="color-note">
+                <strong>💡 다크 모드 안내:</strong> 다크 모드 지원을 위해 <code>body.dark</code> 등에서 CSS 변수 값을 오버라이드하는 방식을 권장합니다.
             </div>
         </section>
 
@@ -76,27 +127,63 @@
             <div class="typography-examples">
                 <div class="text-example">
                     <h1 class="text-display">Display Large (32px)</h1>
-                    <p class="text-caption">메인 페이지 제목</p>
+                    <div class="typography-meta">
+                        <code>font-family: 'Noto Sans KR', ...</code><br>
+                        <code>font-size: var(--font-size-3xl) /* 32px */</code><br>
+                        <code>font-weight: 700</code><br>
+                        <code>line-height: 1.2</code>
+                    </div>
+                    <p class="text-caption">메인 페이지 제목<br><span class="en">Main Page Title</span></p>
                 </div>
                 <div class="text-example">
                     <h2 class="text-headline">Headline (24px)</h2>
-                    <p class="text-caption">섹션 제목</p>
+                    <div class="typography-meta">
+                        <code>font-family: 'Noto Sans KR', ...</code><br>
+                        <code>font-size: var(--font-size-2xl) /* 24px */</code><br>
+                        <code>font-weight: 600</code><br>
+                        <code>line-height: 1.3</code>
+                    </div>
+                    <p class="text-caption">섹션 제목<br><span class="en">Section Title</span></p>
                 </div>
                 <div class="text-example">
                     <h3 class="text-title">Title (18px)</h3>
-                    <p class="text-caption">카드 제목</p>
+                    <div class="typography-meta">
+                        <code>font-family: 'Noto Sans KR', ...</code><br>
+                        <code>font-size: var(--font-size-xl) /* 18px */</code><br>
+                        <code>font-weight: 600</code><br>
+                        <code>line-height: 1.4</code>
+                    </div>
+                    <p class="text-caption">카드 제목<br><span class="en">Card Title</span></p>
                 </div>
                 <div class="text-example">
                     <p class="text-body">Body (16px) - 기본 본문 텍스트입니다.</p>
-                    <p class="text-caption">본문 내용</p>
+                    <div class="typography-meta">
+                        <code>font-family: 'Noto Sans KR', ...</code><br>
+                        <code>font-size: var(--font-size-lg) /* 16px */</code><br>
+                        <code>font-weight: 400</code><br>
+                        <code>line-height: 1.6</code>
+                    </div>
+                    <p class="text-caption">본문 내용<br><span class="en">Body Text</span></p>
                 </div>
                 <div class="text-example">
                     <p class="text-caption">Caption (14px) - 부가 정보나 설명</p>
-                    <p class="text-caption">부가 정보</p>
+                    <div class="typography-meta">
+                        <code>font-family: 'Noto Sans KR', ...</code><br>
+                        <code>font-size: var(--font-size-base) /* 14px */</code><br>
+                        <code>font-weight: 400</code><br>
+                        <code>line-height: 1.5</code>
+                    </div>
+                    <p class="text-caption">부가 정보<br><span class="en">Caption</span></p>
                 </div>
                 <div class="text-example">
                     <p class="text-small">Small (12px) - 작은 텍스트</p>
-                    <p class="text-caption">메타데이터</p>
+                    <div class="typography-meta">
+                        <code>font-family: 'Noto Sans KR', ...</code><br>
+                        <code>font-size: var(--font-size-sm) /* 12px */</code><br>
+                        <code>font-weight: 400</code><br>
+                        <code>line-height: 1.4</code>
+                    </div>
+                    <p class="text-caption">메타데이터<br><span class="en">Metadata</span></p>
                 </div>
             </div>
         </section>
@@ -104,34 +191,277 @@
         <!-- 버튼 시스템 -->
         <section class="ds-section">
             <h2>🔘 버튼 시스템</h2>
+            <div class="component-meta">
+                <strong>Component:</strong> Button<br>
+                <strong>용도:</strong> 주요 액션, 폼 제출, 네비게이션 등<br>
+                <strong>Variant:</strong> Primary, Secondary, Text, Icon Only, Icon+Text<br>
+                <strong>상태:</strong> Default, Hover, Active, Disabled, Loading, Focus
+            </div>
             <div class="button-examples">
                 <div class="button-group">
                     <h4>Primary Buttons</h4>
-                    <button class="btn btn-primary btn-large">Large Button</button>
-                    <button class="btn btn-primary">Default Button</button>
-                    <button class="btn btn-primary btn-small">Small Button</button>
+                    <div class="btn-demo-row">
+                        <button class="btn btn-primary btn-large">Large</button>
+                        <button class="btn btn-primary btn-large hover-demo">Large(Hover)</button>
+                        <button class="btn btn-primary btn-large" disabled>Large(Disabled)</button>
+                        <button class="btn btn-primary btn-large loading-demo" aria-label="로딩 중" disabled><span class="spinner"></span>Loading</button>
+                    </div>
+                    <div class="btn-demo-row">
+                        <button class="btn btn-primary">Default</button>
+                        <button class="btn btn-primary hover-demo">Default(Hover)</button>
+                        <button class="btn btn-primary" disabled>Default(Disabled)</button>
+                        <button class="btn btn-primary loading-demo" aria-label="로딩 중" disabled><span class="spinner"></span>Loading</button>
+                    </div>
+                    <div class="btn-demo-row">
+                        <button class="btn btn-primary btn-small">Small</button>
+                        <button class="btn btn-primary btn-small hover-demo">Small(Hover)</button>
+                        <button class="btn btn-primary btn-small" disabled>Small(Disabled)</button>
+                        <button class="btn btn-primary btn-small loading-demo" aria-label="로딩 중" disabled><span class="spinner"></span>Loading</button>
+                    </div>
+                    <div class="btn-demo-row">
+                        <button class="btn btn-primary btn-icon" aria-label="홈"><span class="icon">🏠</span></button>
+                        <button class="btn btn-primary btn-icon-text"><span class="icon">➕</span>추가</button>
+                    </div>
+                    <div class="btn-token-meta">
+                        <code>background: var(--color-primary)</code>
+                        <code>color: #fff</code>
+                        <code>border-radius: var(--radius-md)</code>
+                        <code>padding: var(--spacing-sm) var(--spacing-md)</code>
+                        <code>font-size: var(--font-size-base)</code>
+                        <code>box-shadow: var(--shadow-md) /* hover/active */</code>
+                    </div>
                 </div>
                 <div class="button-group">
                     <h4>Secondary Buttons</h4>
-                    <button class="btn btn-secondary btn-large">Large Button</button>
-                    <button class="btn btn-secondary">Default Button</button>
-                    <button class="btn btn-secondary btn-small">Small Button</button>
+                    <div class="btn-demo-row">
+                        <button class="btn btn-secondary btn-large">Large</button>
+                        <button class="btn btn-secondary btn-large hover-demo">Large(Hover)</button>
+                        <button class="btn btn-secondary btn-large" disabled>Large(Disabled)</button>
+                    </div>
+                    <div class="btn-demo-row">
+                        <button class="btn btn-secondary">Default</button>
+                        <button class="btn btn-secondary hover-demo">Default(Hover)</button>
+                        <button class="btn btn-secondary" disabled>Default(Disabled)</button>
+                    </div>
+                    <div class="btn-demo-row">
+                        <button class="btn btn-secondary btn-small">Small</button>
+                        <button class="btn btn-secondary btn-small hover-demo">Small(Hover)</button>
+                        <button class="btn btn-secondary btn-small" disabled>Small(Disabled)</button>
+                    </div>
+                    <div class="btn-demo-row">
+                        <button class="btn btn-secondary btn-icon" aria-label="설정"><span class="icon">⚙️</span></button>
+                        <button class="btn btn-secondary btn-icon-text"><span class="icon">🔍</span>검색</button>
+                    </div>
+                    <div class="btn-token-meta">
+                        <code>background: transparent</code>
+                        <code>color: var(--color-primary)</code>
+                        <code>border: 1px solid var(--color-primary)</code>
+                        <code>border-radius: var(--radius-md)</code>
+                        <code>box-shadow: var(--shadow-md) /* hover/active */</code>
+                    </div>
                 </div>
                 <div class="button-group">
                     <h4>Text Buttons</h4>
-                    <button class="btn btn-text btn-large">Large Button</button>
-                    <button class="btn btn-text">Default Button</button>
-                    <button class="btn btn-text btn-small">Small Button</button>
+                    <div class="btn-demo-row">
+                        <button class="btn btn-text btn-large">Large</button>
+                        <button class="btn btn-text btn-large hover-demo">Large(Hover)</button>
+                        <button class="btn btn-text btn-large" disabled>Large(Disabled)</button>
+                    </div>
+                    <div class="btn-demo-row">
+                        <button class="btn btn-text">Default</button>
+                        <button class="btn btn-text hover-demo">Default(Hover)</button>
+                        <button class="btn btn-text" disabled>Default(Disabled)</button>
+                    </div>
+                    <div class="btn-demo-row">
+                        <button class="btn btn-text btn-small">Small</button>
+                        <button class="btn btn-text btn-small hover-demo">Small(Hover)</button>
+                        <button class="btn btn-text btn-small" disabled>Small(Disabled)</button>
+                    </div>
+                    <div class="btn-demo-row">
+                        <button class="btn btn-text btn-icon" aria-label="닫기"><span class="icon">✖️</span></button>
+                        <button class="btn btn-text btn-icon-text"><span class="icon">⭐</span>즐겨찾기</button>
+                    </div>
+                    <div class="btn-token-meta">
+                        <code>background: transparent</code>
+                        <code>color: var(--color-primary)</code>
+                        <code>border: none</code>
+                        <code>border-radius: var(--radius-md)</code>
+                        <code>transition: all var(--transition-normal)</code>
+                    </div>
                 </div>
             </div>
+            <div class="accessibility-note">
+                <strong>접근성 안내:</strong> 모든 버튼은 <code>aria-label</code> 속성으로 스크린리더에 의미를 제공합니다.<br>
+                포커스 상태에서 <code>outline</code>이 명확히 보이도록 CSS를 적용하세요.<br>
+                <code>tabindex="0"</code> 및 키보드 접근성도 필수입니다.
+            </div>
+            <table class="component-doc">
+                <tr><th>Variant</th><th>설명</th></tr>
+                <tr><td>Primary</td><td>주요 액션에 사용, 강조 색상</td></tr>
+                <tr><td>Secondary</td><td>보조 액션, 테두리/투명 배경</td></tr>
+                <tr><td>Text</td><td>최소 강조, 배경 없음</td></tr>
+                <tr><td>Icon Only</td><td>아이콘만 표시, aria-label 필수</td></tr>
+                <tr><td>Icon+Text</td><td>아이콘과 텍스트 조합</td></tr>
+            </table>
+            <table class="component-doc">
+                <tr><th>상태</th><th>설명</th></tr>
+                <tr><td>Default</td><td>기본 상태</td></tr>
+                <tr><td>Hover</td><td>마우스 오버 시</td></tr>
+                <tr><td>Active</td><td>클릭/터치 시</td></tr>
+                <tr><td>Disabled</td><td>비활성화</td></tr>
+                <tr><td>Loading</td><td>로딩 중, 스피너 표시</td></tr>
+                <tr><td>Focus</td><td>키보드 포커스 시 outline 표시</td></tr>
+            </table>
         </section>
 
         <!-- 카드 컴포넌트 -->
         <section class="ds-section">
             <h2>🃏 카드 컴포넌트</h2>
-            <div class="card-examples">
-                <!-- 리스팅 카드 1 (이미지 있음) -->
-                <div class="card card-listing card-with-image">
+            <div class="component-meta">
+                <strong>Component:</strong> MatchingCard<br>
+                <strong>용도:</strong> 매칭/모임 정보 요약 표시<br>
+                <strong>Variant:</strong> 이미지형, 텍스트형<br>
+                <strong>상태:</strong> Default, Hover, Selected
+            </div>
+            <div class="card-examples card-variant-compare">
+                <div class="card-variant-col">
+                    <h4>이미지형 카드 (Default)</h4>
+                    <div class="card card-listing card-with-image" tabindex="0" aria-label="[초보환영] 강남구 배드민턴 매칭, 장소: 강남구민체육관, 날짜: 24-06-10, 인원: 8/12명, 급수: 초심">
+                        <div class="card-content">
+                            <div class="card-info">
+                                <div class="card-header">
+                                    <span class="card-title">[초보환영] 강남구 배드민턴 매칭</span>
+                                    <span class="level-badge beginner">초심</span>
+                                </div>
+                                <div class="card-description">
+                                    초보자도 환영합니다! 친근한 분위기에서 배드민턴을 즐겨보세요. 체력에 맞춰 쉬어가면서 진행하겠습니다.
+                                </div>
+                            </div>
+                            <div class="card-image">
+                                <img src="https://www.nowonsc.kr/design/homepage/nowon/img/sub/badminton_img0301.jpg" alt="매칭 이미지">
+                            </div>
+                        </div>
+                        <div class="card-details">
+                            <span class="detail-item">📍 강남구민체육관</span>
+                            <span class="detail-item">🕒 24-06-10</span>
+                            <span class="detail-item">👥 8/12명</span>
+                            <span class="detail-item">🏸 급수: 초심</span>
+                        </div>
+                        <div class="card-bookmark">
+                            <span class="view-count">조회 133</span>
+                            <span class="bookmark-group"><span class="heart">❤️</span><span class="bookmark-count">12</span></span>
+                        </div>
+                    </div>
+                    <div class="card-token-meta">
+                        <code>border-radius: var(--radius-lg)</code>
+                        <code>box-shadow: var(--shadow-md)</code>
+                        <code>background: var(--color-background)</code>
+                        <code>padding: var(--spacing-md)</code>
+                        <code>level-badge: var(--color-badge-beginner)</code>
+                    </div>
+                </div>
+                <div class="card-variant-col">
+                    <h4>이미지형 카드 (Hover)</h4>
+                    <div class="card card-listing card-with-image hover-demo" tabindex="0" aria-label="[초보환영] 강남구 배드민턴 매칭, 장소: 강남구민체육관, 날짜: 24-06-10, 인원: 8/12명, 급수: 초심">
+                        <div class="card-content">
+                            <div class="card-info">
+                                <div class="card-header">
+                                    <span class="card-title">[초보환영] 강남구 배드민턴 매칭</span>
+                                    <span class="level-badge beginner">초심</span>
+                                </div>
+                                <div class="card-description">
+                                    초보자도 환영합니다! 친근한 분위기에서 배드민턴을 즐겨보세요. 체력에 맞춰 쉬어가면서 진행하겠습니다.
+                                </div>
+                            </div>
+                            <div class="card-image">
+                                <img src="https://www.nowonsc.kr/design/homepage/nowon/img/sub/badminton_img0301.jpg" alt="매칭 이미지">
+                            </div>
+                        </div>
+                        <div class="card-details">
+                            <span class="detail-item">📍 강남구민체육관</span>
+                            <span class="detail-item">🕒 24-06-10</span>
+                            <span class="detail-item">👥 8/12명</span>
+                            <span class="detail-item">🏸 급수: 초심</span>
+                        </div>
+                        <div class="card-bookmark">
+                            <span class="view-count">조회 133</span>
+                            <span class="bookmark-group"><span class="heart">❤️</span><span class="bookmark-count">12</span></span>
+                        </div>
+                    </div>
+                    <div class="card-token-meta">
+                        <code>box-shadow: var(--shadow-lg)</code>
+                        <code>border-color: var(--color-primary)</code>
+                    </div>
+                </div>
+                <div class="card-variant-col">
+                    <h4>이미지형 카드 (Selected)</h4>
+                    <div class="card card-listing card-with-image selected-demo" tabindex="0" aria-label="[초보환영] 강남구 배드민턴 매칭, 장소: 강남구민체육관, 날짜: 24-06-10, 인원: 8/12명, 급수: 초심">
+                        <div class="card-content">
+                            <div class="card-info">
+                                <div class="card-header">
+                                    <span class="card-title">[초보환영] 강남구 배드민턴 매칭</span>
+                                    <span class="level-badge beginner">초심</span>
+                                </div>
+                                <div class="card-description">
+                                    초보자도 환영합니다! 친근한 분위기에서 배드민턴을 즐겨보세요. 체력에 맞춰 쉬어가면서 진행하겠습니다.
+                                </div>
+                            </div>
+                            <div class="card-image">
+                                <img src="https://www.nowonsc.kr/design/homepage/nowon/img/sub/badminton_img0301.jpg" alt="매칭 이미지">
+                            </div>
+                        </div>
+                        <div class="card-details">
+                            <span class="detail-item">📍 강남구민체육관</span>
+                            <span class="detail-item">🕒 24-06-10</span>
+                            <span class="detail-item">👥 8/12명</span>
+                            <span class="detail-item">🏸 급수: 초심</span>
+                        </div>
+                        <div class="card-bookmark">
+                            <span class="view-count">조회 133</span>
+                            <span class="bookmark-group"><span class="heart">❤️</span><span class="bookmark-count">12</span></span>
+                        </div>
+                    </div>
+                    <div class="card-token-meta">
+                        <code>border: 2px solid var(--color-primary)</code>
+                        <code>background: var(--color-primary-light)</code>
+                    </div>
+                </div>
+                <div class="card-variant-col">
+                    <h4>텍스트형 카드 (Default)</h4>
+                    <div class="card card-listing card-textonly" tabindex="0" aria-label="[중급] 송파구 저녁 매칭, 장소: 송파구체육관, 날짜: 24-06-11, 인원: 10/16명, 급수: D조">
+                        <div class="card-content">
+                            <div class="card-info">
+                                <div class="card-header">
+                                    <span class="card-title">[중급] 송파구 저녁 매칭</span>
+                                    <span class="level-badge intermediate">D조</span>
+                                </div>
+                                <div class="card-description">
+                                    중급자들을 위한 매칭입니다. 실력 향상을 위한 연습과 함께 즐거운 경기를 해보세요.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-details">
+                            <span class="detail-item">📍 송파구체육관</span>
+                            <span class="detail-item">🕒 24-06-11</span>
+                            <span class="detail-item">👥 10/16명</span>
+                            <span class="detail-item">🏸 급수: D조</span>
+                        </div>
+                        <div class="card-bookmark">
+                            <span class="view-count">조회 50</span>
+                            <span class="bookmark-group"><span class="heart">❤️</span><span class="bookmark-count">8</span></span>
+                        </div>
+                    </div>
+                    <div class="card-token-meta">
+                        <code>border-radius: var(--radius-lg)</code>
+                        <code>box-shadow: var(--shadow-md)</code>
+                        <code>background: var(--color-background)</code>
+                        <code>padding: var(--spacing-md)</code>
+                    </div>
+                </div>
+            </div>
+            <div class="responsive-card-demo">
+                <h4>반응형 카드 (모바일 단일 열)</h4>
+                <div class="card card-listing card-with-image responsive-demo" tabindex="0" aria-label="[초보환영] 강남구 배드민턴 매칭, 장소: 강남구민체육관, 날짜: 24-06-10, 인원: 8/12명, 급수: 초심">
                     <div class="card-content">
                         <div class="card-info">
                             <div class="card-header">
@@ -157,80 +487,87 @@
                         <span class="bookmark-group"><span class="heart">❤️</span><span class="bookmark-count">12</span></span>
                     </div>
                 </div>
-
-                <!-- 리스팅 카드 2 (이미지 없음) -->
-                <div class="card card-listing">
-                    <div class="card-content">
-                        <div class="card-info">
-                            <div class="card-header">
-                                <span class="card-title">[중급] 송파구 저녁 매칭</span>
-                                <span class="level-badge intermediate">D조</span>
-                            </div>
-                            <div class="card-description">
-                                중급자들을 위한 매칭입니다. 실력 향상을 위한 연습과 함께 즐거운 경기를 해보세요.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-details">
-                        <span class="detail-item">📍 송파구체육관</span>
-                        <span class="detail-item">🕒 24-06-11</span>
-                        <span class="detail-item">👥 10/16명</span>
-                        <span class="detail-item">🏸 급수: D조</span>
-                    </div>
-                    <div class="card-bookmark">
-                        <span class="view-count">조회 50</span>
-                        <span class="bookmark-group"><span class="heart">❤️</span><span class="bookmark-count">8</span></span>
-                    </div>
-                </div>
-
-                <!-- 리스팅 카드 3 (이미지 있음) -->
-                <div class="card card-listing card-with-image">
-                    <div class="card-content">
-                        <div class="card-info">
-                            <div class="card-header">
-                                <span class="card-title">[상급] 마포구 아침 매칭</span>
-                                <span class="level-badge advanced">C조</span>
-                            </div>
-                            <div class="card-description">
-                                상급자 위주로 진행합니다. 아침에 상쾌하게 운동해요!
-                            </div>
-                        </div>
-                        <div class="card-image">
-                            <img src="https://www.nowonsc.kr/design/homepage/nowon/img/sub/badminton_img0301.jpg" alt="매칭 이미지">
-                        </div>
-                    </div>
-                    <div class="card-details">
-                        <span class="detail-item">📍 마포구체육관</span>
-                        <span class="detail-item">🕒 24-06-12</span>
-                        <span class="detail-item">👥 6/10명</span>
-                        <span class="detail-item">🏸 급수: C조</span>
-                    </div>
-                    <div class="card-bookmark">
-                        <span class="view-count">조회 200</span>
-                        <span class="bookmark-group"><span class="heart">❤️</span><span class="bookmark-count">5</span></span>
-                    </div>
+                <div class="responsive-note">
+                    <strong>💡 반응형 안내:</strong> <code>@media (max-width: 768px)</code>에서 카드가 1열로 배치되고, 이미지가 상단으로 이동합니다.
                 </div>
             </div>
+            <div class="accessibility-note">
+                <strong>접근성 안내:</strong> 주요 정보(장소, 날짜, 인원, 급수 등)는 <code>aria-label</code>로 스크린리더에 제공됩니다.<br>
+                카드 전체에 <code>tabindex="0"</code>을 부여해 키보드 탐색이 가능합니다.
+            </div>
+            <table class="component-doc">
+                <tr><th>Variant</th><th>설명</th></tr>
+                <tr><td>이미지형</td><td>썸네일 이미지 포함 카드</td></tr>
+                <tr><td>텍스트형</td><td>이미지 없이 텍스트 정보만 표시</td></tr>
+            </table>
+            <table class="component-doc">
+                <tr><th>상태</th><th>설명</th></tr>
+                <tr><td>Default</td><td>기본 상태</td></tr>
+                <tr><td>Hover</td><td>마우스 오버 시 box-shadow/테두리 강조</td></tr>
+                <tr><td>Selected</td><td>선택 시 테두리/배경 강조</td></tr>
+            </table>
         </section>
 
         <!-- 입력 필드 -->
         <section class="ds-section">
             <h2>📝 입력 필드</h2>
+            <div class="component-meta">
+                <strong>Component:</strong> Input, Select, Textarea, Checkbox, Radio<br>
+                <strong>용도:</strong> 데이터 입력, 폼 작성<br>
+                <strong>Variant:</strong> 기본, 검색, 드롭다운, 날짜, 시간, 숫자, 텍스트영역, 체크박스, 라디오, 아이콘 인풋<br>
+                <strong>상태:</strong> Default, Focus, Disabled, Error
+            </div>
             <div class="input-examples">
-                <div class="input-group">
-                    <label for="input-default">기본 입력</label>
-                    <input type="text" id="input-default" placeholder="텍스트를 입력하세요">
-                </div>
-                <div class="input-group">
-                    <label for="input-search">검색 입력</label>
-                    <div class="search-input-wrapper">
-                        <input type="text" id="input-search" placeholder="장소, 제목 검색">
-                        <button class="search-btn">🔍</button>
+                <div class="input-group input-required">
+                    <label for="input-default">기본 입력 <span class="required">*</span></label>
+                    <input type="text" id="input-default" placeholder="텍스트를 입력하세요" aria-label="기본 입력" required>
+                    <div class="input-token-meta">
+                        <code>border: 1px solid var(--input-border-color)</code>
+                        <code>border-radius: var(--radius-md)</code>
+                        <code>padding: var(--spacing-md)</code>
+                        <code>font-size: var(--font-size-base)</code>
+                        <code>color: var(--color-text-primary)</code>
                     </div>
                 </div>
-                <div class="input-group">
-                    <label for="input-select">선택 입력</label>
-                    <select id="input-select">
+                <div class="input-group input-focus">
+                    <label for="input-focus">포커스 상태</label>
+                    <input type="text" id="input-focus" placeholder="포커스 시도" aria-label="포커스 상태" tabindex="0" class="focus-demo">
+                    <div class="input-token-meta">
+                        <code>box-shadow: 0 0 0 3px var(--input-focus-ring)</code>
+                        <code>border-color: var(--color-primary)</code>
+                    </div>
+                </div>
+                <div class="input-group input-disabled">
+                    <label for="input-disabled">비활성화</label>
+                    <input type="text" id="input-disabled" placeholder="입력 불가" aria-label="비활성화" disabled>
+                    <div class="input-token-meta">
+                        <code>background: var(--color-surface)</code>
+                        <code>color: var(--color-text-disabled)</code>
+                    </div>
+                </div>
+                <div class="input-group input-error">
+                    <label for="input-error">에러 상태</label>
+                    <input type="text" id="input-error" placeholder="에러 발생" aria-label="에러 상태" aria-invalid="true" class="error-demo">
+                    <div class="input-error-message"><span class="icon">⚠️</span> 필수 입력 항목입니다.</div>
+                    <div class="input-token-meta">
+                        <code>border-color: var(--color-error)</code>
+                        <code>color: var(--color-error)</code>
+                    </div>
+                </div>
+                <div class="input-group input-search">
+                    <label for="input-search">검색 입력</label>
+                    <div class="search-input-wrapper">
+                        <input type="text" id="input-search" placeholder="장소, 제목 검색" aria-label="검색 입력">
+                        <button class="search-btn" aria-label="검색"><span class="icon">🔍</span></button>
+                    </div>
+                    <div class="input-token-meta">
+                        <code>padding-right: 50px</code>
+                        <code>icon-size: 20px</code>
+                    </div>
+                </div>
+                <div class="input-group input-select">
+                    <label for="input-select">드롭다운 선택</label>
+                    <select id="input-select" aria-label="드롭다운 선택">
                         <option>급수를 선택하세요</option>
                         <option>초심</option>
                         <option>D조</option>
@@ -238,13 +575,101 @@
                         <option>B조</option>
                         <option>A조</option>
                     </select>
+                    <div class="input-token-meta">
+                        <code>border-radius: var(--radius-md)</code>
+                        <code>background: var(--color-background)</code>
+                    </div>
+                </div>
+                <div class="input-group input-date">
+                    <label for="input-date">날짜 선택</label>
+                    <input type="date" id="input-date" aria-label="날짜 선택">
+                </div>
+                <div class="input-group input-time">
+                    <label for="input-time">시간 선택</label>
+                    <input type="time" id="input-time" aria-label="시간 선택">
+                </div>
+                <div class="input-group input-number">
+                    <label for="input-number">인원 수</label>
+                    <input type="number" id="input-number" placeholder="최대 인원 수" min="1" max="20" aria-label="인원 수">
+                </div>
+                <div class="input-group input-textarea">
+                    <label for="input-textarea">설명</label>
+                    <textarea id="input-textarea" placeholder="매칭에 대한 설명을 입력하세요" rows="3" aria-label="설명"></textarea>
+                </div>
+                <div class="input-group input-checkbox">
+                    <label>체크박스</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-item">
+                            <input type="checkbox" id="checkbox1" aria-label="초보자 환영">
+                            <span class="checkmark"></span>
+                            초보자 환영
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" id="checkbox2" aria-label="장비 대여 가능">
+                            <span class="checkmark"></span>
+                            장비 대여 가능
+                        </label>
+                    </div>
+                </div>
+                <div class="input-group input-radio">
+                    <label>라디오 버튼</label>
+                    <div class="radio-group">
+                        <label class="radio-item">
+                            <input type="radio" name="gender" id="radio1" aria-label="남성">
+                            <span class="radiomark"></span>
+                            남성
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="gender" id="radio2" aria-label="여성">
+                            <span class="radiomark"></span>
+                            여성
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="gender" id="radio3" aria-label="상관없음">
+                            <span class="radiomark"></span>
+                            상관없음
+                        </label>
+                    </div>
                 </div>
             </div>
+            <div class="input-guideline">
+                <strong>접근성 안내:</strong> 모든 입력 필드는 <code>aria-label</code>로 스크린리더에 의미를 제공합니다.<br>
+                에러 상태는 <code>aria-invalid="true"</code>로 명시하고, 키보드 접근성(<code>tabindex</code>)을 보장해야 합니다.<br>
+                그룹별 여백은 <code>margin-bottom: var(--form-spacing-md)</code> 등으로 조정합니다.
+            </div>
+            <div class="input-note">
+                <strong>💡 Placeholder 스타일:</strong> <code>color: var(--color-text-tertiary)</code>, <code>font-size: var(--font-size-base)</code>, <code>opacity: 0.7</code> 등으로 정의<br>
+                <strong>아이콘 인풋:</strong> 아이콘은 <code>20px</code> 기준, 입력창 오른쪽에 <code>8px</code> 여백<br>
+                <strong>다국어 대응:</strong> placeholder/label이 영어로 변환될 때도 레이아웃이 깨지지 않도록 <code>min-width</code> 등 고려<br>
+                <strong>반응형:</strong> <code>@media (max-width: 768px)</code>에서 2단 → 1단 구조로 전환, 입력 필드가 세로로 쌓임
+            </div>
+            <table class="component-doc">
+                <tr><th>Variant</th><th>설명</th></tr>
+                <tr><td>기본</td><td>일반 텍스트 입력</td></tr>
+                <tr><td>검색</td><td>검색창, 아이콘 포함</td></tr>
+                <tr><td>드롭다운</td><td>선택 입력</td></tr>
+                <tr><td>날짜/시간</td><td>일정 선택</td></tr>
+                <tr><td>체크박스/라디오</td><td>옵션 선택</td></tr>
+                <tr><td>아이콘 인풋</td><td>아이콘이 포함된 입력</td></tr>
+            </table>
+            <table class="component-doc">
+                <tr><th>상태</th><th>설명</th></tr>
+                <tr><td>Default</td><td>기본 상태</td></tr>
+                <tr><td>Focus</td><td>포커스 시 box-shadow/테두리 강조</td></tr>
+                <tr><td>Disabled</td><td>비활성화, 색상/커서 변화</td></tr>
+                <tr><td>Error</td><td>에러 메시지, 테두리/아이콘 강조</td></tr>
+            </table>
         </section>
 
         <!-- 배지 & 태그 -->
         <section class="ds-section">
             <h2>🏷️ 배지 & 태그</h2>
+            <div class="component-meta">
+                <strong>Component:</strong> Badge, Tag<br>
+                <strong>용도:</strong> 상태, 등급, 카테고리 표시<br>
+                <strong>Variant:</strong> 레벨, 상태, 태그, tag-sm, tag-md, tag-lg<br>
+                <strong>상태:</strong> Default, Selected
+            </div>
             <div class="badge-examples">
                 <div class="badge-group">
                     <h4>레벨 배지</h4>
@@ -253,115 +678,920 @@
                     <span class="badge badge-advanced">C조</span>
                     <span class="badge badge-pro">B조</span>
                     <span class="badge badge-master">A조</span>
+                    <span class="badge badge-beginner selected-demo"><span class="icon">✔️</span>초심(선택됨)</span>
                 </div>
                 <div class="badge-group">
                     <h4>상태 배지</h4>
-                    <span class="badge badge-success">성공</span>
-                    <span class="badge badge-warning">주의</span>
-                    <span class="badge badge-error">오류</span>
-                    <span class="badge badge-info">정보</span>
+                    <span class="badge badge-success" role="status" aria-label="상태: 성공">성공</span>
+                    <span class="badge badge-warning" role="status" aria-label="상태: 주의">주의</span>
+                    <span class="badge badge-error" role="status" aria-label="상태: 오류">오류</span>
+                    <span class="badge badge-info" role="status" aria-label="상태: 정보">정보</span>
+                    <span class="badge badge-error selected-demo"><span class="icon">✔️</span>오류(선택됨)</span>
                 </div>
                 <div class="badge-group">
-                    <h4>태그</h4>
-                    <span class="tag">운동/스포츠</span>
-                    <span class="tag">배드민턴</span>
-                    <span class="tag">초보환영</span>
-                    <span class="tag">강남구</span>
+                    <h4>태그 Variant</h4>
+                    <span class="tag tag-sm">소형 태그</span>
+                    <span class="tag tag-md">중형 태그</span>
+                    <span class="tag tag-lg">대형 태그</span>
+                    <span class="tag tag-md selected-demo"><span class="icon">✔️</span>선택됨</span>
+                </div>
+                <div class="badge-group">
+                    <h4>태그(긴 텍스트/다국어)</h4>
+                    <span class="tag tag-md">초보자도 환영합니다 (Long Tag Example)</span>
+                    <span class="tag tag-md">Welcome Beginners - Very Long Category Name</span>
                 </div>
             </div>
+            <div class="badge-token-meta">
+                <code>padding: 4px 8px (tag-md)</code>
+                <code>border-radius: var(--tag-radius, 999px)</code>
+                <code>font-size: var(--tag-font-size, 14px)</code>
+                <code>background: var(--badge-error-bg, #FDEDED)</code>
+                <code>color: var(--color-error)</code>
+                <code>icon-size: 16px</code>
+            </div>
+            <div class="badge-accessibility-note">
+                <strong>접근성 안내:</strong> 모든 배지/태그는 <code>role</code>과 <code>aria-label</code>로 스크린리더에 의미를 제공합니다.<br>
+                텍스트 대비는 <strong>WCAG 4.5:1 이상</strong>을 권장합니다.<br>
+                긴 텍스트/다국어는 <code>overflow: auto</code> 또는 <code>text-overflow: ellipsis</code>로 처리합니다.
+            </div>
+            <table class="component-doc">
+                <tr><th>Variant</th><th>설명</th></tr>
+                <tr><td>레벨 배지</td><td>실력 등급(초심~A조)</td></tr>
+                <tr><td>상태 배지</td><td>성공, 주의, 오류, 정보 등</td></tr>
+                <tr><td>태그</td><td>카테고리, 지역 등</td></tr>
+                <tr><td>tag-sm/md/lg</td><td>사이즈 Variant</td></tr>
+            </table>
+            <table class="component-doc">
+                <tr><th>상태</th><th>설명</th></tr>
+                <tr><td>Default</td><td>기본 상태</td></tr>
+                <tr><td>Selected</td><td>굵은 테두리, 강조 배경, check 아이콘 등 시각적 강조</td></tr>
+            </table>
         </section>
 
         <!-- 네비게이션 -->
         <section class="ds-section">
             <h2>🧭 네비게이션</h2>
+            <div class="component-meta">
+                <strong>Component:</strong> Tab, Breadcrumb<br>
+                <strong>용도:</strong> 화면/섹션 이동, 경로 표시<br>
+                <strong>Variant:</strong> 탭, 브레드크럼<br>
+                <strong>상태:</strong> Default, Active, Disabled
+            </div>
             <div class="nav-examples">
-                <nav class="nav-tabs">
-                    <a href="#" class="nav-tab active">전체</a>
+                <h4>탭 네비게이션 (모바일 최소 터치 영역 48px)</h4>
+                <nav class="nav-tabs nav-tabs-demo">
+                    <a href="#" class="nav-tab active" style="min-width:48px;">전체</a>
                     <a href="#" class="nav-tab">배드민턴</a>
                     <a href="#" class="nav-tab">자전거</a>
-                    <a href="#" class="nav-tab">등산</a>
+                    <a href="#" class="nav-tab disabled" tabindex="-1" aria-disabled="true">등산(비활성)</a>
                     <a href="#" class="nav-tab">러닝</a>
                 </nav>
-                
-                <nav class="nav-breadcrumb">
-                    <a href="#" class="breadcrumb-item">홈</a>
+                <div class="nav-token-meta">
+                    <code>gap: var(--spacing-md) (데스크탑)</code>
+                    <code>gap: 4px (모바일)</code>
+                    <code>min-width: 48px</code>
+                    <code>padding: var(--spacing-md) var(--spacing-lg)</code>
+                    <code>border-radius: var(--radius-md)</code>
+                    <code>color: var(--color-text-secondary)</code>
+                    <code>color(active): var(--color-primary)</code>
+                    <code>color(disabled): var(--color-text-disabled)</code>
+                </div>
+                <h4>브레드크럼 (클릭 가능/불가능 구분)</h4>
+                <nav class="nav-breadcrumb nav-breadcrumb-demo">
+                    <a href="#" class="breadcrumb-item breadcrumb-clickable">홈</a>
                     <span class="breadcrumb-separator">/</span>
-                    <a href="#" class="breadcrumb-item">배드민턴</a>
+                    <a href="#" class="breadcrumb-item breadcrumb-clickable">배드민턴</a>
                     <span class="breadcrumb-separator">/</span>
                     <span class="breadcrumb-item active">매칭 목록</span>
                 </nav>
+                <div class="breadcrumb-token-meta">
+                    <code>color: var(--color-text-secondary)</code>
+                    <code>color(active): var(--color-primary)</code>
+                    <code>text-decoration(hover): underline</code>
+                </div>
             </div>
+            <div class="nav-accessibility-note">
+                <strong>접근성 안내:</strong> 탭/브레드크럼은 <code>role="tablist"</code>, <code>aria-current="page"</code> 등 접근성 속성 활용을 권장합니다.<br>
+                Disabled 탭은 <code>aria-disabled="true"</code>와 <code>tabindex="-1"</code>로 키보드 접근을 차단합니다.
+            </div>
+            <table class="component-doc">
+                <tr><th>Variant</th><th>설명</th></tr>
+                <tr><td>탭</td><td>카테고리/섹션 전환, 최소 터치 영역 48px</td></tr>
+                <tr><td>브레드크럼</td><td>경로/위치 표시, 클릭 가능 항목은 hover/underline</td></tr>
+            </table>
+            <table class="component-doc">
+                <tr><th>상태</th><th>설명</th></tr>
+                <tr><td>Default</td><td>기본 상태</td></tr>
+                <tr><td>Active</td><td>강조 색상(var(--color-primary)), border-bottom 등</td></tr>
+                <tr><td>Disabled</td><td>회색/비활성, 키보드 접근 차단</td></tr>
+            </table>
         </section>
 
         <!-- 그리드 시스템 -->
         <section class="ds-section">
             <h2>📐 그리드 시스템</h2>
+            <div class="component-meta">
+                <strong>Component:</strong> Grid<br>
+                <strong>용도:</strong> 레이아웃 분할, 반응형 구조, 중첩 레이아웃<br>
+                <strong>Variant:</strong> 12/12(전체 폭), 6/12(반폭), 4/12(3분할), 3/12(4분할), Nesting<br>
+                <strong>gutter:</strong> <code>gap: var(--grid-gutter, 16px)</code>
+            </div>
             <div class="grid-examples">
                 <div class="grid-row">
-                    <div class="grid-col grid-col-12">
-                        <div class="grid-demo">12/12</div>
+                    <div class="grid-col grid-col-12" title="전체 폭 (12/12)">
+                        <div class="grid-demo">12/12 <span class="grid-desc">(전체 폭)</span></div>
                     </div>
                 </div>
                 <div class="grid-row">
+                    <div class="grid-col grid-col-6" title="반폭 (6/12)">
+                        <div class="grid-demo">6/12 <span class="grid-desc">(반폭)</span></div>
+                    </div>
+                    <div class="grid-col grid-col-6" title="반폭 (6/12)">
+                        <div class="grid-demo">6/12 <span class="grid-desc">(반폭)</span></div>
+                    </div>
+                </div>
+                <div class="grid-row">
+                    <div class="grid-col grid-col-4" title="3분할 (4/12)">
+                        <div class="grid-demo">4/12 <span class="grid-desc">(3분할)</span></div>
+                    </div>
+                    <div class="grid-col grid-col-4" title="3분할 (4/12)">
+                        <div class="grid-demo">4/12 <span class="grid-desc">(3분할)</span></div>
+                    </div>
+                    <div class="grid-col grid-col-4" title="3분할 (4/12)">
+                        <div class="grid-demo">4/12 <span class="grid-desc">(3분할)</span></div>
+                    </div>
+                </div>
+                <div class="grid-row">
+                    <div class="grid-col grid-col-3" title="4분할 (3/12)">
+                        <div class="grid-demo">3/12 <span class="grid-desc">(4분할)</span></div>
+                    </div>
+                    <div class="grid-col grid-col-3" title="4분할 (3/12)">
+                        <div class="grid-demo">3/12 <span class="grid-desc">(4분할)</span></div>
+                    </div>
+                    <div class="grid-col grid-col-3" title="4분할 (3/12)">
+                        <div class="grid-demo">3/12 <span class="grid-desc">(4분할)</span></div>
+                    </div>
+                    <div class="grid-col grid-col-3" title="4분할 (3/12)">
+                        <div class="grid-demo">3/12 <span class="grid-desc">(4분할)</span></div>
+                    </div>
+                </div>
+                <div class="grid-row grid-nesting-demo">
+                    <div class="grid-col grid-col-6" title="Nesting 예시">
+                        <div class="grid-demo">6/12 <span class="grid-desc">(반폭, 중첩)</span>
+                            <div class="grid-row">
+                                <div class="grid-col grid-col-6">
+                                    <div class="grid-demo grid-nested">6/12 (중첩)</div>
+                                </div>
+                                <div class="grid-col grid-col-6">
+                                    <div class="grid-demo grid-nested">6/12 (중첩)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="grid-col grid-col-6">
                         <div class="grid-demo">6/12</div>
                     </div>
+                </div>
+                <div class="grid-row grid-responsive-demo">
                     <div class="grid-col grid-col-6">
-                        <div class="grid-demo">6/12</div>
+                        <div class="grid-demo">6/12 <span class="grid-desc">(md 이상)</span><br><span class="grid-desc">(sm 이하: 12/12)</span></div>
+                    </div>
+                    <div class="grid-col grid-col-6">
+                        <div class="grid-demo">6/12 <span class="grid-desc">(md 이상)</span><br><span class="grid-desc">(sm 이하: 12/12)</span></div>
                     </div>
                 </div>
-                <div class="grid-row">
+                <div class="grid-row grid-ui-demo">
                     <div class="grid-col grid-col-4">
-                        <div class="grid-demo">4/12</div>
-                    </div>
-                    <div class="grid-col grid-col-4">
-                        <div class="grid-demo">4/12</div>
+                        <div class="grid-demo grid-ui">실제 UI에서는 배경 없이 그리드 라인만 활용</div>
                     </div>
                     <div class="grid-col grid-col-4">
-                        <div class="grid-demo">4/12</div>
+                        <div class="grid-demo grid-ui">실제 UI에서는 배경 없이 그리드 라인만 활용</div>
                     </div>
-                </div>
-                <div class="grid-row">
-                    <div class="grid-col grid-col-3">
-                        <div class="grid-demo">3/12</div>
-                    </div>
-                    <div class="grid-col grid-col-3">
-                        <div class="grid-demo">3/12</div>
-                    </div>
-                    <div class="grid-col grid-col-3">
-                        <div class="grid-demo">3/12</div>
-                    </div>
-                    <div class="grid-col grid-col-3">
-                        <div class="grid-demo">3/12</div>
+                    <div class="grid-col grid-col-4">
+                        <div class="grid-demo grid-ui">실제 UI에서는 배경 없이 그리드 라인만 활용</div>
                     </div>
                 </div>
             </div>
+            <div class="grid-token-meta">
+                <code>--grid-gutter: 16px</code>
+                <code>--grid-col-12: 100%</code>
+                <code>--grid-col-6: 50%</code>
+                <code>--grid-col-4: 33.3333%</code>
+                <code>--grid-col-3: 25%</code>
+                <code>@media (max-width: 768px) { .grid-col-6 → 100% }</code>
+            </div>
+            <div class="grid-note">
+                <strong>💡 브레이크포인트 안내:</strong> <code>md(768px)</code> 이상에서는 2~4분할, <code>sm(768px 이하)</code>에서는 1열로 전환됩니다.<br>
+                <strong>중첩(Nesting):</strong> 그리드 안에 또 다른 그리드가 들어갈 수 있습니다.<br>
+                <strong>실제 UI:</strong> 배경색은 시각적 보조용이며, 실제 UI에서는 배경 없이 그리드 라인만 활용합니다.
+            </div>
+            <table class="component-doc">
+                <tr><th>Variant</th><th>설명</th></tr>
+                <tr><td>12/12</td><td>전체 폭(100%)</td></tr>
+                <tr><td>6/12</td><td>반폭(50%)</td></tr>
+                <tr><td>4/12</td><td>3분할(33.3%)</td></tr>
+                <tr><td>3/12</td><td>4분할(25%)</td></tr>
+                <tr><td>Nesting</td><td>중첩 레이아웃</td></tr>
+            </table>
+            <table class="component-doc">
+                <tr><th>상태/구조</th><th>설명</th></tr>
+                <tr><td>Default</td><td>기본 그리드 구조</td></tr>
+                <tr><td>Responsive</td><td>브레이크포인트별 1열 전환</td></tr>
+                <tr><td>Nesting</td><td>그리드 안에 그리드 중첩</td></tr>
+                <tr><td>UI</td><td>실제 UI에서는 배경 없이 라인만 활용</td></tr>
+            </table>
         </section>
 
-        <!-- 반응형 예시 -->
+        <!-- 모달 & 다이얼로그 -->
         <section class="ds-section">
-            <h2>📱 반응형 예시</h2>
-            <div class="responsive-example">
-                <div class="responsive-card">
-                    <div class="responsive-image">
-                        <img src="https://www.nowonsc.kr/design/homepage/nowon/img/sub/badminton_img0301.jpg" alt="반응형 이미지">
-                    </div>
-                    <div class="responsive-content">
-                        <h3>반응형 카드</h3>
-                        <p>모바일 우선 디자인으로 제작된 카드입니다. 화면 크기에 따라 레이아웃이 자동으로 조정됩니다.</p>
-                        <div class="card-details">
-                            <span class="detail-item">📍 강남구</span>
-                            <span class="detail-item">🕒 24-06-10</span>
-                            <span class="detail-item">👥 8/12명</span>
-                            <span class="detail-item">🏸 급수: 초심</span>
+            <h2>🪟 모달 & 다이얼로그</h2>
+            <div class="component-meta">
+                <strong>Component:</strong> Modal, Dialog<br>
+                <strong>용도:</strong> 확인형(Confirm), 알림형(Notice), 입력형(Form), 커스텀형(Custom)<br>
+                <strong>닫기 방식:</strong> X 버튼, 오버레이 클릭, ESC 키, 취소/확인 버튼
+            </div>
+            <div class="modal-examples">
+                <h4>확인형(Confirm)</h4>
+                <div class="modal modal-demo" style="display:block; position:static;">
+                    <div class="modal-content">
+                        <div class="modal-header modal-header-divider">
+                            <h3 class="modal-title">매칭 참가</h3>
+                            <button class="modal-close" aria-label="닫기">&times;</button>
                         </div>
-                        <div class="card-bookmark">
-                            <span class="view-count">조회 133</span>
-                            <span class="bookmark-group"><span class="heart">❤️</span><span class="bookmark-count">12</span></span>
+                        <div class="modal-body">
+                            <p>이 매칭에 참가하시겠습니까?</p>
+                        </div>
+                        <div class="modal-footer modal-footer-right">
+                            <button class="btn btn-secondary">취소</button>
+                            <button class="btn btn-primary">확인</button>
+                        </div>
+                    </div>
+                </div>
+                <h4>알림형(Notice)</h4>
+                <div class="modal modal-demo" style="display:block; position:static;">
+                    <div class="modal-content">
+                        <div class="modal-header modal-header-divider">
+                            <h3 class="modal-title">알림</h3>
+                            <button class="modal-close" aria-label="닫기">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <p>매칭이 성공적으로 생성되었습니다!</p>
+                        </div>
+                        <div class="modal-footer modal-footer-right">
+                            <button class="btn btn-primary">확인</button>
+                        </div>
+                    </div>
+                </div>
+                <h4>입력형(Form)</h4>
+                <div class="modal modal-demo" style="display:block; position:static;">
+                    <div class="modal-content modal-large">
+                        <div class="modal-header modal-header-divider">
+                            <h3 class="modal-title">프로필 편집</h3>
+                            <button class="modal-close" aria-label="닫기">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="input-group input-required">
+                                <label for="modal-name">이름 <span class="required">*</span></label>
+                                <input type="text" id="modal-name" placeholder="이름을 입력하세요" aria-label="이름" required>
+                            </div>
+                            <div class="input-group input-error">
+                                <label for="modal-level">실력 <span class="required">*</span></label>
+                                <select id="modal-level" aria-label="실력" aria-invalid="true">
+                                    <option>실력을 선택하세요</option>
+                                    <option>초심</option>
+                                    <option>D조</option>
+                                    <option>C조</option>
+                                    <option>B조</option>
+                                    <option>A조</option>
+                                </select>
+                                <div class="input-error-message"><span class="icon">⚠️</span> 실력 선택은 필수입니다.</div>
+                            </div>
+                        </div>
+                        <div class="modal-footer modal-footer-right">
+                            <button class="btn btn-secondary">취소</button>
+                            <button class="btn btn-primary">저장</button>
+                        </div>
+                    </div>
+                </div>
+                <h4>커스텀형(Custom)</h4>
+                <div class="modal modal-demo" style="display:block; position:static;">
+                    <div class="modal-content">
+                        <div class="modal-header modal-header-divider">
+                            <h3 class="modal-title">커스텀 모달</h3>
+                            <button class="modal-close" aria-label="닫기">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <p>자유로운 레이아웃/컴포넌트 배치가 가능합니다.</p>
+                        </div>
+                        <div class="modal-footer modal-footer-center">
+                            <button class="btn btn-primary">확인</button>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="modal-guideline">
+                <strong>닫기 인터랙션:</strong> X 버튼, 오버레이 클릭, ESC 키, 취소/확인 버튼 등으로 닫기 동작을 지원해야 합니다.<br>
+                <strong>Header 위계:</strong> 제목은 <code>font-size: var(--font-size-xl)</code>, <code>font-weight: bold</code>로 강조, <code>modal-header-divider</code>로 구분선 사용<br>
+                <strong>버튼 정렬/순서:</strong> 기본 우측 정렬, <code>취소-확인</code> 또는 <code>취소-저장</code> 순서, CTA(확인/저장)는 강조(Primary), 취소는 서브톤(Secondary) 사용<br>
+                <strong>폼 입력 상태:</strong> 필수 입력, 에러, 포커스 등 상태 Variant를 명확히 구분<br>
+            </div>
+            <table class="component-doc">
+                <tr><th>Variant</th><th>설명</th></tr>
+                <tr><td>Confirm</td><td>확인/취소 등 사용자 결정 필요</td></tr>
+                <tr><td>Notice</td><td>알림/안내 메시지</td></tr>
+                <tr><td>Form</td><td>입력/수정 폼 포함</td></tr>
+                <tr><td>Custom</td><td>자유로운 레이아웃/컴포넌트 배치</td></tr>
+            </table>
+            <table class="component-doc">
+                <tr><th>상태/구조</th><th>설명</th></tr>
+                <tr><td>Header</td><td>제목 강조, 구분선 사용</td></tr>
+                <tr><td>Footer</td><td>버튼 우측 정렬, CTA 강조</td></tr>
+                <tr><td>닫기</td><td>X, ESC, 오버레이, 버튼 등</td></tr>
+                <tr><td>Form 상태</td><td>필수, 에러, 포커스 등 Variant</td></tr>
+            </table>
+        </section>
+
+        <!-- 로딩 & 상태 -->
+        <section class="ds-section">
+            <h2>⏳ 로딩 & 상태</h2>
+            <div class="component-meta">
+                <strong>Component:</strong> Loading, Skeleton, Empty, Error<br>
+                <strong>Variant:</strong> Spinner(로딩), Skeleton(스켈레톤), Empty(빈 상태), Error(에러)<br>
+                <strong>상황별 가이드:</strong> API 응답 지연 시 → Skeleton, 데이터 없음 → Empty, 네트워크/서버 오류 → Error
+            </div>
+            <div class="loading-examples">
+                <div class="loading-group">
+                    <h4>로딩 스피너 (Spinner)</h4>
+                    <div class="loading-spinner" style="width:40px; height:40px;"></div>
+                    <div class="loading-spinner loading-spinner-large" style="width:64px; height:64px;"></div>
+                    <div class="loading-usage">API 요청/응답 대기, 즉시 피드백 필요 시 사용</div>
+                </div>
+                <div class="loading-group">
+                    <h4>스켈레톤 (Skeleton)</h4>
+                    <div class="skeleton-card">
+                        <div class="skeleton-header">
+                            <div class="skeleton-title"></div>
+                            <div class="skeleton-badge"></div>
+                        </div>
+                        <div class="skeleton-content">
+                            <div class="skeleton-line"></div>
+                            <div class="skeleton-line"></div>
+                        </div>
+                    </div>
+                    <div class="skeleton-list">
+                        <div class="skeleton-line" style="width:80%; height:16px;"></div>
+                        <div class="skeleton-line" style="width:60%; height:16px;"></div>
+                        <div class="skeleton-line" style="width:90%; height:16px;"></div>
+                    </div>
+                    <div class="loading-usage">리스트/카드 등 실제 UI 형태를 미리 보여주며, 0.3초 이상 로딩 예상 시 사용</div>
+                </div>
+                <div class="loading-group">
+                    <h4>빈 상태 (Empty)</h4>
+                    <div class="empty-state">
+                        <div class="empty-icon" style="font-size:48px; color:var(--color-info);">📭</div>
+                        <h3>아직 등록된 매칭이 없어요 😊</h3>
+                        <p>첫 번째 매칭을 만들어보세요!</p>
+                        <button class="btn btn-primary btn-large" style="margin-top:16px;">매칭 생성하기</button>
+                    </div>
+                    <div class="loading-usage">데이터가 없을 때, UX 친화적 메시지와 CTA 제공</div>
+                </div>
+                <div class="loading-group">
+                    <h4>에러 상태 (Error)</h4>
+                    <div class="error-state">
+                        <div class="error-icon" style="font-size:48px; color:var(--color-error);">⚠️</div>
+                        <h3>문제가 발생했어요! 잠시 후 다시 시도해 주세요 🙏</h3>
+                        <p>네트워크 또는 서버 오류가 발생했습니다.</p>
+                        <button class="btn btn-primary btn-large" style="margin-top:16px;">다시 시도</button>
+                    </div>
+                    <div class="loading-usage">네트워크/서버 오류 등 예외 상황에서 사용, CTA(재시도) 강조</div>
+                </div>
+            </div>
+            <div class="loading-icon-guide">
+                <strong>아이콘 스타일:</strong> <code>font-size: 48px</code>, <code>color: var(--color-info)</code> 또는 <code>var(--color-error)</code> 등 테마별 변경 가능<br>
+                <strong>커스터마이징:</strong> 상황에 따라 아이콘/색상/메시지 변경 가능
+            </div>
+            <div class="loading-flow-guide">
+                <strong>상태 흐름:</strong> <code>Default → Loading(Spinner/Skeleton) → Empty/Error → Retry</code> 순으로 전이<br>
+                <span class="loading-flow-diagram">Default → <b>Loading</b> → <b>Empty</b> or <b>Error</b> → <b>Retry</b></span>
+            </div>
+            <table class="component-doc">
+                <tr><th>Variant</th><th>설명</th></tr>
+                <tr><td>Spinner</td><td>즉각적 로딩, 짧은 대기</td></tr>
+                <tr><td>Skeleton</td><td>실제 UI 형태 미리보기, 0.3초 이상 로딩</td></tr>
+                <tr><td>Empty</td><td>데이터 없음, UX 친화적 메시지/CTA</td></tr>
+                <tr><td>Error</td><td>오류/예외, CTA(재시도) 강조</td></tr>
+            </table>
+            <table class="component-doc">
+                <tr><th>상태/구조</th><th>설명</th></tr>
+                <tr><td>Default</td><td>초기 상태</td></tr>
+                <tr><td>Loading</td><td>Spinner/Skeleton 표시</td></tr>
+                <tr><td>Empty</td><td>데이터 없음, CTA 제공</td></tr>
+                <tr><td>Error</td><td>오류 메시지, CTA(재시도)</td></tr>
+                <tr><td>Retry</td><td>재시도 버튼 클릭 시 Loading으로 전환</td></tr>
+            </table>
+        </section>
+
+        <!-- 하단 탭바 -->
+        <section class="ds-section">
+            <h2>📱 하단 탭바</h2>
+            <div class="component-meta">
+                <strong>Component:</strong> BottomTabBar<br>
+                <strong>용도:</strong> 주요 네비게이션<br>
+                <strong>Variant:</strong> 기본, 활성화<br>
+                <strong>상태:</strong> Default, Active
+            </div>
+            <div class="tabbar-examples">
+                <nav class="bottom-tabbar">
+                    <a href="#" class="tabbar-item active">
+                        <span class="tabbar-icon">🏠</span>
+                        <span class="tabbar-label">홈</span>
+                    </a>
+                    <a href="#" class="tabbar-item">
+                        <span class="tabbar-icon">🏸</span>
+                        <span class="tabbar-label">매칭</span>
+                    </a>
+                    <a href="#" class="tabbar-item">
+                        <span class="tabbar-icon">➕</span>
+                        <span class="tabbar-label">생성</span>
+                    </a>
+                    <a href="#" class="tabbar-item">
+                        <span class="tabbar-icon">👤</span>
+                        <span class="tabbar-label">프로필</span>
+                    </a>
+                </nav>
+            </div>
+            <table class="component-doc">
+                <tr><th>Variant</th><th>설명</th></tr>
+                <tr><td>기본</td><td>일반 탭</td></tr>
+                <tr><td>활성화</td><td>선택된 탭</td></tr>
+            </table>
+        </section>
+
+        <!-- 폼 컴포넌트 -->
+        <section class="ds-section">
+            <h2>📋 폼 컴포넌트</h2>
+            <div class="component-meta">
+                <strong>Component:</strong> Form<br>
+                <strong>용도:</strong> 데이터 입력, 매칭 생성 등<br>
+                <strong>Variant:</strong> 기본, 행/열 배치<br>
+                <strong>상태:</strong> Default, Error, Disabled
+            </div>
+            <div class="form-examples">
+                <form class="form">
+                    <h3>매칭 생성</h3>
+                    <div class="form-group">
+                        <label for="form-title">제목</label>
+                        <input type="text" id="form-title" placeholder="매칭 제목을 입력하세요" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="form-date">날짜</label>
+                            <input type="date" id="form-date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-time">시간</label>
+                            <input type="time" id="form-time" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="form-location">장소</label>
+                            <input type="text" id="form-location" placeholder="체육관 이름" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-level">급수</label>
+                            <select id="form-level" required>
+                                <option value="">급수 선택</option>
+                                <option value="초심">초심</option>
+                                <option value="D조">D조</option>
+                                <option value="C조">C조</option>
+                                <option value="B조">B조</option>
+                                <option value="A조">A조</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="form-description">설명</label>
+                        <textarea id="form-description" placeholder="매칭에 대한 설명을 입력하세요" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>옵션</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-item">
+                                <input type="checkbox" id="form-beginner">
+                                <span class="checkmark"></span>
+                                초보자 환영
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" id="form-equipment">
+                                <span class="checkmark"></span>
+                                장비 대여 가능
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary">취소</button>
+                        <button type="submit" class="btn btn-primary">생성하기</button>
+                    </div>
+                </form>
+            </div>
+            <table class="component-doc">
+                <tr><th>필드</th><th>설명</th></tr>
+                <tr><td>제목</td><td>매칭 제목</td></tr>
+                <tr><td>날짜/시간</td><td>일정</td></tr>
+                <tr><td>장소</td><td>체육관 등</td></tr>
+                <tr><td>급수</td><td>실력 등급</td></tr>
+                <tr><td>설명</td><td>상세 설명</td></tr>
+                <tr><td>옵션</td><td>체크박스 등</td></tr>
+            </table>
+        </section>
+
+        <!-- 알림 & 피드백 -->
+        <section class="ds-section">
+            <h2>🔔 알림 & 피드백</h2>
+            <div class="component-meta">
+                <strong>Component:</strong> Toast, Snackbar, Badge<br>
+                <strong>용도:</strong> 피드백, 알림, 상태 표시<br>
+                <strong>Variant:</strong> 성공, 에러, 정보, 배지<br>
+                <strong>상태:</strong> Default, Visible, Hidden
+            </div>
+            <div class="notification-examples">
+                <div class="notification-group">
+                    <h4>토스트 메시지</h4>
+                    <button class="btn btn-primary" onclick="showToast('success')">성공 토스트</button>
+                    <button class="btn btn-secondary" onclick="showToast('error')">에러 토스트</button>
+                    <button class="btn btn-text" onclick="showToast('info')">정보 토스트</button>
+                </div>
+                <div class="notification-group">
+                    <h4>스낵바</h4>
+                    <button class="btn btn-primary" onclick="showSnackbar('매칭이 생성되었습니다!')">스낵바 표시</button>
+                </div>
+                <div class="notification-group">
+                    <h4>알림 배지</h4>
+                    <div class="badge-example">
+                        <span class="icon-with-badge">
+                            🔔
+                            <span class="notification-badge">3</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <table class="component-doc">
+                <tr><th>Variant</th><th>설명</th></tr>
+                <tr><td>성공</td><td>성공 메시지</td></tr>
+                <tr><td>에러</td><td>에러 메시지</td></tr>
+                <tr><td>정보</td><td>안내 메시지</td></tr>
+                <tr><td>배지</td><td>알림 개수 등</td></tr>
+            </table>
+        </section>
+
+        <!-- 리스트 컴포넌트 -->
+        <section class="ds-section">
+            <h2>📋 리스트 컴포넌트</h2>
+            <div class="component-meta">
+                <strong>Component:</strong> List, ListItem<br>
+                <strong>용도:</strong> 참가자, 알림 등 목록 표시<br>
+                <strong>Variant:</strong> 기본, 액션 포함, 배지 포함<br>
+                <strong>상태:</strong> Default, Selected, Disabled
+            </div>
+            <div class="list-examples">
+                <div class="list-group">
+                    <h4>참가자 리스트</h4>
+                    <div class="list">
+                        <div class="list-item">
+                            <div class="list-avatar">👤</div>
+                            <div class="list-content">
+                                <div class="list-title">김철수</div>
+                                <div class="list-subtitle">초심 • 참가 신청</div>
+                            </div>
+                            <div class="list-action">
+                                <button class="btn btn-primary btn-small">수락</button>
+                                <button class="btn btn-secondary btn-small">거절</button>
+                            </div>
+                        </div>
+                        <div class="list-item">
+                            <div class="list-avatar">👤</div>
+                            <div class="list-content">
+                                <div class="list-title">이영희</div>
+                                <div class="list-subtitle">D조 • 참가 완료</div>
+                            </div>
+                            <div class="list-action">
+                                <span class="badge badge-success">참가</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-group">
+                    <h4>알림 리스트</h4>
+                    <div class="list">
+                        <div class="list-item">
+                            <div class="list-icon">🏸</div>
+                            <div class="list-content">
+                                <div class="list-title">매칭 참가 신청</div>
+                                <div class="list-subtitle">김철수님이 매칭에 참가 신청했습니다.</div>
+                                <div class="list-time">5분 전</div>
+                            </div>
+                        </div>
+                        <div class="list-item">
+                            <div class="list-icon">📅</div>
+                            <div class="list-content">
+                                <div class="list-title">매칭 일정 변경</div>
+                                <div class="list-subtitle">내일 매칭 시간이 14:00로 변경되었습니다.</div>
+                                <div class="list-time">1시간 전</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <table class="component-doc">
+                <tr><th>Variant</th><th>설명</th></tr>
+                <tr><td>기본</td><td>일반 목록</td></tr>
+                <tr><td>액션 포함</td><td>버튼 등 액션 포함</td></tr>
+                <tr><td>배지 포함</td><td>상태/알림 배지 포함</td></tr>
+            </table>
+        </section>
+
+        <!-- 소셜 로그인 버튼 -->
+        <section class="ds-section">
+            <h2>🔐 소셜 로그인</h2>
+            <div class="component-meta">
+                <strong>Component:</strong> SocialLoginButton<br>
+                <strong>용도:</strong> 소셜 계정으로 로그인<br>
+                <strong>Variant:</strong> 카카오, 네이버, 구글<br>
+                <strong>상태:</strong> Default, Hover, Disabled
+            </div>
+            <div class="social-login-examples">
+                <div class="social-login-group">
+                    <h4>소셜 로그인 버튼</h4>
+                    <div class="social-login-buttons">
+                        <button class="social-btn kakao">
+                            <img src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_small.png" alt="카카오톡">
+                            <span>카카오톡으로 시작하기</span>
+                        </button>
+                        <button class="social-btn naver">
+                            <img src="https://developers.naver.com/assets/img/btnG_icon_square.png" alt="네이버">
+                            <span>네이버로 시작하기</span>
+                        </button>
+                        <button class="social-btn google">
+                            <img src="https://developers.google.com/identity/images/g-logo.png" alt="구글">
+                            <span>구글로 시작하기</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <table class="component-doc">
+                <tr><th>Variant</th><th>설명</th></tr>
+                <tr><td>카카오</td><td>카카오 계정 로그인</td></tr>
+                <tr><td>네이버</td><td>네이버 계정 로그인</td></tr>
+                <tr><td>구글</td><td>구글 계정 로그인</td></tr>
+            </table>
+        </section>
+
+        <!-- 프로필 컴포넌트 -->
+        <section class="ds-section">
+            <h2>👤 프로필 컴포넌트</h2>
+            <div class="component-meta">
+                <strong>Component:</strong> ProfileCard, ProfileEdit<br>
+                <strong>용도:</strong> 사용자 정보 표시/수정<br>
+                <strong>Variant:</strong> 카드, 편집폼<br>
+                <strong>상태:</strong> Default, Editing
+            </div>
+            <div class="profile-examples">
+                <div class="profile-group">
+                    <h4>프로필 카드</h4>
+                    <div class="profile-card">
+                        <div class="profile-header">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="프로필" class="profile-avatar">
+                            <div class="profile-info">
+                                <h3 class="profile-name">김배드민</h3>
+                                <p class="profile-joined">가입일: 2022.03.15</p>
+                                <span class="profile-level">A조</span>
+                            </div>
+                        </div>
+                        <div class="profile-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">4.8</span>
+                                <span class="stat-label">리뷰 점수</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">1회</span>
+                                <span class="stat-label">페널티</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-group">
+                    <h4>프로필 편집</h4>
+                    <div class="profile-edit-form">
+                        <div class="profile-image-upload">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="프로필" class="profile-avatar">
+                            <button class="change-image-btn">이미지 변경</button>
+                        </div>
+                        <div class="profile-fields">
+                            <div class="profile-field">
+                                <label>닉네임</label>
+                                <div class="field-with-action">
+                                    <span class="field-value">홍길동</span>
+                                    <button class="edit-btn">수정</button>
+                                </div>
+                            </div>
+                            <div class="profile-field">
+                                <label>실력 급수</label>
+                                <select class="skill-select">
+                                    <option>초심</option>
+                                    <option>D조</option>
+                                    <option>C조</option>
+                                    <option>B조</option>
+                                    <option>A조</option>
+                                </select>
+                            </div>
+                            <div class="profile-field">
+                                <label>위치 (최대 2개)</label>
+                                <div class="location-manager">
+                                    <div class="location-list">
+                                        <span class="location-tag">강남구 <button class="remove-location">×</button></span>
+                                        <span class="location-tag">송파구 <button class="remove-location">×</button></span>
+                                    </div>
+                                    <div class="location-input-group">
+                                        <input type="text" placeholder="구 입력" class="location-input">
+                                        <button class="add-location-btn">추가</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <table class="component-doc">
+                <tr><th>Variant</th><th>설명</th></tr>
+                <tr><td>카드</td><td>프로필 정보 표시</td></tr>
+                <tr><td>편집폼</td><td>프로필 정보 수정</td></tr>
+            </table>
+        </section>
+
+        <!-- 지도 & 위치 -->
+        <section class="ds-section">
+            <h2>🗺️ 지도 & 위치</h2>
+            <div class="component-meta">
+                <strong>Component:</strong> Map, PlaceSearch<br>
+                <strong>용도:</strong> 위치 정보 표시, 장소 검색<br>
+                <strong>Variant:</strong> 지도, 검색<br>
+                <strong>상태:</strong> Default, Selected
+            </div>
+            <div class="map-examples">
+                <div class="map-group">
+                    <h4>지도 표시</h4>
+                    <div class="map-container">
+                        <img src="https://designcompass.org/wp-content/uploads/2025/06/kakaomap-subway-08.jpg" alt="지도" class="map-image">
+                        <div class="map-info">
+                            <div class="map-building">강남구민체육관</div>
+                            <div class="map-address">서울 강남구 역삼로 123</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-group">
+                    <h4>장소 검색</h4>
+                    <div class="place-search">
+                        <input type="text" placeholder="장소를 검색해주세요" class="place-input" readonly>
+                        <button class="map-search-btn">장소검색</button>
+                    </div>
+                </div>
+            </div>
+            <table class="component-doc">
+                <tr><th>Variant</th><th>설명</th></tr>
+                <tr><td>지도</td><td>위치/장소 지도 표시</td></tr>
+                <tr><td>검색</td><td>장소 검색 입력</td></tr>
+            </table>
+        </section>
+
+        <!-- 별점 & 리뷰 -->
+        <section class="ds-section">
+            <h2>⭐ 별점 & 리뷰</h2>
+            <div class="component-meta">
+                <strong>Component:</strong> StarRating, ReviewForm, PhotoUpload<br>
+                <strong>용도:</strong> 별점 평가, 리뷰 작성, 사진 업로드<br>
+                <strong>Variant:</strong> 별점, 폼, 사진<br>
+                <strong>상태:</strong> Default, Active, Disabled
+            </div>
+            <div class="rating-examples">
+                <div class="rating-group">
+                    <h4>별점 컴포넌트</h4>
+                    <div class="star-rating">
+                        <span class="star active">★</span>
+                        <span class="star active">★</span>
+                        <span class="star active">★</span>
+                        <span class="star active">★</span>
+                        <span class="star">★</span>
+                        <span class="rating-text">4.0점</span>
+                    </div>
+                </div>
+                <div class="rating-group">
+                    <h4>리뷰 폼</h4>
+                    <div class="review-form">
+                        <div class="form-group">
+                            <label>별점</label>
+                            <div class="star-rating-input">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>상세 리뷰</label>
+                            <textarea placeholder="상세한 후기를 작성해 주세요." rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>좋았던 점 (복수 선택)</label>
+                            <div class="tag-selection">
+                                <button class="tag-btn">친절해요</button>
+                                <button class="tag-btn active">매너가 좋아요</button>
+                                <button class="tag-btn">열정적이에요</button>
+                                <button class="tag-btn">피드백이 좋아요</button>
+                                <button class="tag-btn">시간 약속을 잘 지켜요</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rating-group">
+                    <h4>사진 업로드</h4>
+                    <div class="photo-upload">
+                        <input type="file" id="photo-upload" accept="image/*" multiple style="display:none;">
+                        <label for="photo-upload" class="photo-upload-btn">
+                            <span class="plus-icon">＋</span>
+                            <span>사진 추가 (최대 3장)</span>
+                        </label>
+                        <div class="photo-preview">
+                            <div class="photo-thumbnail">
+                                <img src="https://via.placeholder.com/80x80" alt="미리보기">
+                                <button class="remove-photo">×</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <table class="component-doc">
+                <tr><th>Variant</th><th>설명</th></tr>
+                <tr><td>별점</td><td>별점 평가</td></tr>
+                <tr><td>폼</td><td>리뷰 작성 폼</td></tr>
+                <tr><td>사진</td><td>사진 업로드</td></tr>
+            </table>
+        </section>
+
+        <!-- 상태 배지 시스템 -->
+        <section class="ds-section">
+            <h2>🏷️ 상태 배지</h2>
+            <div class="component-meta">
+                <strong>Component:</strong> StatusBadge<br>
+                <strong>용도:</strong> 참여/알림 상태 표시<br>
+                <strong>Variant:</strong> 주최자, 참여, 대기, 자동승인, 거절, 긴급, 알림, 리뷰<br>
+                <strong>상태:</strong> Default, Active
+            </div>
+            <div class="badge-examples">
+                <div class="badge-group">
+                    <h4>참여 상태 배지</h4>
+                    <div class="status-badges">
+                        <span class="badge badge-host">주최자</span>
+                        <span class="badge badge-join">참여</span>
+                        <span class="badge badge-wait">대기</span>
+                        <span class="badge badge-auto-approved">자동승인</span>
+                        <span class="badge badge-rejected">거절됨</span>
+                    </div>
+                </div>
+                <div class="badge-group">
+                    <h4>알림 상태 배지</h4>
+                    <div class="notification-badges">
+                        <span class="badge badge-urgent">긴급</span>
+                        <span class="badge badge-reminder">알림</span>
+                        <span class="badge badge-review">리뷰</span>
+                    </div>
+                </div>
+                <div class="badge-group">
+                    <h4>알림 개수 배지</h4>
+                    <div class="count-badges">
+                        <span class="icon-with-badge">
+                            🔔
+                            <span class="notification-count">3</span>
+                        </span>
+                        <span class="icon-with-badge">
+                            📝
+                            <span class="notification-count">5</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <table class="component-doc">
+                <tr><th>Variant</th><th>설명</th></tr>
+                <tr><td>주최자</td><td>모임 주최자</td></tr>
+                <tr><td>참여</td><td>참여자</td></tr>
+                <tr><td>대기</td><td>대기 상태</td></tr>
+                <tr><td>자동승인</td><td>조건 충족 자동 승인</td></tr>
+                <tr><td>거절</td><td>참여 거절</td></tr>
+                <tr><td>긴급</td><td>긴급 알림</td></tr>
+                <tr><td>알림</td><td>일반 알림</td></tr>
+                <tr><td>리뷰</td><td>리뷰 요청</td></tr>
+            </table>
         </section>
     </div>
 </body>

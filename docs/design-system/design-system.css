@@ -3,23 +3,20 @@
 /* CSS 변수 정의 */
 :root {
     /* 색상 팔레트 */
-    --color-primary: #4CAF50;
-    --color-primary-light: #66BB6A;
-    --color-primary-dark: #388E3C;
-    
-    --color-background: #FFFFFF;
-    --color-surface: #FAFAFA;
-    --color-border: #E5E5E5;
-    
-    --color-text-primary: #333333;
-    --color-text-secondary: #666666;
-    --color-text-tertiary: #999999;
-    --color-text-disabled: #CCCCCC;
-    
-    --color-success: #4CAF50;
-    --color-warning: #FF9800;
-    --color-error: #F44336;
-    --color-info: #2196F3;
+    --color-primary: #4CAF50; /* 메인 포인트 */
+    --color-primary-light: #66BB6A; /* Hover/Active */
+    --color-primary-dark: #388E3C; /* Pressed/Active */
+    --color-background: #FFFFFF; /* 배경 */
+    --color-surface: #FAFAFA; /* 카드/서피스 */
+    --color-border: #E5E5E5; /* 테두리 */
+    --color-text-primary: #333333; /* 주요 텍스트 */
+    --color-text-secondary: #666666; /* 보조 텍스트 */
+    --color-text-tertiary: #999999; /* 부가 정보 */
+    --color-text-disabled: #CCCCCC; /* 비활성 텍스트 */
+    --color-success: #4CAF50; /* 성공 */
+    --color-warning: #FF9800; /* 경고 */
+    --color-error: #F44336; /* 오류 */
+    --color-info: #2196F3; /* 정보 */
     
     /* 타이포그래피 */
     --font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -61,6 +58,29 @@
     --transition-fast: 0.15s ease;
     --transition-normal: 0.3s ease;
     --transition-slow: 0.5s ease;
+}
+
+/* 다크 모드 예시 (body.dark 등에서 오버라이드) */
+body.dark {
+    --color-background: #181A1B;
+    --color-surface: #232526;
+    --color-text-primary: #F5F5F5;
+    --color-text-secondary: #CCCCCC;
+    --color-border: #333;
+}
+
+/* 타이포그래피 토큰 예시 */
+:root {
+    --font-size-3xl: 32px; /* Display Large */
+    --font-size-2xl: 24px; /* Headline */
+    --font-size-xl: 18px;  /* Title */
+    --font-size-lg: 16px;  /* Body */
+    --font-size-base: 14px; /* Caption */
+    --font-size-sm: 12px;  /* Small */
+    --font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-weight-bold: 700;
+    --font-weight-semibold: 600;
+    --font-weight-normal: 400;
 }
 
 /* 기본 스타일 */
