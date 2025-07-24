@@ -1,5 +1,20 @@
 # 운동갈래 디자인 시스템 규칙
 
+## 목차/카테고리
+- 색상 팔레트
+- 타이포그래피
+- 버튼
+- 카드
+- 입력 필드
+- 뱃지/태그
+- 네비게이션
+- 그리드/레이아웃
+- 아이콘/이미지
+- 모달/다이얼로그
+- 로딩/상태
+- 접근성 가이드
+- 변경 이력
+
 ## 디자인 시스템 위치
 - docs/design-system/design-system.html
 - docs/design-system/design-system.css
@@ -11,53 +26,59 @@
 - **모바일 우선**: 반응형 디자인
 - **일관성**: 모든 컴포넌트에서 동일한 스타일 적용
 
-## 색상 팔레트
-- **Primary Green**: #4CAF50 (라임 그린, 메인 포인트)
-- **Background**: #FFFFFF (흰색 배경)
-- **Text Primary**: #333333 (진한 회색, 주요 텍스트)
-- **Text Secondary**: #666666 (중간 회색, 보조 텍스트)
-- **Text Tertiary**: #999999 (연한 회색, 부가 정보)
-- **Border**: #E5E5E5 (연한 회색, 테두리)
+## 색상 팔레트 (토큰 표)
+| 토큰명              | HEX      | 용도         |
+|---------------------|----------|--------------|
+| --color-primary     | #4CAF50  | 메인 포인트  |
+| --color-error       | #F44336  | 오류 상태    |
+| --color-warning     | #FF9800  | 경고 상태    |
+| --color-info        | #2196F3  | 정보/알림    |
+| --color-background  | #FFFFFF  | 배경         |
+| --color-surface     | #FAFAFA  | 카드/서피스  |
+| --color-border      | #E5E5E5  | 테두리       |
+| --color-text-primary| #333333  | 주요 텍스트  |
+| --color-text-secondary| #666666 | 보조 텍스트  |
+| --color-text-tertiary| #999999  | 부가 정보    |
 
-## 필수 컴포넌트 구조
+## 필수 컴포넌트 구조 및 상태/Variant
 
 ### 카드 컴포넌트 (모든 카드는 이 구조를 따라야 함)
+(상태: Default, Hover, Selected)
 ```html
-<div class="card card-listing">
-  <div class="card-content">
-    <div class="card-info">
-      <div class="card-header">
-        <span class="card-title">제목</span>
-        <span class="level-badge beginner">레벨</span>
-      </div>
-      <div class="card-description">설명</div>
-    </div>
-    <div class="card-image">이미지 (선택사항)</div>
-  </div>
-  <div class="card-details">
-    <span class="detail-item">📍 장소</span>
-    <span class="detail-item">🕒 시간</span>
-    <span class="detail-item">👥 인원</span>
-    <span class="detail-item">🏸 급수</span>
-  </div>
-  <div class="card-bookmark">
-    <span class="view-count">조회수</span>
-    <span class="bookmark-group"><span class="heart">❤️</span><span class="bookmark-count">좋아요</span></span>
-  </div>
+<div class="card card-listing ...[상태/variant class]">
+  ... (기존 구조 동일)
 </div>
 ```
-
-### 레벨 배지
-- **초심**: `level-badge beginner` (연한 초록)
-- **D조**: `level-badge intermediate` (파랑)
-- **C조**: `level-badge advanced` (주황)
-- **B조**: `level-badge pro` (보라)
-- **A조**: `level-badge master` (빨강)
+- 상태별(hover, selected 등) 시각화 필수
+- aria-label, tabindex 등 접근성 속성 적용
 
 ### 버튼 시스템
-- **Primary**: `btn btn-primary` (라임 그린)
-- **Secondary**: `btn btn-secondary` (회색)
-- **Text**: `btn btn-text` (텍스트만)
+- Variant: Primary, Secondary, Text, Icon Only, Icon+Text
+- 상태: Default, Hover, Active, Disabled, Loading, Focus
+- 각 상태/Variant별 시각화 및 토큰 표기 필수
+- 접근성: aria-label, outline, tabindex 적용
+
+### 입력 필드
+- Variant: 기본, 검색, 드롭다운, 날짜, 시간, 숫자, 텍스트영역, 체크박스, 라디오, 아이콘 인풋
+- 상태: Default, Focus, Disabled, Error
+- aria-label, aria-invalid, tabindex 등 적용
+
+### 뱃지/태그
+- Variant: 레벨, 상태, 태그, tag-sm, tag-md, tag-lg
+- 상태: Default, Selected
+- role, aria-label, WCAG 대비 준수
+
+### 네비게이션/그리드/모달/로딩 등
+- 각 섹션별 Variant/상태/접근성/토큰/반응형 예시 포함
+
+## 접근성 가이드
+- WCAG 2.1 AA 기준 컬러 대비 준수
+- 모든 버튼/카드/입력에 aria-label, tabindex, outline 적용
+- 키보드 네비게이션(탭, 엔터, 스페이스) 지원
+- Disabled/Active/Focus 등 모든 상태 시각화 및 안내
+
+## 변경 이력
+- 2024-06-XX: 목차/카테고리/접근성/상태별 시각화/토큰 표/버전관리 등 규칙 강화
 
 ## 사용법
 새로운 화면을 만들 때 다음 문구를 사용하세요:
@@ -70,11 +91,6 @@
 - 카드 구조는 ListView.builder로 구현
 - 레벨 배지는 Container + BorderRadius로 구현
 
-## 주의사항
-- 모든 화면에서 일관된 디자인 시스템 적용
-- 구분선은 사용하지 않음 (깔끔한 디자인)
-- 모든 카드에 필수 정보 포함 (장소, 시간, 인원, 급수, 조회수, 좋아요)
-- 반응형 디자인 고려
 description:
 globs:
 alwaysApply: false

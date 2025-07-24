@@ -8,6 +8,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- 목차/인덱스 추가 (body 내 design-system div 상단에) -->
+    <nav class="ds-index">
+      <ul>
+        <li><a href="#palette">색상 팔레트</a></li>
+        <li><a href="#typography">타이포그래피</a></li>
+        <li><a href="#button">버튼</a></li>
+        <li><a href="#card">카드</a></li>
+        <li><a href="#input">입력 필드</a></li>
+        <li><a href="#badge">뱃지/태그</a></li>
+        <li><a href="#nav">네비게이션</a></li>
+        <li><a href="#grid">그리드/레이아웃</a></li>
+        <li><a href="#icon">아이콘/이미지</a></li>
+        <li><a href="#modal">모달/다이얼로그</a></li>
+        <li><a href="#loading">로딩/상태</a></li>
+        <li><a href="#a11y">접근성 가이드</a></li>
+        <li><a href="#changelog">변경 이력</a></li>
+      </ul>
+    </nav>
     <div class="design-system">
         <!-- 헤더 -->
         <header class="ds-header">
@@ -16,7 +34,7 @@
         </header>
 
         <!-- 색상 팔레트 -->
-        <section class="ds-section">
+        <section class="ds-section" id="palette">
             <h2>🎨 색상 팔레트</h2>
             <div class="color-grid">
                 <div class="color-item">
@@ -122,7 +140,7 @@
         </section>
 
         <!-- 타이포그래피 -->
-        <section class="ds-section">
+        <section class="ds-section" id="typography">
             <h2>📝 타이포그래피</h2>
             <div class="typography-examples">
                 <div class="text-example">
@@ -189,7 +207,7 @@
         </section>
 
         <!-- 버튼 시스템 -->
-        <section class="ds-section">
+        <section class="ds-section" id="button">
             <h2>🔘 버튼 시스템</h2>
             <div class="component-meta">
                 <strong>Component:</strong> Button<br>
@@ -315,7 +333,7 @@
         </section>
 
         <!-- 카드 컴포넌트 -->
-        <section class="ds-section">
+        <section class="ds-section" id="card">
             <h2>🃏 카드 컴포넌트</h2>
             <div class="component-meta">
                 <strong>Component:</strong> MatchingCard<br>
@@ -509,7 +527,7 @@
         </section>
 
         <!-- 입력 필드 -->
-        <section class="ds-section">
+        <section class="ds-section" id="input">
             <h2>📝 입력 필드</h2>
             <div class="component-meta">
                 <strong>Component:</strong> Input, Select, Textarea, Checkbox, Radio<br>
@@ -662,7 +680,7 @@
         </section>
 
         <!-- 배지 & 태그 -->
-        <section class="ds-section">
+        <section class="ds-section" id="badge">
             <h2>🏷️ 배지 & 태그</h2>
             <div class="component-meta">
                 <strong>Component:</strong> Badge, Tag<br>
@@ -729,7 +747,7 @@
         </section>
 
         <!-- 네비게이션 -->
-        <section class="ds-section">
+        <section class="ds-section" id="nav">
             <h2>🧭 네비게이션</h2>
             <div class="component-meta">
                 <strong>Component:</strong> Tab, Breadcrumb<br>
@@ -788,7 +806,7 @@
         </section>
 
         <!-- 그리드 시스템 -->
-        <section class="ds-section">
+        <section class="ds-section" id="grid">
             <h2>📐 그리드 시스템</h2>
             <div class="component-meta">
                 <strong>Component:</strong> Grid<br>
@@ -903,7 +921,7 @@
         </section>
 
         <!-- 모달 & 다이얼로그 -->
-        <section class="ds-section">
+        <section class="ds-section" id="modal">
             <h2>🪟 모달 & 다이얼로그</h2>
             <div class="component-meta">
                 <strong>Component:</strong> Modal, Dialog<br>
@@ -1012,7 +1030,7 @@
         </section>
 
         <!-- 로딩 & 상태 -->
-        <section class="ds-section">
+        <section class="ds-section" id="loading">
             <h2>⏳ 로딩 & 상태</h2>
             <div class="component-meta">
                 <strong>Component:</strong> Loading, Skeleton, Empty, Error<br>
