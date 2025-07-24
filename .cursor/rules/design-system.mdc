@@ -3,67 +3,69 @@
 ## 목차/카테고리
 - 색상 팔레트
 - 타이포그래피
-- 버튼
-- 카드
-- 입력 필드
-- 뱃지/태그
-- 네비게이션
-- 그리드/레이아웃
-- 아이콘/이미지
-- 모달/다이얼로그
-- 로딩/상태
-- 접근성 가이드
-- 변경 이력
+- 버튼(Button)
+- 카드(Card)
+- 입력 필드(Input)
+- 뱃지/태그(Badge/Tag)
+- 네비게이션(Navigation)
+- 그리드/레이아웃(Grid/Layout)
+- 아이콘/이미지(Icon/Image)
+- 모달/다이얼로그(Modal/Dialog)
+- 로딩/상태(Loading/State)
+- 접근성(Accessibility)
+- 변경 이력(Changelog)
 
 ## 디자인 시스템 위치
 - docs/design-system/design-system.html
 - docs/design-system/design-system.css
 
 ## 핵심 디자인 원칙
-- **밝고 친근한 무드**: 소모임 스타일
-- **흰색 배경**: 깔끔하고 깨끗한 느낌
-- **라임 그린 포인트**: #4CAF50
-- **모바일 우선**: 반응형 디자인
-- **일관성**: 모든 컴포넌트에서 동일한 스타일 적용
+- 밝고 친근한 무드(소모임 스타일)
+- 브랜드 컬러: #4CAF50 (운동갈래 초록)
+- 흰색/연한 회색 배경, 짙은 회색 텍스트
+- 모바일 우선 반응형
+- 일관성, 접근성, 다국어, 다크모드 지원
 
 ## 색상 팔레트 (토큰 표)
-| 토큰명              | HEX      | 용도         |
-|---------------------|----------|--------------|
-| --color-primary     | #4CAF50  | 메인 포인트  |
-| --color-error       | #F44336  | 오류 상태    |
-| --color-warning     | #FF9800  | 경고 상태    |
-| --color-info        | #2196F3  | 정보/알림    |
-| --color-background  | #FFFFFF  | 배경         |
-| --color-surface     | #FAFAFA  | 카드/서피스  |
-| --color-border      | #E5E5E5  | 테두리       |
-| --color-text-primary| #333333  | 주요 텍스트  |
-| --color-text-secondary| #666666 | 보조 텍스트  |
-| --color-text-tertiary| #999999  | 부가 정보    |
+| 토큰명                  | HEX      | 역할/상태         | 설명                |
+|-------------------------|----------|-------------------|---------------------|
+| --color-bg-default      | #FFFFFF  | 전체 배경         |                     |
+| --color-bg-surface      | #FAFAFA  | 카드/서피스       |                     |
+| --color-bg-primary      | #4CAF50  | 브랜드/포인트     | 버튼, 배지 등       |
+| --color-bg-success      | #E8F5E9  | 성공 배경         |                     |
+| --color-bg-error        | #FDEDED  | 에러 배경         |                     |
+| --color-bg-warning      | #FFF3E0  | 경고 배경         |                     |
+| --color-bg-info         | #E3F2FD  | 정보 배경         |                     |
+| --color-text-primary    | #333333  | 주요 텍스트       |                     |
+| --color-text-secondary  | #666666  | 보조 텍스트       |                     |
+| --color-text-tertiary   | #999999  | 부가 정보         |                     |
+| --color-border-default  | #E5E5E5  | 테두리            |                     |
+| --color-border-primary  | #4CAF50  | 포인트 테두리     |                     |
+| --color-border-error    | #F44336  | 에러 테두리       |                     |
+| ...                     | ...      | ...               | ...                 |
 
-## 필수 컴포넌트 구조 및 상태/Variant
+## 컴포넌트 명세 및 규칙
 
-### 카드 컴포넌트 (모든 카드는 이 구조를 따라야 함)
-(상태: Default, Hover, Selected)
-```html
-<div class="card card-listing ...[상태/variant class]">
-  ... (기존 구조 동일)
-</div>
-```
-- 상태별(hover, selected 등) 시각화 필수
-- aria-label, tabindex 등 접근성 속성 적용
+### 카드(Card)
+- 구조: card > card-header > card-content > card-details > card-bookmark
+- Variant: 이미지형, 텍스트형
+- 상태: Default, Hover, Selected
+- title은 줄바꿈 허용(white-space: normal)
+- aria-label, tabindex, role="article" 필수
+- 반응형: 모바일에서 세로 쌓임, 이미지 100% 너비
 
-### 버튼 시스템
-- Variant: Primary, Secondary, Text, Icon Only, Icon+Text
+### 버튼(Button)
+- Variant: Primary, Secondary, Outline, Text, Icon Only, Icon+Text
 - 상태: Default, Hover, Active, Disabled, Loading, Focus
-- 각 상태/Variant별 시각화 및 토큰 표기 필수
-- 접근성: aria-label, outline, tabindex 적용
+- 각 상태/Variant별 시각화, 토큰 표기
+- 접근성: aria-label, outline, tabindex
 
-### 입력 필드
+### 입력 필드(Input)
 - Variant: 기본, 검색, 드롭다운, 날짜, 시간, 숫자, 텍스트영역, 체크박스, 라디오, 아이콘 인풋
 - 상태: Default, Focus, Disabled, Error
-- aria-label, aria-invalid, tabindex 등 적용
+- aria-label, aria-invalid, tabindex
 
-### 뱃지/태그
+### 뱃지/태그(Badge/Tag)
 - Variant: 레벨, 상태, 태그, tag-sm, tag-md, tag-lg
 - 상태: Default, Selected
 - role, aria-label, WCAG 대비 준수
@@ -72,24 +74,23 @@
 - 각 섹션별 Variant/상태/접근성/토큰/반응형 예시 포함
 
 ## 접근성 가이드
-- WCAG 2.1 AA 기준 컬러 대비 준수
-- 모든 버튼/카드/입력에 aria-label, tabindex, outline 적용
-- 키보드 네비게이션(탭, 엔터, 스페이스) 지원
-- Disabled/Active/Focus 등 모든 상태 시각화 및 안내
+- WCAG 2.1 AA 기준 컬러 대비
+- 모든 버튼/카드/입력에 aria-label, tabindex, outline
+- 키보드 네비게이션(탭, 엔터, 스페이스)
+- Disabled/Active/Focus 등 모든 상태 시각화
+- 다크모드 지원
 
 ## 변경 이력
-- 2024-06-XX: 목차/카테고리/접근성/상태별 시각화/토큰 표/버전관리 등 규칙 강화
+- 2024-06-XX: 실제 디자인 시스템 구조/토큰/접근성/반응형/다크모드 등 최신화
 
 ## 사용법
-새로운 화면을 만들 때 다음 문구를 사용하세요:
 - "운동갈래 디자인 시스템을 참고해서 화면을 만들어줘"
 - "소모임 스타일의 밝고 친근한 디자인으로 만들어줘"
 
 ## Flutter 개발 시 참고사항
-- 동일한 색상 팔레트 사용
-- 동일한 디자인 원칙 적용
-- 카드 구조는 ListView.builder로 구현
-- 레벨 배지는 Container + BorderRadius로 구현
+- 동일한 색상 팔레트/토큰 사용
+- 카드 구조는 ListView.builder, 레벨 배지는 Container+BorderRadius
+- 접근성/반응형/상태별 시각화 동일 적용
 
 description:
 globs:
