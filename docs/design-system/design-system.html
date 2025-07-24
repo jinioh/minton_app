@@ -41,118 +41,41 @@
                 <div class="theme-box" style="background:#181A1B;color:#F5F5F5;">다크</div>
             </div>
             <table class="token-table">
-                <tr><th>토큰명</th><th>HEX</th><th>역할/상태</th><th>라이트</th><th>다크</th></tr>
-                <tr><td>--color-bg-default</td><td>#FFFFFF</td><td>배경</td><td style="background:#fff;">#fff</td><td style="background:#181A1B;color:#fff;">#181A1B</td></tr>
-                <tr><td>--color-bg-primary</td><td>#4CAF50</td><td>Primary</td><td style="background:#4CAF50;color:#fff;">#4CAF50</td><td style="background:#388E3C;color:#fff;">#388E3C</td></tr>
-                <tr><td>--color-bg-success</td><td>#E8F5E9</td><td>Success</td><td style="background:#E8F5E9;">#E8F5E9</td><td style="background:#1B5E20;color:#fff;">#1B5E20</td></tr>
-                <tr><td>--color-bg-error</td><td>#FDEDED</td><td>Error</td><td style="background:#FDEDED;">#FDEDED</td><td style="background:#3B2323;color:#fff;">#3B2323</td></tr>
-                <tr><td>--color-bg-warning</td><td>#FFF3E0</td><td>Warning</td><td style="background:#FFF3E0;">#FFF3E0</td><td style="background:#4E342E;color:#fff;">#4E342E</td></tr>
-                <tr><td>--color-bg-info</td><td>#E3F2FD</td><td>Info</td><td style="background:#E3F2FD;">#E3F2FD</td><td style="background:#0D47A1;color:#fff;">#0D47A1</td></tr>
-                <tr><td>--color-text-primary</td><td>#333333</td><td>텍스트</td><td style="background:#fff;">#333333</td><td style="background:#181A1B;color:#F5F5F5;">#F5F5F5</td></tr>
-                <tr><td>--color-text-error</td><td>#D32F2F</td><td>텍스트-Error</td><td style="background:#fff;">#D32F2F</td><td style="background:#181A1B;color:#FF8A80;">#FF8A80</td></tr>
+                <tr><th>토큰명</th><th>HEX</th><th>역할/상태</th><th>미리보기</th><th>설명</th></tr>
+                <tr><td>--color-bg-default</td><td>#FFFFFF</td><td>배경</td><td><span style="display:inline-block;width:32px;height:32px;background:#fff;border:1px solid #bbb;"></span></td><td>전체 배경</td></tr>
+                <tr><td>--color-bg-primary</td><td>#4CAF50</td><td>Primary</td><td><span style="display:inline-block;width:32px;height:32px;background:#4CAF50;border:1px solid #388E3C;"></span></td><td>메인 포인트, 버튼 등</td></tr>
+                <tr><td>--color-bg-success</td><td>#E8F5E9</td><td>Success BG</td><td><span style="display:inline-block;width:32px;height:32px;background:#E8F5E9;border:2px solid #4CAF50;"></span></td><td>성공 배경/배지 (실제 UI에서만 사용)</td></tr>
+                <tr><td>--color-bg-error</td><td>#FDEDED</td><td>Error BG</td><td><span style="display:inline-block;width:32px;height:32px;background:#FDEDED;border:2px solid #F44336;"></span></td><td>에러 배경/배지 (실제 UI에서만 사용)</td></tr>
+                <tr><td>--color-bg-warning</td><td>#FFF3E0</td><td>Warning BG</td><td><span style="display:inline-block;width:32px;height:32px;background:#FFF3E0;border:2px solid #FF9800;"></span></td><td>경고 배경/배지 (실제 UI에서만 사용)</td></tr>
+                <tr><td>--color-bg-info</td><td>#E3F2FD</td><td>Info BG</td><td><span style="display:inline-block;width:32px;height:32px;background:#E3F2FD;border:2px solid #2196F3;"></span></td><td>정보 배경/배지 (실제 UI에서만 사용)</td></tr>
+                <tr><td>--color-border-default</td><td>#E5E5E5</td><td>Border</td><td><span style="display:inline-block;width:32px;height:32px;background:#fff;border:3px solid #E5E5E5;"></span></td><td>테두리(실제 UI에서만 사용)</td></tr>
+                <tr><td>--color-text-primary</td><td>#333333</td><td>텍스트</td><td><span style="display:inline-block;width:32px;height:32px;background:#333;"></span></td><td>주요 텍스트</td></tr>
+                <tr><td>--color-text-error</td><td>#D32F2F</td><td>텍스트-Error</td><td><span style="display:inline-block;width:32px;height:32px;background:#D32F2F;"></span></td><td>에러 텍스트/아이콘</td></tr>
                 <!-- ...필요한 토큰 추가... -->
             </table>
-            <div class="token-note">※ 모든 토큰은 역할/상태/컴포넌트별로 계층화되어 있으며, 라이트/다크 테마를 완전 지원합니다.</div>
-            <div class="color-grid">
-                <div class="color-item">
-                    <div class="color-swatch primary-bg"></div>
-                    <div class="color-info">
-                        <h4>Primary Green <code>--color-primary</code></h4>
-                        <p>#4CAF50</p>
-                        <p>메인 포인트 색상</p>
-                    </div>
+            <div class="token-note">※ 연한 색상(배경/테두리 등)은 실제 UI에서만 사용되며, 팔레트 미리보기에서는 진한 테두리로 구분을 강조합니다.</div>
+            <!-- 실제 UI 적용 미리보기 -->
+            <div class="palette-ui-preview" style="margin-top:32px;display:flex;gap:32px;align-items:flex-end;flex-wrap:wrap;">
+                <div>
+                    <div style="background:#4CAF50;color:#fff;padding:8px 24px;border-radius:8px;display:inline-block;">Primary Button</div>
+                    <div style="margin-top:8px;font-size:12px;color:#888;">버튼/포인트</div>
                 </div>
-                <div class="color-item">
-                    <div class="color-swatch background-bg"></div>
-                    <div class="color-info">
-                        <h4>Background <code>--color-background</code></h4>
-                        <p>#FFFFFF</p>
-                        <p>메인 배경색</p>
-                    </div>
+                <div>
+                    <div style="background:#E8F5E9;color:#388E3C;padding:8px 16px;border-radius:999px;display:inline-block;border:2px solid #4CAF50;">Success Badge</div>
+                    <div style="margin-top:8px;font-size:12px;color:#888;">성공 배지/배경</div>
                 </div>
-                <div class="color-item">
-                    <div class="color-swatch text-primary-bg"></div>
-                    <div class="color-info">
-                        <h4>Text Primary <code>--color-text-primary</code></h4>
-                        <p>#333333</p>
-                        <p>주요 텍스트</p>
-                    </div>
+                <div>
+                    <div style="background:#FDEDED;color:#D32F2F;padding:8px 16px;border-radius:999px;display:inline-block;border:2px solid #F44336;">Error Badge</div>
+                    <div style="margin-top:8px;font-size:12px;color:#888;">에러 배지/배경</div>
                 </div>
-                <div class="color-item">
-                    <div class="color-swatch text-secondary-bg"></div>
-                    <div class="color-info">
-                        <h4>Text Secondary <code>--color-text-secondary</code></h4>
-                        <p>#666666</p>
-                        <p>보조 텍스트</p>
-                    </div>
+                <div>
+                    <div style="background:#FFF3E0;color:#F57C00;padding:8px 16px;border-radius:999px;display:inline-block;border:2px solid #FF9800;">Warning Badge</div>
+                    <div style="margin-top:8px;font-size:12px;color:#888;">경고 배지/배경</div>
                 </div>
-                <div class="color-item">
-                    <div class="color-swatch text-tertiary-bg"></div>
-                    <div class="color-info">
-                        <h4>Text Tertiary <code>--color-text-tertiary</code></h4>
-                        <p>#999999</p>
-                        <p>부가 정보</p>
-                    </div>
+                <div>
+                    <div style="background:#E5E5E5;color:#333;padding:8px 24px;border-radius:8px;display:inline-block;border:2px solid #BDBDBD;">Border Example</div>
+                    <div style="margin-top:8px;font-size:12px;color:#888;">테두리 적용 예시</div>
                 </div>
-                <div class="color-item">
-                    <div class="color-swatch border-bg"></div>
-                    <div class="color-info">
-                        <h4>Border <code>--color-border</code></h4>
-                        <p>#E5E5E5</p>
-                        <p>테두리 색상</p>
-                    </div>
-                </div>
-                <div class="color-item">
-                    <div class="color-swatch" style="background: var(--color-success);"></div>
-                    <div class="color-info">
-                        <h4>Success <code>--color-success</code></h4>
-                        <p>#4CAF50</p>
-                        <p>성공/완료 상태</p>
-                    </div>
-                </div>
-                <div class="color-item">
-                    <div class="color-swatch" style="background: var(--color-error);"></div>
-                    <div class="color-info">
-                        <h4>Error <code>--color-error</code></h4>
-                        <p>#F44336</p>
-                        <p>오류/실패 상태</p>
-                    </div>
-                </div>
-                <div class="color-item">
-                    <div class="color-swatch" style="background: var(--color-warning);"></div>
-                    <div class="color-info">
-                        <h4>Warning <code>--color-warning</code></h4>
-                        <p>#FF9800</p>
-                        <p>경고/주의 상태</p>
-                    </div>
-                </div>
-                <div class="color-item">
-                    <div class="color-swatch" style="background: var(--color-primary-light);"></div>
-                    <div class="color-info">
-                        <h4>Primary Hover <code>--color-primary-light</code></h4>
-                        <p>#66BB6A</p>
-                        <p>Primary Hover/Active</p>
-                    </div>
-                </div>
-                <div class="color-item">
-                    <div class="color-swatch" style="background: var(--color-primary-dark);"></div>
-                    <div class="color-info">
-                        <h4>Primary Dark <code>--color-primary-dark</code></h4>
-                        <p>#388E3C</p>
-                        <p>Primary Active/Pressed</p>
-                    </div>
-                </div>
-                <div class="color-item">
-                    <div class="color-swatch" style="background: var(--color-info);"></div>
-                    <div class="color-info">
-                        <h4>Info <code>--color-info</code></h4>
-                        <p>#2196F3</p>
-                        <p>정보/알림</p>
-                    </div>
-                </div>
-            </div>
-            <div class="color-note">
-                <strong>💡 다크 모드 안내:</strong> 다크 모드 지원을 위해 <code>body.dark</code> 등에서 CSS 변수 값을 오버라이드하는 방식을 권장합니다.
             </div>
         </section>
 
