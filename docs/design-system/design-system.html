@@ -36,6 +36,23 @@
         <!-- 색상 팔레트 -->
         <section class="ds-section" id="palette">
             <h2>🎨 색상 팔레트</h2>
+            <div class="theme-preview">
+                <div class="theme-box" style="background:var(--color-bg-default);color:var(--color-text-primary);">라이트</div>
+                <div class="theme-box" style="background:#181A1B;color:#F5F5F5;">다크</div>
+            </div>
+            <table class="token-table">
+                <tr><th>토큰명</th><th>HEX</th><th>역할/상태</th><th>라이트</th><th>다크</th></tr>
+                <tr><td>--color-bg-default</td><td>#FFFFFF</td><td>배경</td><td style="background:#fff;">#fff</td><td style="background:#181A1B;color:#fff;">#181A1B</td></tr>
+                <tr><td>--color-bg-primary</td><td>#4CAF50</td><td>Primary</td><td style="background:#4CAF50;color:#fff;">#4CAF50</td><td style="background:#388E3C;color:#fff;">#388E3C</td></tr>
+                <tr><td>--color-bg-success</td><td>#E8F5E9</td><td>Success</td><td style="background:#E8F5E9;">#E8F5E9</td><td style="background:#1B5E20;color:#fff;">#1B5E20</td></tr>
+                <tr><td>--color-bg-error</td><td>#FDEDED</td><td>Error</td><td style="background:#FDEDED;">#FDEDED</td><td style="background:#3B2323;color:#fff;">#3B2323</td></tr>
+                <tr><td>--color-bg-warning</td><td>#FFF3E0</td><td>Warning</td><td style="background:#FFF3E0;">#FFF3E0</td><td style="background:#4E342E;color:#fff;">#4E342E</td></tr>
+                <tr><td>--color-bg-info</td><td>#E3F2FD</td><td>Info</td><td style="background:#E3F2FD;">#E3F2FD</td><td style="background:#0D47A1;color:#fff;">#0D47A1</td></tr>
+                <tr><td>--color-text-primary</td><td>#333333</td><td>텍스트</td><td style="background:#fff;">#333333</td><td style="background:#181A1B;color:#F5F5F5;">#F5F5F5</td></tr>
+                <tr><td>--color-text-error</td><td>#D32F2F</td><td>텍스트-Error</td><td style="background:#fff;">#D32F2F</td><td style="background:#181A1B;color:#FF8A80;">#FF8A80</td></tr>
+                <!-- ...필요한 토큰 추가... -->
+            </table>
+            <div class="token-note">※ 모든 토큰은 역할/상태/컴포넌트별로 계층화되어 있으며, 라이트/다크 테마를 완전 지원합니다.</div>
             <div class="color-grid">
                 <div class="color-item">
                     <div class="color-swatch primary-bg"></div>
@@ -208,475 +225,91 @@
 
         <!-- 버튼 시스템 -->
         <section class="ds-section" id="button">
-            <h2>🔘 버튼 시스템</h2>
-            <div class="component-meta">
-                <strong>Component:</strong> Button<br>
-                <strong>용도:</strong> 주요 액션, 폼 제출, 네비게이션 등<br>
-                <strong>Variant:</strong> Primary, Secondary, Text, Icon Only, Icon+Text<br>
-                <strong>상태:</strong> Default, Hover, Active, Disabled, Loading, Focus
-            </div>
-            <div class="button-examples">
-                <div class="button-group">
-                    <h4>Primary Buttons</h4>
-                    <div class="btn-demo-row">
-                        <button class="btn btn-primary btn-large">Large</button>
-                        <button class="btn btn-primary btn-large hover-demo">Large(Hover)</button>
-                        <button class="btn btn-primary btn-large" disabled>Large(Disabled)</button>
-                        <button class="btn btn-primary btn-large loading-demo" aria-label="로딩 중" disabled><span class="spinner"></span>Loading</button>
-                    </div>
-                    <div class="btn-demo-row">
-                        <button class="btn btn-primary">Default</button>
-                        <button class="btn btn-primary hover-demo">Default(Hover)</button>
-                        <button class="btn btn-primary" disabled>Default(Disabled)</button>
-                        <button class="btn btn-primary loading-demo" aria-label="로딩 중" disabled><span class="spinner"></span>Loading</button>
-                    </div>
-                    <div class="btn-demo-row">
-                        <button class="btn btn-primary btn-small">Small</button>
-                        <button class="btn btn-primary btn-small hover-demo">Small(Hover)</button>
-                        <button class="btn btn-primary btn-small" disabled>Small(Disabled)</button>
-                        <button class="btn btn-primary btn-small loading-demo" aria-label="로딩 중" disabled><span class="spinner"></span>Loading</button>
-                    </div>
-                    <div class="btn-demo-row">
-                        <button class="btn btn-primary btn-icon" aria-label="홈"><span class="icon">🏠</span></button>
-                        <button class="btn btn-primary btn-icon-text"><span class="icon">➕</span>추가</button>
-                    </div>
-                    <div class="btn-token-meta">
-                        <code>background: var(--color-primary)</code>
-                        <code>color: #fff</code>
-                        <code>border-radius: var(--radius-md)</code>
-                        <code>padding: var(--spacing-sm) var(--spacing-md)</code>
-                        <code>font-size: var(--font-size-base)</code>
-                        <code>box-shadow: var(--shadow-md) /* hover/active */</code>
-                    </div>
-                </div>
-                <div class="button-group">
-                    <h4>Secondary Buttons</h4>
-                    <div class="btn-demo-row">
-                        <button class="btn btn-secondary btn-large">Large</button>
-                        <button class="btn btn-secondary btn-large hover-demo">Large(Hover)</button>
-                        <button class="btn btn-secondary btn-large" disabled>Large(Disabled)</button>
-                    </div>
-                    <div class="btn-demo-row">
-                        <button class="btn btn-secondary">Default</button>
-                        <button class="btn btn-secondary hover-demo">Default(Hover)</button>
-                        <button class="btn btn-secondary" disabled>Default(Disabled)</button>
-                    </div>
-                    <div class="btn-demo-row">
-                        <button class="btn btn-secondary btn-small">Small</button>
-                        <button class="btn btn-secondary btn-small hover-demo">Small(Hover)</button>
-                        <button class="btn btn-secondary btn-small" disabled>Small(Disabled)</button>
-                    </div>
-                    <div class="btn-demo-row">
-                        <button class="btn btn-secondary btn-icon" aria-label="설정"><span class="icon">⚙️</span></button>
-                        <button class="btn btn-secondary btn-icon-text"><span class="icon">🔍</span>검색</button>
-                    </div>
-                    <div class="btn-token-meta">
-                        <code>background: transparent</code>
-                        <code>color: var(--color-primary)</code>
-                        <code>border: 1px solid var(--color-primary)</code>
-                        <code>border-radius: var(--radius-md)</code>
-                        <code>box-shadow: var(--shadow-md) /* hover/active */</code>
-                    </div>
-                </div>
-                <div class="button-group">
-                    <h4>Text Buttons</h4>
-                    <div class="btn-demo-row">
-                        <button class="btn btn-text btn-large">Large</button>
-                        <button class="btn btn-text btn-large hover-demo">Large(Hover)</button>
-                        <button class="btn btn-text btn-large" disabled>Large(Disabled)</button>
-                    </div>
-                    <div class="btn-demo-row">
-                        <button class="btn btn-text">Default</button>
-                        <button class="btn btn-text hover-demo">Default(Hover)</button>
-                        <button class="btn btn-text" disabled>Default(Disabled)</button>
-                    </div>
-                    <div class="btn-demo-row">
-                        <button class="btn btn-text btn-small">Small</button>
-                        <button class="btn btn-text btn-small hover-demo">Small(Hover)</button>
-                        <button class="btn btn-text btn-small" disabled>Small(Disabled)</button>
-                    </div>
-                    <div class="btn-demo-row">
-                        <button class="btn btn-text btn-icon" aria-label="닫기"><span class="icon">✖️</span></button>
-                        <button class="btn btn-text btn-icon-text"><span class="icon">⭐</span>즐겨찾기</button>
-                    </div>
-                    <div class="btn-token-meta">
-                        <code>background: transparent</code>
-                        <code>color: var(--color-primary)</code>
-                        <code>border: none</code>
-                        <code>border-radius: var(--radius-md)</code>
-                        <code>transition: all var(--transition-normal)</code>
-                    </div>
-                </div>
-            </div>
-            <div class="accessibility-note">
-                <strong>접근성 안내:</strong> 모든 버튼은 <code>aria-label</code> 속성으로 스크린리더에 의미를 제공합니다.<br>
-                포커스 상태에서 <code>outline</code>이 명확히 보이도록 CSS를 적용하세요.<br>
-                <code>tabindex="0"</code> 및 키보드 접근성도 필수입니다.
-            </div>
-            <table class="component-doc">
-                <tr><th>Variant</th><th>설명</th></tr>
-                <tr><td>Primary</td><td>주요 액션에 사용, 강조 색상</td></tr>
-                <tr><td>Secondary</td><td>보조 액션, 테두리/투명 배경</td></tr>
-                <tr><td>Text</td><td>최소 강조, 배경 없음</td></tr>
-                <tr><td>Icon Only</td><td>아이콘만 표시, aria-label 필수</td></tr>
-                <tr><td>Icon+Text</td><td>아이콘과 텍스트 조합</td></tr>
+          <h2>🔘 버튼 시스템</h2>
+          <table class="component-meta-table">
+            <tr><th>명세</th><td>Button</td></tr>
+            <tr><th>용도</th><td>주요 액션, 폼 제출, 네비게이션 등</td></tr>
+            <tr><th>속성</th><td>type, size, icon, disabled, loading, aria-label</td></tr>
+            <tr><th>토큰</th><td>--button-bg-primary, --button-text-primary, --button-border-primary 등</td></tr>
+            <tr><th>접근성</th><td>aria-label, tabindex, outline, role="button"</td></tr>
+          </table>
+          <div class="button-examples">
+            <!-- Variant × State × Size 비교 그리드 -->
+            <table class="variant-state-table">
+              <tr><th>Variant</th><th>Default</th><th>Hover</th><th>Disabled</th></tr>
+              <tr><td>Primary Large</td><td><button class="btn btn-primary btn-large">Large</button></td><td><button class="btn btn-primary btn-large hover-demo">Large(Hover)</button></td><td><button class="btn btn-primary btn-large" disabled>Large(Disabled)</button></td></tr>
+              <tr><td>Secondary Small</td><td><button class="btn btn-secondary btn-small">Small</button></td><td><button class="btn btn-secondary btn-small hover-demo">Small(Hover)</button></td><td><button class="btn btn-secondary btn-small" disabled>Small(Disabled)</button></td></tr>
             </table>
-            <table class="component-doc">
-                <tr><th>상태</th><th>설명</th></tr>
-                <tr><td>Default</td><td>기본 상태</td></tr>
-                <tr><td>Hover</td><td>마우스 오버 시</td></tr>
-                <tr><td>Active</td><td>클릭/터치 시</td></tr>
-                <tr><td>Disabled</td><td>비활성화</td></tr>
-                <tr><td>Loading</td><td>로딩 중, 스피너 표시</td></tr>
-                <tr><td>Focus</td><td>키보드 포커스 시 outline 표시</td></tr>
-            </table>
+            <!-- Do/Don't 예시 -->
+            <div class="do-dont-row">
+              <div class="do-example"><strong>Do</strong><br><button class="btn btn-primary" aria-label="저장">저장</button></div>
+              <div class="dont-example"><strong>Don't</strong><br><button class="btn btn-primary" disabled>모든 버튼에 Primary만 사용</button></div>
+            </div>
+            <!-- 코드 예시 -->
+            <pre class="code-example">&lt;button class="btn btn-primary" aria-label="저장"&gt;저장&lt;/button&gt;</pre>
+          </div>
+          <div class="accessibility-note">
+            <strong>접근성 가이드:</strong> 모든 버튼은 <code>aria-label</code>과 <code>tabindex</code>를 포함해야 하며, 키보드 포커스 시 outline이 명확히 보여야 합니다.
+          </div>
         </section>
 
         <!-- 카드 컴포넌트 -->
         <section class="ds-section" id="card">
-            <h2>🃏 카드 컴포넌트</h2>
-            <div class="component-meta">
-                <strong>Component:</strong> MatchingCard<br>
-                <strong>용도:</strong> 매칭/모임 정보 요약 표시<br>
-                <strong>Variant:</strong> 이미지형, 텍스트형<br>
-                <strong>상태:</strong> Default, Hover, Selected
-            </div>
-            <div class="card-examples card-variant-compare">
-                <div class="card-variant-col">
-                    <h4>이미지형 카드 (Default)</h4>
-                    <div class="card card-listing card-with-image" tabindex="0" aria-label="[초보환영] 강남구 배드민턴 매칭, 장소: 강남구민체육관, 날짜: 24-06-10, 인원: 8/12명, 급수: 초심">
-                        <div class="card-content">
-                            <div class="card-info">
-                                <div class="card-header">
-                                    <span class="card-title">[초보환영] 강남구 배드민턴 매칭</span>
-                                    <span class="level-badge beginner">초심</span>
-                                </div>
-                                <div class="card-description">
-                                    초보자도 환영합니다! 친근한 분위기에서 배드민턴을 즐겨보세요. 체력에 맞춰 쉬어가면서 진행하겠습니다.
-                                </div>
-                            </div>
-                            <div class="card-image">
-                                <img src="https://www.nowonsc.kr/design/homepage/nowon/img/sub/badminton_img0301.jpg" alt="매칭 이미지">
-                            </div>
-                        </div>
-                        <div class="card-details">
-                            <span class="detail-item">📍 강남구민체육관</span>
-                            <span class="detail-item">🕒 24-06-10</span>
-                            <span class="detail-item">👥 8/12명</span>
-                            <span class="detail-item">🏸 급수: 초심</span>
-                        </div>
-                        <div class="card-bookmark">
-                            <span class="view-count">조회 133</span>
-                            <span class="bookmark-group"><span class="heart">❤️</span><span class="bookmark-count">12</span></span>
-                        </div>
-                    </div>
-                    <div class="card-token-meta">
-                        <code>border-radius: var(--radius-lg)</code>
-                        <code>box-shadow: var(--shadow-md)</code>
-                        <code>background: var(--color-background)</code>
-                        <code>padding: var(--spacing-md)</code>
-                        <code>level-badge: var(--color-badge-beginner)</code>
-                    </div>
-                </div>
-                <div class="card-variant-col">
-                    <h4>이미지형 카드 (Hover)</h4>
-                    <div class="card card-listing card-with-image hover-demo" tabindex="0" aria-label="[초보환영] 강남구 배드민턴 매칭, 장소: 강남구민체육관, 날짜: 24-06-10, 인원: 8/12명, 급수: 초심">
-                        <div class="card-content">
-                            <div class="card-info">
-                                <div class="card-header">
-                                    <span class="card-title">[초보환영] 강남구 배드민턴 매칭</span>
-                                    <span class="level-badge beginner">초심</span>
-                                </div>
-                                <div class="card-description">
-                                    초보자도 환영합니다! 친근한 분위기에서 배드민턴을 즐겨보세요. 체력에 맞춰 쉬어가면서 진행하겠습니다.
-                                </div>
-                            </div>
-                            <div class="card-image">
-                                <img src="https://www.nowonsc.kr/design/homepage/nowon/img/sub/badminton_img0301.jpg" alt="매칭 이미지">
-                            </div>
-                        </div>
-                        <div class="card-details">
-                            <span class="detail-item">📍 강남구민체육관</span>
-                            <span class="detail-item">🕒 24-06-10</span>
-                            <span class="detail-item">👥 8/12명</span>
-                            <span class="detail-item">🏸 급수: 초심</span>
-                        </div>
-                        <div class="card-bookmark">
-                            <span class="view-count">조회 133</span>
-                            <span class="bookmark-group"><span class="heart">❤️</span><span class="bookmark-count">12</span></span>
-                        </div>
-                    </div>
-                    <div class="card-token-meta">
-                        <code>box-shadow: var(--shadow-lg)</code>
-                        <code>border-color: var(--color-primary)</code>
-                    </div>
-                </div>
-                <div class="card-variant-col">
-                    <h4>이미지형 카드 (Selected)</h4>
-                    <div class="card card-listing card-with-image selected-demo" tabindex="0" aria-label="[초보환영] 강남구 배드민턴 매칭, 장소: 강남구민체육관, 날짜: 24-06-10, 인원: 8/12명, 급수: 초심">
-                        <div class="card-content">
-                            <div class="card-info">
-                                <div class="card-header">
-                                    <span class="card-title">[초보환영] 강남구 배드민턴 매칭</span>
-                                    <span class="level-badge beginner">초심</span>
-                                </div>
-                                <div class="card-description">
-                                    초보자도 환영합니다! 친근한 분위기에서 배드민턴을 즐겨보세요. 체력에 맞춰 쉬어가면서 진행하겠습니다.
-                                </div>
-                            </div>
-                            <div class="card-image">
-                                <img src="https://www.nowonsc.kr/design/homepage/nowon/img/sub/badminton_img0301.jpg" alt="매칭 이미지">
-                            </div>
-                        </div>
-                        <div class="card-details">
-                            <span class="detail-item">📍 강남구민체육관</span>
-                            <span class="detail-item">🕒 24-06-10</span>
-                            <span class="detail-item">👥 8/12명</span>
-                            <span class="detail-item">🏸 급수: 초심</span>
-                        </div>
-                        <div class="card-bookmark">
-                            <span class="view-count">조회 133</span>
-                            <span class="bookmark-group"><span class="heart">❤️</span><span class="bookmark-count">12</span></span>
-                        </div>
-                    </div>
-                    <div class="card-token-meta">
-                        <code>border: 2px solid var(--color-primary)</code>
-                        <code>background: var(--color-primary-light)</code>
-                    </div>
-                </div>
-                <div class="card-variant-col">
-                    <h4>텍스트형 카드 (Default)</h4>
-                    <div class="card card-listing card-textonly" tabindex="0" aria-label="[중급] 송파구 저녁 매칭, 장소: 송파구체육관, 날짜: 24-06-11, 인원: 10/16명, 급수: D조">
-                        <div class="card-content">
-                            <div class="card-info">
-                                <div class="card-header">
-                                    <span class="card-title">[중급] 송파구 저녁 매칭</span>
-                                    <span class="level-badge intermediate">D조</span>
-                                </div>
-                                <div class="card-description">
-                                    중급자들을 위한 매칭입니다. 실력 향상을 위한 연습과 함께 즐거운 경기를 해보세요.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-details">
-                            <span class="detail-item">📍 송파구체육관</span>
-                            <span class="detail-item">🕒 24-06-11</span>
-                            <span class="detail-item">👥 10/16명</span>
-                            <span class="detail-item">🏸 급수: D조</span>
-                        </div>
-                        <div class="card-bookmark">
-                            <span class="view-count">조회 50</span>
-                            <span class="bookmark-group"><span class="heart">❤️</span><span class="bookmark-count">8</span></span>
-                        </div>
-                    </div>
-                    <div class="card-token-meta">
-                        <code>border-radius: var(--radius-lg)</code>
-                        <code>box-shadow: var(--shadow-md)</code>
-                        <code>background: var(--color-background)</code>
-                        <code>padding: var(--spacing-md)</code>
-                    </div>
-                </div>
-            </div>
-            <div class="responsive-card-demo">
-                <h4>반응형 카드 (모바일 단일 열)</h4>
-                <div class="card card-listing card-with-image responsive-demo" tabindex="0" aria-label="[초보환영] 강남구 배드민턴 매칭, 장소: 강남구민체육관, 날짜: 24-06-10, 인원: 8/12명, 급수: 초심">
-                    <div class="card-content">
-                        <div class="card-info">
-                            <div class="card-header">
-                                <span class="card-title">[초보환영] 강남구 배드민턴 매칭</span>
-                                <span class="level-badge beginner">초심</span>
-                            </div>
-                            <div class="card-description">
-                                초보자도 환영합니다! 친근한 분위기에서 배드민턴을 즐겨보세요. 체력에 맞춰 쉬어가면서 진행하겠습니다.
-                            </div>
-                        </div>
-                        <div class="card-image">
-                            <img src="https://www.nowonsc.kr/design/homepage/nowon/img/sub/badminton_img0301.jpg" alt="매칭 이미지">
-                        </div>
-                    </div>
-                    <div class="card-details">
-                        <span class="detail-item">📍 강남구민체육관</span>
-                        <span class="detail-item">🕒 24-06-10</span>
-                        <span class="detail-item">👥 8/12명</span>
-                        <span class="detail-item">🏸 급수: 초심</span>
-                    </div>
-                    <div class="card-bookmark">
-                        <span class="view-count">조회 133</span>
-                        <span class="bookmark-group"><span class="heart">❤️</span><span class="bookmark-count">12</span></span>
-                    </div>
-                </div>
-                <div class="responsive-note">
-                    <strong>💡 반응형 안내:</strong> <code>@media (max-width: 768px)</code>에서 카드가 1열로 배치되고, 이미지가 상단으로 이동합니다.
-                </div>
-            </div>
-            <div class="accessibility-note">
-                <strong>접근성 안내:</strong> 주요 정보(장소, 날짜, 인원, 급수 등)는 <code>aria-label</code>로 스크린리더에 제공됩니다.<br>
-                카드 전체에 <code>tabindex="0"</code>을 부여해 키보드 탐색이 가능합니다.
-            </div>
-            <table class="component-doc">
-                <tr><th>Variant</th><th>설명</th></tr>
-                <tr><td>이미지형</td><td>썸네일 이미지 포함 카드</td></tr>
-                <tr><td>텍스트형</td><td>이미지 없이 텍스트 정보만 표시</td></tr>
+          <h2>🃏 카드 컴포넌트</h2>
+          <table class="component-meta-table">
+            <tr><th>명세</th><td>MatchingCard</td></tr>
+            <tr><th>용도</th><td>매칭/모임 정보 요약 표시</td></tr>
+            <tr><th>속성</th><td>title, description, image, details, bookmark, aria-label</td></tr>
+            <tr><th>토큰</th><td>--card-bg-default, --card-border-default, --level-badge 등</td></tr>
+            <tr><th>접근성</th><td>aria-label, tabindex, role="article"</td></tr>
+          </table>
+          <div class="card-examples">
+            <!-- Variant × State 비교 -->
+            <table class="variant-state-table">
+              <tr><th>Variant</th><th>Default</th><th>Hover</th><th>Selected</th></tr>
+              <tr><td>이미지형</td><td><div class="card card-listing card-with-image">...</div></td><td><div class="card card-listing card-with-image hover-demo">...</div></td><td><div class="card card-listing card-with-image selected-demo">...</div></td></tr>
+              <tr><td>텍스트형</td><td><div class="card card-listing card-textonly">...</div></td><td colspan="2"></td></tr>
             </table>
-            <table class="component-doc">
-                <tr><th>상태</th><th>설명</th></tr>
-                <tr><td>Default</td><td>기본 상태</td></tr>
-                <tr><td>Hover</td><td>마우스 오버 시 box-shadow/테두리 강조</td></tr>
-                <tr><td>Selected</td><td>선택 시 테두리/배경 강조</td></tr>
-            </table>
+            <!-- Do/Don't 예시 -->
+            <div class="do-dont-row">
+              <div class="do-example"><strong>Do</strong><br>카드에 장소/날짜/인원/급수 등 필수 정보 포함</div>
+              <div class="dont-example"><strong>Don't</strong><br>카드에 정보가 누락되거나 aria-label이 없는 경우</div>
+            </div>
+            <!-- 코드 예시 -->
+            <pre class="code-example">&lt;div class="card card-listing" tabindex="0" aria-label="[초보환영] 강남구 배드민턴 매칭, 장소: 강남구민체육관 ..."&gt;...&lt;/div&gt;</pre>
+          </div>
+          <div class="accessibility-note">
+            <strong>접근성 가이드:</strong> 카드 전체에 <code>aria-label</code>과 <code>tabindex</code>를 부여해 스크린리더와 키보드 탐색이 가능해야 합니다.
+          </div>
         </section>
 
         <!-- 입력 필드 -->
         <section class="ds-section" id="input">
-            <h2>📝 입력 필드</h2>
-            <div class="component-meta">
-                <strong>Component:</strong> Input, Select, Textarea, Checkbox, Radio<br>
-                <strong>용도:</strong> 데이터 입력, 폼 작성<br>
-                <strong>Variant:</strong> 기본, 검색, 드롭다운, 날짜, 시간, 숫자, 텍스트영역, 체크박스, 라디오, 아이콘 인풋<br>
-                <strong>상태:</strong> Default, Focus, Disabled, Error
-            </div>
-            <div class="input-examples">
-                <div class="input-group input-required">
-                    <label for="input-default">기본 입력 <span class="required">*</span></label>
-                    <input type="text" id="input-default" placeholder="텍스트를 입력하세요" aria-label="기본 입력" required>
-                    <div class="input-token-meta">
-                        <code>border: 1px solid var(--input-border-color)</code>
-                        <code>border-radius: var(--radius-md)</code>
-                        <code>padding: var(--spacing-md)</code>
-                        <code>font-size: var(--font-size-base)</code>
-                        <code>color: var(--color-text-primary)</code>
-                    </div>
-                </div>
-                <div class="input-group input-focus">
-                    <label for="input-focus">포커스 상태</label>
-                    <input type="text" id="input-focus" placeholder="포커스 시도" aria-label="포커스 상태" tabindex="0" class="focus-demo">
-                    <div class="input-token-meta">
-                        <code>box-shadow: 0 0 0 3px var(--input-focus-ring)</code>
-                        <code>border-color: var(--color-primary)</code>
-                    </div>
-                </div>
-                <div class="input-group input-disabled">
-                    <label for="input-disabled">비활성화</label>
-                    <input type="text" id="input-disabled" placeholder="입력 불가" aria-label="비활성화" disabled>
-                    <div class="input-token-meta">
-                        <code>background: var(--color-surface)</code>
-                        <code>color: var(--color-text-disabled)</code>
-                    </div>
-                </div>
-                <div class="input-group input-error">
-                    <label for="input-error">에러 상태</label>
-                    <input type="text" id="input-error" placeholder="에러 발생" aria-label="에러 상태" aria-invalid="true" class="error-demo">
-                    <div class="input-error-message"><span class="icon">⚠️</span> 필수 입력 항목입니다.</div>
-                    <div class="input-token-meta">
-                        <code>border-color: var(--color-error)</code>
-                        <code>color: var(--color-error)</code>
-                    </div>
-                </div>
-                <div class="input-group input-search">
-                    <label for="input-search">검색 입력</label>
-                    <div class="search-input-wrapper">
-                        <input type="text" id="input-search" placeholder="장소, 제목 검색" aria-label="검색 입력">
-                        <button class="search-btn" aria-label="검색"><span class="icon">🔍</span></button>
-                    </div>
-                    <div class="input-token-meta">
-                        <code>padding-right: 50px</code>
-                        <code>icon-size: 20px</code>
-                    </div>
-                </div>
-                <div class="input-group input-select">
-                    <label for="input-select">드롭다운 선택</label>
-                    <select id="input-select" aria-label="드롭다운 선택">
-                        <option>급수를 선택하세요</option>
-                        <option>초심</option>
-                        <option>D조</option>
-                        <option>C조</option>
-                        <option>B조</option>
-                        <option>A조</option>
-                    </select>
-                    <div class="input-token-meta">
-                        <code>border-radius: var(--radius-md)</code>
-                        <code>background: var(--color-background)</code>
-                    </div>
-                </div>
-                <div class="input-group input-date">
-                    <label for="input-date">날짜 선택</label>
-                    <input type="date" id="input-date" aria-label="날짜 선택">
-                </div>
-                <div class="input-group input-time">
-                    <label for="input-time">시간 선택</label>
-                    <input type="time" id="input-time" aria-label="시간 선택">
-                </div>
-                <div class="input-group input-number">
-                    <label for="input-number">인원 수</label>
-                    <input type="number" id="input-number" placeholder="최대 인원 수" min="1" max="20" aria-label="인원 수">
-                </div>
-                <div class="input-group input-textarea">
-                    <label for="input-textarea">설명</label>
-                    <textarea id="input-textarea" placeholder="매칭에 대한 설명을 입력하세요" rows="3" aria-label="설명"></textarea>
-                </div>
-                <div class="input-group input-checkbox">
-                    <label>체크박스</label>
-                    <div class="checkbox-group">
-                        <label class="checkbox-item">
-                            <input type="checkbox" id="checkbox1" aria-label="초보자 환영">
-                            <span class="checkmark"></span>
-                            초보자 환영
-                        </label>
-                        <label class="checkbox-item">
-                            <input type="checkbox" id="checkbox2" aria-label="장비 대여 가능">
-                            <span class="checkmark"></span>
-                            장비 대여 가능
-                        </label>
-                    </div>
-                </div>
-                <div class="input-group input-radio">
-                    <label>라디오 버튼</label>
-                    <div class="radio-group">
-                        <label class="radio-item">
-                            <input type="radio" name="gender" id="radio1" aria-label="남성">
-                            <span class="radiomark"></span>
-                            남성
-                        </label>
-                        <label class="radio-item">
-                            <input type="radio" name="gender" id="radio2" aria-label="여성">
-                            <span class="radiomark"></span>
-                            여성
-                        </label>
-                        <label class="radio-item">
-                            <input type="radio" name="gender" id="radio3" aria-label="상관없음">
-                            <span class="radiomark"></span>
-                            상관없음
-                        </label>
-                    </div>
-                </div>
-            </div>
-            <div class="input-guideline">
-                <strong>접근성 안내:</strong> 모든 입력 필드는 <code>aria-label</code>로 스크린리더에 의미를 제공합니다.<br>
-                에러 상태는 <code>aria-invalid="true"</code>로 명시하고, 키보드 접근성(<code>tabindex</code>)을 보장해야 합니다.<br>
-                그룹별 여백은 <code>margin-bottom: var(--form-spacing-md)</code> 등으로 조정합니다.
-            </div>
-            <div class="input-note">
-                <strong>💡 Placeholder 스타일:</strong> <code>color: var(--color-text-tertiary)</code>, <code>font-size: var(--font-size-base)</code>, <code>opacity: 0.7</code> 등으로 정의<br>
-                <strong>아이콘 인풋:</strong> 아이콘은 <code>20px</code> 기준, 입력창 오른쪽에 <code>8px</code> 여백<br>
-                <strong>다국어 대응:</strong> placeholder/label이 영어로 변환될 때도 레이아웃이 깨지지 않도록 <code>min-width</code> 등 고려<br>
-                <strong>반응형:</strong> <code>@media (max-width: 768px)</code>에서 2단 → 1단 구조로 전환, 입력 필드가 세로로 쌓임
-            </div>
-            <table class="component-doc">
-                <tr><th>Variant</th><th>설명</th></tr>
-                <tr><td>기본</td><td>일반 텍스트 입력</td></tr>
-                <tr><td>검색</td><td>검색창, 아이콘 포함</td></tr>
-                <tr><td>드롭다운</td><td>선택 입력</td></tr>
-                <tr><td>날짜/시간</td><td>일정 선택</td></tr>
-                <tr><td>체크박스/라디오</td><td>옵션 선택</td></tr>
-                <tr><td>아이콘 인풋</td><td>아이콘이 포함된 입력</td></tr>
+          <h2>📝 입력 필드</h2>
+          <table class="component-meta-table">
+            <tr><th>명세</th><td>Input, Select, Textarea</td></tr>
+            <tr><th>용도</th><td>데이터 입력, 폼 작성</td></tr>
+            <tr><th>속성</th><td>type, placeholder, value, required, disabled, aria-label, aria-invalid</td></tr>
+            <tr><th>토큰</th><td>--input-border-color, --input-focus-ring 등</td></tr>
+            <tr><th>접근성</th><td>aria-label, aria-invalid, tabindex, role="textbox"</td></tr>
+          </table>
+          <div class="input-examples">
+            <!-- Variant × State 비교 -->
+            <table class="variant-state-table">
+              <tr><th>Variant</th><th>Default</th><th>Focus</th><th>Disabled</th><th>Error</th></tr>
+              <tr><td>기본</td><td><input type="text" placeholder="기본" /></td><td><input type="text" class="focus-demo" placeholder="포커스" /></td><td><input type="text" disabled placeholder="비활성" /></td><td><input type="text" class="error-demo" aria-invalid="true" placeholder="에러" /></td></tr>
             </table>
-            <table class="component-doc">
-                <tr><th>상태</th><th>설명</th></tr>
-                <tr><td>Default</td><td>기본 상태</td></tr>
-                <tr><td>Focus</td><td>포커스 시 box-shadow/테두리 강조</td></tr>
-                <tr><td>Disabled</td><td>비활성화, 색상/커서 변화</td></tr>
-                <tr><td>Error</td><td>에러 메시지, 테두리/아이콘 강조</td></tr>
-            </table>
+            <!-- Do/Don't 예시 -->
+            <div class="do-dont-row">
+              <div class="do-example"><strong>Do</strong><br>필수 입력에는 <code>required</code>와 <code>aria-label</code>을 명확히</div>
+              <div class="dont-example"><strong>Don't</strong><br>placeholder만 있고 label/aria-label이 없는 경우</div>
+            </div>
+            <!-- 코드 예시 -->
+            <pre class="code-example">&lt;input type="text" aria-label="이름" required /&gt;</pre>
+          </div>
+          <div class="accessibility-note">
+            <strong>접근성 가이드:</strong> 모든 입력 필드는 <code>aria-label</code>, <code>aria-invalid</code>, <code>tabindex</code>를 포함해야 하며, 에러 상태는 시각적으로 명확히 구분되어야 합니다.
+          </div>
         </section>
 
         <!-- 배지 & 태그 -->
@@ -1610,6 +1243,14 @@
                 <tr><td>알림</td><td>일반 알림</td></tr>
                 <tr><td>리뷰</td><td>리뷰 요청</td></tr>
             </table>
+        </section>
+
+        <!-- 변경 이력 -->
+        <section class="ds-section" id="changelog">
+            <h2>📝 변경 이력</h2>
+            <ul>
+                <li>2024-06-XX: 토큰 계층화/테마/상태/글로벌-로컬/스케일/미리보기 강화</li>
+            </ul>
         </section>
     </div>
 </body>

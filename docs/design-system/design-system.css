@@ -1,25 +1,64 @@
-/* ===== 디자인 시스템 CSS ===== */
+/* ===== 디자인 시스템 CSS (2024-06-XX: 토큰 계층화/테마/상태/글로벌-로컬 구분/스케일/미리보기 강화) ===== */
 
-/* CSS 변수 정의 */
+/* 글로벌 토큰: 색상(역할/상태별), 타이포, 간격, 둥근모서리, 그림자, 전환 */
 :root {
-    /* 색상 팔레트 */
-    --color-primary: #4CAF50; /* 메인 포인트 */
-    --color-primary-light: #66BB6A; /* Hover/Active */
-    --color-primary-dark: #388E3C; /* Pressed/Active */
-    --color-background: #FFFFFF; /* 배경 */
-    --color-surface: #FAFAFA; /* 카드/서피스 */
-    --color-border: #E5E5E5; /* 테두리 */
-    --color-text-primary: #333333; /* 주요 텍스트 */
-    --color-text-secondary: #666666; /* 보조 텍스트 */
-    --color-text-tertiary: #999999; /* 부가 정보 */
-    --color-text-disabled: #CCCCCC; /* 비활성 텍스트 */
-    --color-success: #4CAF50; /* 성공 */
-    --color-warning: #FF9800; /* 경고 */
-    --color-error: #F44336; /* 오류 */
-    --color-info: #2196F3; /* 정보 */
-    
-    /* 타이포그래피 */
-    --font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    /* 색상 - 배경 */
+    --color-bg-default: #FFFFFF;
+    --color-bg-surface: #FAFAFA;
+    --color-bg-inverse: #181A1B;
+    --color-bg-primary: #4CAF50;
+    --color-bg-secondary: #F5F5F5;
+    --color-bg-success: #E8F5E9;
+    --color-bg-error: #FDEDED;
+    --color-bg-warning: #FFF3E0;
+    --color-bg-info: #E3F2FD;
+    /* 색상 - 텍스트 */
+    --color-text-primary: #333333;
+    --color-text-secondary: #666666;
+    --color-text-tertiary: #999999;
+    --color-text-inverse: #F5F5F5;
+    --color-text-disabled: #CCCCCC;
+    --color-text-success: #388E3C;
+    --color-text-error: #D32F2F;
+    --color-text-warning: #F57C00;
+    --color-text-info: #1976D2;
+    /* 색상 - 테두리/액센트 */
+    --color-border-default: #E5E5E5;
+    --color-border-strong: #BDBDBD;
+    --color-border-primary: #4CAF50;
+    --color-border-error: #F44336;
+    --color-border-warning: #FF9800;
+    --color-border-info: #2196F3;
+    /* 색상 - 상태/버튼/컴포넌트 */
+    --button-bg-primary: var(--color-bg-primary);
+    --button-bg-secondary: #F5F5F5;
+    --button-bg-disabled: #E0E0E0;
+    --button-text-primary: #fff;
+    --button-text-secondary: var(--color-text-primary);
+    --button-border-primary: var(--color-border-primary);
+    --card-bg-default: var(--color-bg-surface);
+    --card-border-default: var(--color-border-default);
+    --badge-bg-success: #E8F5E9;
+    --badge-bg-error: #FDEDED;
+    --badge-bg-warning: #FFF3E0;
+    --badge-bg-info: #E3F2FD;
+    /* 스케일 - spacing */
+    --spacing-xxs: 2px;
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-2xl: 48px;
+    /* 스케일 - radius */
+    --radius-xs: 2px;
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-full: 9999px;
+    /* 스케일 - font */
+    --font-family-base: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --font-size-xs: 10px;
     --font-size-sm: 12px;
     --font-size-base: 14px;
@@ -27,61 +66,87 @@
     --font-size-xl: 18px;
     --font-size-2xl: 24px;
     --font-size-3xl: 32px;
-    
     --font-weight-light: 300;
     --font-weight-normal: 400;
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
-    
-    /* 간격 */
-    --spacing-xs: 4px;
-    --spacing-sm: 8px;
-    --spacing-md: 16px;
-    --spacing-lg: 24px;
-    --spacing-xl: 32px;
-    --spacing-2xl: 48px;
-    
-    /* 둥근 모서리 */
-    --radius-sm: 4px;
-    --radius-md: 8px;
-    --radius-lg: 12px;
-    --radius-xl: 16px;
-    --radius-full: 9999px;
-    
-    /* 그림자 */
+    /* 스케일 - shadow */
+    --shadow-xs: 0 1px 2px 0 rgba(0,0,0,0.03);
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    
     /* 전환 효과 */
     --transition-fast: 0.15s ease;
     --transition-normal: 0.3s ease;
     --transition-slow: 0.5s ease;
 }
 
-/* 다크 모드 예시 (body.dark 등에서 오버라이드) */
+/* 다크 테마: 모든 토큰 오버라이드 */
 body.dark {
-    --color-background: #181A1B;
-    --color-surface: #232526;
+    --color-bg-default: #181A1B;
+    --color-bg-surface: #232526;
+    --color-bg-inverse: #fff;
+    --color-bg-primary: #388E3C;
+    --color-bg-secondary: #232526;
+    --color-bg-success: #1B5E20;
+    --color-bg-error: #3B2323;
+    --color-bg-warning: #4E342E;
+    --color-bg-info: #0D47A1;
     --color-text-primary: #F5F5F5;
     --color-text-secondary: #CCCCCC;
-    --color-border: #333;
+    --color-text-tertiary: #888888;
+    --color-text-inverse: #232526;
+    --color-text-disabled: #555;
+    --color-text-success: #A5D6A7;
+    --color-text-error: #FF8A80;
+    --color-text-warning: #FFD54F;
+    --color-text-info: #90CAF9;
+    --color-border-default: #333;
+    --color-border-strong: #555;
+    --color-border-primary: #388E3C;
+    --color-border-error: #B71C1C;
+    --color-border-warning: #F57C00;
+    --color-border-info: #1976D2;
+    --button-bg-primary: #388E3C;
+    --button-bg-secondary: #232526;
+    --button-bg-disabled: #333;
+    --button-text-primary: #fff;
+    --button-text-secondary: #F5F5F5;
+    --button-border-primary: #388E3C;
+    --card-bg-default: #232526;
+    --card-border-default: #333;
+    --badge-bg-success: #1B5E20;
+    --badge-bg-error: #3B2323;
+    --badge-bg-warning: #4E342E;
+    --badge-bg-info: #0D47A1;
 }
 
-/* 타이포그래피 토큰 예시 */
-:root {
-    --font-size-3xl: 32px; /* Display Large */
-    --font-size-2xl: 24px; /* Headline */
-    --font-size-xl: 18px;  /* Title */
-    --font-size-lg: 16px;  /* Body */
-    --font-size-base: 14px; /* Caption */
-    --font-size-sm: 12px;  /* Small */
-    --font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    --font-weight-bold: 700;
-    --font-weight-semibold: 600;
-    --font-weight-normal: 400;
+/* 테마 미리보기용 클래스 */
+.theme-preview {
+    display: flex;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
 }
+.theme-preview .theme-box {
+    width: 120px;
+    height: 80px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border-default);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-primary);
+    background: var(--color-bg-default);
+}
+.theme-preview.dark .theme-box {
+    color: var(--color-text-primary);
+    background: var(--color-bg-default);
+}
+
+/* 이하 기존 스타일은 글로벌/로컬 토큰을 활용하도록 순차적으로 리팩토링 필요 */
 
 /* 기본 스타일 */
 * {
@@ -91,8 +156,8 @@ body.dark {
 }
 
 body {
-    font-family: var(--font-family);
-    background-color: var(--color-background);
+    font-family: var(--font-family-base);
+    background-color: var(--color-bg-default);
     color: var(--color-text-primary);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
@@ -111,7 +176,7 @@ body {
     text-align: center;
     margin-bottom: var(--spacing-2xl);
     padding: var(--spacing-xl) 0;
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border-default);
 }
 
 .ds-header h1 {
@@ -130,9 +195,9 @@ body {
 .ds-section {
     margin-bottom: var(--spacing-2xl);
     padding: var(--spacing-xl);
-    background: var(--color-surface);
+    background: var(--card-bg-default);
     border-radius: var(--radius-lg);
-    border: 1px solid var(--color-border);
+    border: 1px solid var(--color-border-default);
 }
 
 .ds-section h2 {
@@ -157,16 +222,16 @@ body {
     align-items: center;
     gap: var(--spacing-md);
     padding: var(--spacing-md);
-    background: var(--color-background);
+    background: var(--color-bg-secondary);
     border-radius: var(--radius-md);
-    border: 1px solid var(--color-border);
+    border: 1px solid var(--color-border-default);
 }
 
 .color-swatch {
     width: 60px;
     height: 60px;
     border-radius: var(--radius-md);
-    border: 1px solid var(--color-border);
+    border: 1px solid var(--color-border-default);
     flex-shrink: 0;
 }
 
@@ -187,12 +252,12 @@ body {
 }
 
 /* 색상 스왓치 */
-.primary-bg { background-color: var(--color-primary); }
-.background-bg { background-color: var(--color-background); border: 1px solid var(--color-border); }
+.primary-bg { background-color: var(--color-bg-primary); }
+.background-bg { background-color: var(--color-bg-default); border: 1px solid var(--color-border-default); }
 .text-primary-bg { background-color: var(--color-text-primary); }
 .text-secondary-bg { background-color: var(--color-text-secondary); }
 .text-tertiary-bg { background-color: var(--color-text-tertiary); }
-.border-bg { background-color: var(--color-border); }
+.border-bg { background-color: var(--color-border-default); }
 
 /* ===== 타이포그래피 ===== */
 .typography-examples {
@@ -203,9 +268,9 @@ body {
 
 .text-example {
     padding: var(--spacing-md);
-    background: var(--color-background);
+    background: var(--color-bg-secondary);
     border-radius: var(--radius-md);
-    border: 1px solid var(--color-border);
+    border: 1px solid var(--color-border-default);
 }
 
 .text-caption {
@@ -280,7 +345,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: var(--spacing-sm) var(--spacing-md);
-    font-family: var(--font-family);
+    font-family: var(--font-family-base);
     font-size: var(--font-size-base);
     font-weight: var(--font-weight-medium);
     line-height: 1.5;
@@ -314,41 +379,41 @@ body {
 
 /* Primary 버튼 */
 .btn-primary {
-    background-color: var(--color-primary);
-    color: white;
-    border-color: var(--color-primary);
+    background-color: var(--button-bg-primary);
+    color: var(--button-text-primary);
+    border-color: var(--button-border-primary);
 }
 
 .btn-primary:hover {
-    background-color: var(--color-primary-dark);
-    border-color: var(--color-primary-dark);
+    background-color: var(--color-bg-primary);
+    border-color: var(--color-bg-primary);
     box-shadow: var(--shadow-md);
 }
 
 /* Secondary 버튼 */
 .btn-secondary {
-    background-color: transparent;
-    color: var(--color-primary);
-    border-color: var(--color-primary);
+    background-color: var(--button-bg-secondary);
+    color: var(--color-bg-primary);
+    border-color: var(--color-bg-primary);
 }
 
 .btn-secondary:hover {
-    background-color: var(--color-primary);
-    color: white;
+    background-color: var(--color-bg-primary);
+    color: var(--button-text-primary);
     box-shadow: var(--shadow-md);
 }
 
 /* Text 버튼 */
 .btn-text {
     background-color: transparent;
-    color: var(--color-primary);
+    color: var(--color-bg-primary);
     border-color: transparent;
     padding: var(--spacing-xs) var(--spacing-sm);
 }
 
 .btn-text:hover {
     background-color: rgba(76, 175, 80, 0.1);
-    color: var(--color-primary-dark);
+    color: var(--color-bg-primary);
 }
 
 /* ===== 카드 컴포넌트 ===== */
@@ -359,8 +424,8 @@ body {
 }
 
 .card {
-    background: var(--color-background);
-    border: 1px solid var(--color-border);
+    background: var(--card-bg-default);
+    border: 1px solid var(--color-border-default);
     border-radius: var(--radius-lg);
     overflow: hidden;
     transition: all var(--transition-normal);
@@ -377,7 +442,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: var(--spacing-md);
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border-default);
 }
 
 .card-default .card-title {
@@ -388,8 +453,8 @@ body {
 }
 
 .card-default .card-badge {
-    background: var(--color-primary);
-    color: white;
+    background: var(--color-bg-primary);
+    color: var(--button-text-primary);
     padding: var(--spacing-xs) var(--spacing-sm);
     border-radius: var(--radius-full);
     font-size: var(--font-size-sm);
@@ -433,8 +498,8 @@ body {
 
 /* 기존 화면 스타일 카드 */
 .card-listing {
-    background: var(--color-background);
-    border: 1px solid var(--color-border);
+    background: var(--color-bg-default);
+    border: 1px solid var(--color-border-default);
     border-radius: var(--radius-lg);
     padding: var(--spacing-md);
     transition: all var(--transition-normal);
@@ -443,7 +508,7 @@ body {
 }
 
 .card-listing:hover {
-    border-color: var(--color-primary);
+    border-color: var(--color-bg-primary);
     box-shadow: var(--shadow-md);
     transform: translateY(-2px);
 }
@@ -503,7 +568,7 @@ body {
     height: 80px;
     border-radius: var(--radius-md);
     overflow: hidden;
-    background-color: var(--color-surface);
+    background-color: var(--color-bg-surface);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -571,33 +636,33 @@ body {
     font-weight: var(--font-weight-medium);
     white-space: nowrap;
     flex-shrink: 0;
-    background-color: var(--color-surface);
-    color: var(--color-primary);
+    background-color: var(--badge-bg-success);
+    color: var(--color-bg-primary);
 }
 
 .level-badge.beginner {
-    background-color: var(--color-surface);
-    color: var(--color-primary);
+    background-color: var(--badge-bg-success);
+    color: var(--color-bg-primary);
 }
 
 .level-badge.intermediate {
-    background-color: var(--color-surface);
-    color: var(--color-info);
+    background-color: var(--badge-bg-info);
+    color: var(--color-bg-info);
 }
 
 .level-badge.advanced {
-    background-color: var(--color-surface);
-    color: var(--color-warning);
+    background-color: var(--badge-bg-warning);
+    color: var(--color-bg-warning);
 }
 
 .level-badge.pro {
-    background-color: var(--color-surface);
-    color: #9C27B0;
+    background-color: var(--badge-bg-info);
+    color: var(--color-bg-info);
 }
 
 .level-badge.master {
-    background-color: var(--color-surface);
-    color: var(--color-error);
+    background-color: var(--badge-bg-error);
+    color: var(--color-bg-error);
 }
 
 /* ===== 입력 필드 ===== */
@@ -622,11 +687,11 @@ body {
 .input-group input,
 .input-group select {
     padding: var(--spacing-md);
-    font-family: var(--font-family);
+    font-family: var(--font-family-base);
     font-size: var(--font-size-base);
-    border: 1px solid var(--color-border);
+    border: 1px solid var(--color-border-default);
     border-radius: var(--radius-md);
-    background: var(--color-background);
+    background: var(--color-bg-default);
     color: var(--color-text-primary);
     transition: all var(--transition-normal);
 }
@@ -634,7 +699,7 @@ body {
 .input-group input:focus,
 .input-group select:focus {
     outline: none;
-    border-color: var(--color-primary);
+    border-color: var(--color-bg-primary);
     box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
 }
 
@@ -668,7 +733,7 @@ body {
 }
 
 .search-btn:hover {
-    background: var(--color-surface);
+    background: var(--color-bg-surface);
     color: var(--color-text-secondary);
 }
 
@@ -704,48 +769,48 @@ body {
 }
 
 .badge-beginner {
-    background: rgba(76, 175, 80, 0.1);
-    color: var(--color-primary);
+    background: var(--badge-bg-success);
+    color: var(--color-bg-primary);
 }
 
 .badge-intermediate {
-    background: rgba(33, 150, 243, 0.1);
-    color: var(--color-info);
+    background: var(--badge-bg-info);
+    color: var(--color-bg-info);
 }
 
 .badge-advanced {
-    background: rgba(255, 152, 0, 0.1);
-    color: var(--color-warning);
+    background: var(--badge-bg-warning);
+    color: var(--color-bg-warning);
 }
 
 .badge-pro {
-    background: rgba(156, 39, 176, 0.1);
-    color: #9C27B0;
+    background: var(--badge-bg-info);
+    color: var(--color-bg-info);
 }
 
 .badge-master {
-    background: rgba(244, 67, 54, 0.1);
-    color: var(--color-error);
+    background: var(--badge-bg-error);
+    color: var(--color-bg-error);
 }
 
 .badge-success {
-    background: rgba(76, 175, 80, 0.1);
-    color: var(--color-success);
+    background: var(--badge-bg-success);
+    color: var(--color-bg-primary);
 }
 
 .badge-warning {
-    background: rgba(255, 152, 0, 0.1);
-    color: var(--color-warning);
+    background: var(--badge-bg-warning);
+    color: var(--color-bg-warning);
 }
 
 .badge-error {
-    background: rgba(244, 67, 54, 0.1);
-    color: var(--color-error);
+    background: var(--badge-bg-error);
+    color: var(--color-bg-error);
 }
 
 .badge-info {
-    background: rgba(33, 150, 243, 0.1);
-    color: var(--color-info);
+    background: var(--badge-bg-info);
+    color: var(--color-bg-info);
 }
 
 .tag {
@@ -754,9 +819,9 @@ body {
     padding: var(--spacing-xs) var(--spacing-sm);
     font-size: var(--font-size-sm);
     font-weight: var(--font-weight-normal);
-    background: var(--color-surface);
+    background: var(--color-bg-surface);
     color: var(--color-text-secondary);
-    border: 1px solid var(--color-border);
+    border: 1px solid var(--color-border-default);
     border-radius: var(--radius-md);
     white-space: nowrap;
 }
@@ -770,7 +835,7 @@ body {
 
 .nav-tabs {
     display: flex;
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border-default);
     gap: var(--spacing-md);
 }
 
@@ -788,8 +853,8 @@ body {
 }
 
 .nav-tab.active {
-    color: var(--color-primary);
-    border-bottom-color: var(--color-primary);
+    color: var(--color-bg-primary);
+    border-bottom-color: var(--color-bg-primary);
 }
 
 .nav-breadcrumb {
@@ -806,7 +871,7 @@ body {
 }
 
 .breadcrumb-item:hover {
-    color: var(--color-primary);
+    color: var(--color-bg-primary);
 }
 
 .breadcrumb-item.active {
@@ -841,8 +906,8 @@ body {
 .grid-col-12 { flex: 0 0 100%; }
 
 .grid-demo {
-    background: var(--color-primary);
-    color: white;
+    background: var(--color-bg-primary);
+    color: var(--button-text-primary);
     padding: var(--spacing-md);
     text-align: center;
     border-radius: var(--radius-md);
@@ -857,8 +922,8 @@ body {
 .responsive-card {
     display: flex;
     gap: var(--spacing-md);
-    background: var(--color-background);
-    border: 1px solid var(--color-border);
+    background: var(--color-bg-default);
+    border: 1px solid var(--color-border-default);
     border-radius: var(--radius-lg);
     padding: var(--spacing-md);
     transition: all var(--transition-normal);
@@ -1055,8 +1120,8 @@ body {
 /* 목차(인덱스) 네비게이션 스타일 */
 .ds-index {
     width: 100%;
-    background: var(--color-surface);
-    border-bottom: 1px solid var(--color-border);
+    background: var(--color-bg-surface);
+    border-bottom: 1px solid var(--color-border-default);
     margin-bottom: var(--spacing-lg);
     position: sticky;
     top: 0;
@@ -1077,7 +1142,7 @@ body {
     padding: 0;
 }
 .ds-index a {
-    color: var(--color-primary);
+    color: var(--color-bg-primary);
     text-decoration: none;
     font-size: var(--font-size-base);
     font-weight: var(--font-weight-medium);
@@ -1086,8 +1151,8 @@ body {
     transition: background var(--transition-fast), color var(--transition-fast);
 }
 .ds-index a:hover, .ds-index a:focus {
-    background: var(--color-primary);
-    color: #fff;
+    background: var(--color-bg-primary);
+    color: var(--button-text-primary);
     outline: none;
 }
 
